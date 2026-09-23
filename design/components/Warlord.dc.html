@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>בוסים – שוגון ודרקון</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 300px; height: 300px; position: relative;">
+<svg width="300" height="300" viewBox="0 0 300 300" style="display: block; overflow: visible;">
+<defs>
+<linearGradient id="wb-blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F8FAFC"></stop><stop offset="0.5" stop-color="#C9D3DF"></stop><stop offset="1" stop-color="#7D8AA0"></stop></linearGradient>
+<linearGradient id="wl-armor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A3358"></stop><stop offset="1" stop-color="#15121F"></stop></linearGradient>
+<radialGradient id="wl-smoke"><stop offset="0" stop-color="#7048E8" stop-opacity="0.7"></stop><stop offset="1" stop-color="#7048E8" stop-opacity="0"></stop></radialGradient>
+<radialGradient id="wl-pearl" cx="0.35" cy="0.35" r="0.7"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset="0.5" stop-color="#A5F3FC"></stop><stop offset="1" stop-color="#22D3EE"></stop></radialGradient>
+<radialGradient id="wl-eye"><stop offset="0" stop-color="#FFE08A"></stop><stop offset="0.5" stop-color="#FF3B3B"></stop><stop offset="1" stop-color="#FF3B3B" stop-opacity="0"></stop></radialGradient>
+</defs>
+
+<sc-if value="{{isShogun}}" hint-placeholder-val="{{ true }}">
+<g>
+<ellipse cx="150" cy="286" rx="130" ry="22" fill="url(#wl-smoke)"></ellipse>
+<ellipse cx="152" cy="292" rx="86" ry="8" fill="#000000" opacity="0.45"></ellipse>
+<g class="fg-body" style="transform-box: view-box; transform-origin: 150px 290px;">
+<g class="fg-tails" style="transform-box: view-box; transform-origin: 136px 110px;">
+<path d="M136 104 C 100 112, 58 156, 26 252 L56 264 L68 244 L90 260 L104 236 L126 252 L142 132 Z" fill="#5C0F1A" stroke="#0B0B14" stroke-width="4" stroke-linejoin="round"></path>
+<path d="M130 116 C 98 128, 64 170, 38 248" stroke="#F5B82E" stroke-width="3" fill="none"></path>
+<circle cx="78" cy="196" r="15" fill="none" stroke="#F5B82E" stroke-width="3"></circle>
+<circle cx="72" cy="192" r="4" fill="#F5B82E"></circle><circle cx="84" cy="192" r="4" fill="#F5B82E"></circle><circle cx="78" cy="203" r="4" fill="#F5B82E"></circle>
+</g>
+<g class="fg-arm-b" style="transform-box: view-box; transform-origin: 130px 120px;">
+<path d="M130 120 L104 152 L122 172" fill="none" stroke="#0B0B14" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M130 120 L104 152 L122 172" fill="none" stroke="#2B1E3A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M108 156 L120 166" stroke="#4A3F6B" stroke-width="12" stroke-linecap="round"></path>
+<circle cx="124" cy="174" r="10" fill="#3A3358" stroke="#0B0B14" stroke-width="3"></circle>
+</g>
+<path d="M122 180 L90 262 L132 270 L148 190 Z" fill="#2B1E3A" stroke="#0B0B14" stroke-width="3.5" stroke-linejoin="round"></path>
+<path d="M112 200 L100 262 M128 204 L118 266" stroke="#0B0B14" stroke-width="2" opacity="0.4"></path>
+<path d="M150 184 L176 262 L214 254 L174 180 Z" fill="#362849" stroke="#0B0B14" stroke-width="3.5" stroke-linejoin="round"></path>
+<path d="M166 200 L188 256 M176 196 L200 252" stroke="#0B0B14" stroke-width="2" opacity="0.4"></path>
+<path d="M96 258 L130 264 L128 284 L92 280 Z" fill="#1E1B2E" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M82 280 Q100 272 132 280 L132 292 L80 292 Z" fill="#15121F" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M180 252 L212 248 L214 276 L182 280 Z" fill="#1E1B2E" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M184 262 H212 M184 270 H212" stroke="#F5B82E" stroke-width="2"></path>
+<path d="M176 280 Q200 270 232 282 L232 292 L176 292 Z" fill="#15121F" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M116 114 Q150 98 188 114 L182 184 Q150 196 118 184 Z" fill="url(#wl-armor)" stroke="#0B0B14" stroke-width="4" stroke-linejoin="round"></path>
+<path d="M118 130 H186 M118 144 H185 M119 158 H184 M120 172 H183" stroke="#7048E8" stroke-width="3"></path>
+<g fill="#F5B82E">
+<circle cx="128" cy="137" r="1.8"></circle><circle cx="142" cy="137" r="1.8"></circle><circle cx="156" cy="137" r="1.8"></circle><circle cx="170" cy="137" r="1.8"></circle>
+<circle cx="128" cy="151" r="1.8"></circle><circle cx="142" cy="151" r="1.8"></circle><circle cx="156" cy="151" r="1.8"></circle><circle cx="170" cy="151" r="1.8"></circle>
+<circle cx="128" cy="165" r="1.8"></circle><circle cx="142" cy="165" r="1.8"></circle><circle cx="156" cy="165" r="1.8"></circle><circle cx="170" cy="165" r="1.8"></circle>
+</g>
+<circle cx="160" cy="122" r="10" fill="#15121F" stroke="#F5B82E" stroke-width="2.5"></circle>
+<path d="M156 118 q6 -2 6 4 M163 124 q-2 5 -7 2 M157 126 q-4 -3 -1 -8" stroke="#F5B82E" stroke-width="2" fill="none"></path>
+<path d="M122 118 Q150 106 184 118" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="3" fill="none"></path>
+<path d="M116 184 L110 214 L136 218 L140 190 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M142 192 L142 222 L166 222 L164 192 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M168 190 L172 218 L194 212 L184 184 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M112 200 L138 203 M142 206 L165 206 M170 202 L190 198" stroke="#7048E8" stroke-width="2.5"></path>
+<path d="M102 106 L130 110 L128 152 L98 148 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M101 118 L129 121 M100 130 L128 133 M99 142 L128 145" stroke="#7048E8" stroke-width="2.5"></path>
+<g>
+<path d="M150 92 L150 110 L170 110 L170 92 Z" fill="#15121F" stroke="#0B0B14" stroke-width="3"></path>
+<path d="M132 62 L98 78 L102 94 L126 86 L104 102 L110 114 L138 98 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M102 88 L128 76 M108 106 L134 90" stroke="#7048E8" stroke-width="2"></path>
+<circle cx="162" cy="78" r="29" fill="#2B1E1E" stroke="#0B0B14" stroke-width="3.5"></circle>
+<ellipse cx="154" cy="72" rx="12" ry="8" fill="url(#wl-eye)" class="eye-glow"></ellipse>
+<ellipse cx="178" cy="70" rx="10" ry="7" fill="url(#wl-eye)" class="eye-glow"></ellipse>
+<path d="M146 72 L162 70 L160 75 L148 76 Z" fill="#FF3B3B" stroke="#0B0B14" stroke-width="1.2"></path>
+<path d="M172 70 L186 68 L185 73 L173 74 Z" fill="#FF3B3B" stroke="#0B0B14" stroke-width="1.2"></path>
+<path d="M138 78 Q162 72 190 78 L188 98 Q172 116 150 112 Q138 102 138 78 Z" fill="#1A1418" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M150 96 Q168 104 184 94" stroke="#E63946" stroke-width="3" fill="none"></path>
+<path d="M154 97 l3 7 l3 -6 M176 97 l2 6 l3 -7" fill="#F5B82E" stroke="#F5B82E" stroke-width="1.5"></path>
+<path d="M170 86 q6 1 10 -2" stroke="#4A3F6B" stroke-width="2" fill="none"></path>
+<path d="M130 68 Q130 30 164 28 Q198 30 198 64 Z" fill="url(#wl-armor)" stroke="#0B0B14" stroke-width="3.5" stroke-linejoin="round"></path>
+<path d="M144 34 Q140 50 142 66 M164 28 L164 65 M184 34 Q188 50 186 65" stroke="#4A3F6B" stroke-width="2" fill="none"></path>
+<path d="M134 62 Q166 54 202 62 L200 68 Q166 60 136 70 Z" fill="#1E1B2E" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M152 34 Q130 0 100 -16 Q132 -8 160 26 Z" fill="#F5B82E" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M172 32 Q194 -4 228 -14 Q200 4 178 30 Z" fill="#F5B82E" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M150 22 Q134 2 116 -6 M176 22 Q192 2 212 -6" stroke="#FFF1B8" stroke-width="2" fill="none"></path>
+<path d="M156 38 L166 22 L176 38 L166 46 Z" fill="#E63946" stroke="#0B0B14" stroke-width="2" stroke-linejoin="round"></path>
+</g>
+<g class="fg-arm-f" style="transform-box: view-box; transform-origin: 184px 120px;">
+<path d="M184 120 L212 148 L232 126" fill="none" stroke="#0B0B14" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M184 120 L212 148 L232 126" fill="none" stroke="#362849" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M170 104 L202 110 L198 156 L166 150 Z" fill="#2A2340" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M169 118 L201 123 M168 132 L200 137 M167 144 L199 149" stroke="#7048E8" stroke-width="2.5"></path>
+<g transform="translate(232 124) rotate(14)">
+<rect x="-4.5" y="-120" width="9" height="270" rx="4" fill="#3B2A20" stroke="#0B0B14" stroke-width="2.5"></rect>
+<path d="M-1 -116 L-1 146" stroke="#6B4A36" stroke-width="2"></path>
+<rect x="-6" y="-128" width="12" height="12" rx="2" fill="#F5B82E" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-5 -128 Q-4 -178 20 -206 Q14 -168 6 -128 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M0 -134 Q2 -168 14 -192" stroke="#FFFFFF" stroke-width="1.5" fill="none"></path>
+<path d="M-5 -118 q-10 10 -4 24" stroke="#E63946" stroke-width="3" fill="none"></path>
+<rect x="-6" y="140" width="12" height="10" rx="2" fill="#F5B82E" stroke="#0B0B14" stroke-width="2"></rect>
+</g>
+<circle cx="232" cy="126" r="11" fill="#3A3358" stroke="#0B0B14" stroke-width="3"></circle>
+</g>
+</g>
+</g>
+</sc-if>
+
+<sc-if value="{{isDragon}}" hint-placeholder-val="{{ false }}">
+<g>
+<ellipse cx="150" cy="292" rx="100" ry="8" fill="#000000" opacity="0.35"></ellipse>
+<g class="fg-body" style="transform-box: view-box; transform-origin: 120px 290px;">
+<g class="sway" style="transform-box: view-box; transform-origin: 40px 290px;">
+<g fill="#F59F00" stroke="#0B0B14" stroke-width="2.5" stroke-linejoin="round">
+<path d="M44 262 L20 250 L40 246 Z"></path>
+<path d="M78 222 L58 206 L80 206 Z"></path>
+<path d="M104 180 L96 160 L112 168 Z"></path>
+<path d="M88 140 L70 126 L92 128 Z"></path>
+<path d="M50 118 L26 116 L44 104 Z"></path>
+<path d="M44 84 L28 66 L50 72 Z"></path>
+<path d="M76 56 L70 34 L88 48 Z"></path>
+<path d="M112 46 L114 24 L126 44 Z"></path>
+<path d="M146 56 L156 36 L160 60 Z"></path>
+</g>
+<path d="M30 290 C 10 230, 110 240, 104 180 C 98 120, 20 140, 40 90 C 58 46, 130 40, 172 76" fill="none" stroke="#0B0B14" stroke-width="46" stroke-linecap="round"></path>
+<path d="M30 290 C 10 230, 110 240, 104 180 C 98 120, 20 140, 40 90 C 58 46, 130 40, 172 76" fill="none" stroke="#12876F" stroke-width="39" stroke-linecap="round"></path>
+<path d="M30 290 C 10 230, 110 240, 104 180 C 98 120, 20 140, 40 90 C 58 46, 130 40, 172 76" fill="none" stroke="#1FB594" stroke-width="28" stroke-linecap="round" stroke-dasharray="7 7" opacity="0.55"></path>
+<path d="M30 290 C 10 230, 110 240, 104 180 C 98 120, 20 140, 40 90 C 58 46, 130 40, 172 76" fill="none" stroke="#F3E3B0" stroke-width="14" stroke-linecap="round"></path>
+<path d="M30 290 C 10 230, 110 240, 104 180 C 98 120, 20 140, 40 90 C 58 46, 130 40, 172 76" fill="none" stroke="#C9B77E" stroke-width="14" stroke-dasharray="2 8"></path>
+<path d="M22 286 Q4 300 8 276 Q-8 282 2 264 Q14 270 24 280 Z" fill="#F59F00" stroke="#0B0B14" stroke-width="2.5" stroke-linejoin="round"></path>
+<g>
+<path d="M104 196 L134 214" stroke="#0B0B14" stroke-width="16" stroke-linecap="round"></path>
+<path d="M104 196 L134 214" stroke="#12876F" stroke-width="10" stroke-linecap="round"></path>
+<circle cx="150" cy="212" r="16" fill="#22D3EE" opacity="0.3" class="eye-glow"></circle>
+<circle cx="150" cy="212" r="11" fill="url(#wl-pearl)" stroke="#0B0B14" stroke-width="2.5"></circle>
+<path d="M134 206 L144 200 M136 214 L146 214 M134 222 L144 226" stroke="#F3E3B0" stroke-width="4" stroke-linecap="round"></path>
+<path d="M134 206 L144 200 M136 214 L146 214 M134 222 L144 226" stroke="#0B0B14" stroke-width="1.2" stroke-linecap="round"></path>
+</g>
+<g>
+<path d="M56 104 L30 124" stroke="#0B0B14" stroke-width="16" stroke-linecap="round"></path>
+<path d="M56 104 L30 124" stroke="#12876F" stroke-width="10" stroke-linecap="round"></path>
+<path d="M30 124 L20 122 M30 124 L22 132 M30 124 L30 134" stroke="#F3E3B0" stroke-width="4" stroke-linecap="round"></path>
+</g>
+<g>
+<path d="M166 54 Q150 20 136 12 Q150 22 152 32 Q140 26 130 30 Q148 36 160 64 Z" fill="#F3E3B0" stroke="#0B0B14" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M150 70 Q134 58 120 64 Q132 70 136 80 Q124 80 118 90 Q136 88 152 88 Z" fill="#F59F00" stroke="#0B0B14" stroke-width="2.5" stroke-linejoin="round"></path>
+<path d="M158 60 Q176 42 202 50 L238 60 Q252 64 254 74 L242 80 L214 84 Q196 100 172 96 Q154 88 158 60 Z" fill="#12876F" stroke="#0B0B14" stroke-width="3.5" stroke-linejoin="round"></path>
+<path d="M176 92 L232 96 L248 108 Q212 114 180 104 Z" fill="#0E6B58" stroke="#0B0B14" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M186 96 Q214 104 240 104" stroke="#E63946" stroke-width="4" fill="none" stroke-linecap="round"></path>
+<path d="M214 84 l3 6 l3 -5 l3 6 l3 -5 l3 6 l3 -5 l3 5" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF" stroke-linejoin="round"></path>
+<path d="M200 98 l3 -5 l3 5 l3 -5 l3 5 l3 -5 l3 5" stroke="#FFFFFF" stroke-width="1.8" fill="none"></path>
+<path d="M170 64 Q192 52 220 58" stroke="#1FB594" stroke-width="4" fill="none" stroke-linecap="round"></path>
+<ellipse cx="198" cy="64" rx="10" ry="7" fill="#FF9F1C" opacity="0.4" class="eye-glow"></ellipse>
+<ellipse cx="198" cy="64" rx="6.5" ry="5" fill="#FFD43B" stroke="#0B0B14" stroke-width="2"></ellipse>
+<ellipse cx="199" cy="64" rx="1.6" ry="4.2" fill="#0B0B14"></ellipse>
+<path d="M184 56 L210 58" stroke="#0B0B14" stroke-width="4" stroke-linecap="round"></path>
+<circle cx="246" cy="66" r="2.2" fill="#0B0B14"></circle>
+<path d="M240 70 Q270 58 282 78 Q288 96 270 102" stroke="#F59F00" stroke-width="3" fill="none" stroke-linecap="round"></path>
+<path d="M236 104 Q258 116 256 134 Q254 146 240 146" stroke="#F59F00" stroke-width="3" fill="none" stroke-linecap="round"></path>
+</g>
+</g>
+</g>
+</g>
+</sc-if>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"kind":{"editor":"enum","options":["shogun","dragon"],"default":"shogun"},"$preview":{"width":300,"height":300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const k = this.props.kind ?? 'shogun';
+    return { isShogun: k !== 'dragon', isDragon: k === 'dragon' };
+  }
+}
+</script>
+</body>
+</html>

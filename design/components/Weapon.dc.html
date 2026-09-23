@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>נשקים – שמונה סוגים</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 220px; height: 70px; position: relative;">
+<svg width="220" height="70" viewBox="0 0 220 70" style="display: block; overflow: visible;">
+<defs>
+<linearGradient id="wb-blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F8FAFC"></stop><stop offset="0.5" stop-color="#C9D3DF"></stop><stop offset="1" stop-color="#7D8AA0"></stop></linearGradient>
+</defs>
+<g transform="translate({{ax}} {{ay}}) rotate(90) scale({{sc}})">
+<sc-if value="{{wKatana}}" hint-placeholder-val="{{ true }}">
+<g>
+<rect x="-4.5" y="-17" width="9" height="36" rx="3" fill="#15151C" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-4 -13 L4 -8 M4 -13 L-4 -8 M-4 -3 L4 2 M4 -3 L-4 2 M-4 7 L4 12 M4 7 L-4 12" stroke="#E9E4D8" stroke-width="1.6"></path>
+<rect x="-5" y="18" width="10" height="5" rx="2" fill="#C99A2E" stroke="#0B0B14" stroke-width="1.5"></rect>
+<ellipse cx="0" cy="-19" rx="10" ry="3.8" fill="#F5B82E" stroke="#0B0B14" stroke-width="2"></ellipse>
+<rect x="-3.8" y="-26" width="7.6" height="5" fill="#E0B24A" stroke="#0B0B14" stroke-width="1.5"></rect>
+<path d="M-3.6 -26 L-3.6 -98 Q-2.5 -107 4.5 -114 L3.8 -26 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2.2" stroke-linejoin="round"></path>
+<path d="M0.8 -30 Q-1.4 -44 0.8 -58 Q-1.4 -72 0.8 -86 Q-0.6 -96 2 -104" stroke="#FFFFFF" stroke-width="1.3" fill="none" opacity="0.9"></path>
+</g>
+</sc-if>
+<sc-if value="{{wOdachi}}" hint-placeholder-val="{{ false }}">
+<g>
+<rect x="-4.5" y="-20" width="9" height="46" rx="3" fill="#7A1411" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-4 -16 L4 -11 M4 -16 L-4 -11 M-4 -5 L4 0 M4 -5 L-4 0 M-4 6 L4 11 M4 6 L-4 11 M-4 16 L4 21 M4 16 L-4 21" stroke="#F5B82E" stroke-width="1.5"></path>
+<rect x="-5" y="26" width="10" height="5" rx="2" fill="#C99A2E" stroke="#0B0B14" stroke-width="1.5"></rect>
+<rect x="-10" y="-26" width="20" height="6" rx="2" fill="#F5B82E" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-4 -26 L-4 -150 Q-2.5 -160 6 -168 L4.2 -26 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2.2" stroke-linejoin="round"></path>
+<path d="M1 -32 Q-1.6 -50 1 -68 Q-1.6 -86 1 -104 Q-1.6 -122 1 -140 Q0 -152 3 -158" stroke="#FFFFFF" stroke-width="1.3" fill="none" opacity="0.9"></path>
+</g>
+</sc-if>
+<sc-if value="{{wKunai}}" hint-placeholder-val="{{ false }}">
+<g>
+<rect x="-3" y="-5" width="6" height="23" rx="2" fill="#2A2A36" stroke="#0B0B14" stroke-width="1.8"></rect>
+<path d="M-3 0 L3 3 M-3 5 L3 8 M-3 10 L3 13" stroke="#C9C2B2" stroke-width="1.4"></path>
+<circle cx="0" cy="23" r="4.5" fill="none" stroke="#9AA5B1" stroke-width="2.4"></circle>
+<path d="M0 27 q-7 8 -3 17 q2 -7 7 -9 z" fill="#E63946" stroke="#0B0B14" stroke-width="1.2"></path>
+<path d="M0 -44 L7 -14 L2.5 -5 L-2.5 -5 L-7 -14 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2" stroke-linejoin="round"></path>
+<path d="M0 -39 L0 -9" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"></path>
+</g>
+</sc-if>
+<sc-if value="{{wShuriken}}" hint-placeholder-val="{{ false }}">
+<g transform="translate(0 -16)">
+<g class="spin-shuriken" style="transform-box: fill-box; transform-origin: 50% 50%;">
+<path d="M0 -20 L5 -5 L20 0 L5 5 L0 20 L-5 5 L-20 0 L-5 -5 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2" stroke-linejoin="round"></path>
+<circle cx="0" cy="0" r="4.5" fill="#2A2A36" stroke="#0B0B14" stroke-width="1.5"></circle>
+<path d="M0 -17 L0 -7 M17 0 L7 0" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"></path>
+</g>
+</g>
+</sc-if>
+<sc-if value="{{wBo}}" hint-placeholder-val="{{ false }}">
+<g>
+<rect x="-3.5" y="-96" width="7" height="160" rx="3.5" fill="#9C6B3C" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-1 -90 L-1 58" stroke="#C99562" stroke-width="1.5" opacity="0.8"></path>
+<rect x="-4.2" y="-96" width="8.4" height="10" rx="2" fill="#B8BEC7" stroke="#0B0B14" stroke-width="1.5"></rect>
+<rect x="-4.2" y="54" width="8.4" height="10" rx="2" fill="#B8BEC7" stroke="#0B0B14" stroke-width="1.5"></rect>
+<rect x="-4.2" y="-12" width="8.4" height="24" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></rect>
+<path d="M-4 -8 L4 -4 M-4 -1 L4 3 M-4 6 L4 10" stroke="#0B0B14" stroke-width="1" opacity="0.5"></path>
+</g>
+</sc-if>
+<sc-if value="{{wNunchaku}}" hint-placeholder-val="{{ false }}">
+<g>
+<rect x="-4" y="-40" width="8" height="46" rx="4" fill="#3B2A20" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-4 -30 H4 M-4 -4 H4" stroke="#F5B82E" stroke-width="2"></path>
+<circle cx="0" cy="-42" r="2.5" fill="#9AA5B1" stroke="#0B0B14" stroke-width="1"></circle>
+<path d="M0 -42 q8 -12 18 -10 q10 2 16 -6" fill="none" stroke="#9AA5B1" stroke-width="2.6" stroke-dasharray="3 1.6"></path>
+<g transform="translate(34 -58) rotate(-120)">
+<rect x="-4" y="0" width="8" height="46" rx="4" fill="#3B2A20" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-4 10 H4 M-4 36 H4" stroke="#F5B82E" stroke-width="2"></path>
+</g>
+</g>
+</sc-if>
+<sc-if value="{{wKusarigama}}" hint-placeholder-val="{{ false }}">
+<g>
+<path d="M0 12 q-10 10 0 18 q12 8 2 18 q-10 8 0 16" fill="none" stroke="#9AA5B1" stroke-width="2.6" stroke-dasharray="3 1.6"></path>
+<circle cx="2" cy="66" r="6" fill="#4A4F5C" stroke="#0B0B14" stroke-width="2"></circle>
+<rect x="-3.5" y="-34" width="7" height="46" rx="3" fill="#8B5A2B" stroke="#0B0B14" stroke-width="2"></rect>
+<path d="M-3.5 -26 L3.5 -22 M-3.5 -18 L3.5 -14" stroke="#0B0B14" stroke-width="1.2" opacity="0.5"></path>
+<path d="M-2 -34 Q14 -58 42 -46 Q20 -46 6 -30 Z" fill="url(#wb-blade)" stroke="#0B0B14" stroke-width="2" stroke-linejoin="round"></path>
+</g>
+</sc-if>
+<sc-if value="{{wTessen}}" hint-placeholder-val="{{ false }}">
+<g>
+<rect x="-3" y="-6" width="6" height="22" rx="2" fill="#15151C" stroke="#0B0B14" stroke-width="1.8"></rect>
+<path d="M0 -4 L-40 -30 A48 48 0 0 1 40 -30 Z" fill="#B42318" stroke="#0B0B14" stroke-width="2.2" stroke-linejoin="round"></path>
+<path d="M0 -4 L-24 -45 M0 -4 L0 -52 M0 -4 L24 -45" stroke="#0B0B14" stroke-width="1.4" opacity="0.6"></path>
+<path d="M-40 -30 A48 48 0 0 1 40 -30" fill="none" stroke="#F5B82E" stroke-width="3"></path>
+<circle cx="0" cy="-30" r="8" fill="#F8F9FA" stroke="#0B0B14" stroke-width="1.5"></circle>
+<circle cx="0" cy="-30" r="4" fill="#E63946"></circle>
+</g>
+</sc-if>
+
+</g>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"kind":{"editor":"enum","options":["katana","kunai","shuriken","bo","nunchaku","odachi","kusarigama","tessen"],"default":"katana"},"$preview":{"width":220,"height":70}}'>
+const FIT = {
+  katana: [42, 35, 1.4], odachi: [41, 35, 1.0], kunai: [109, 35, 2.0], shuriken: [89, 35, 1.5],
+  bo: [91, 35, 1.2], nunchaku: [80, 7, 0.8], kusarigama: [118, 9, 1.3], tessen: [96, 35, 0.8]
+};
+class Component extends DCLogic {
+  renderVals() {
+    const k = FIT[this.props.kind] ? this.props.kind : 'katana';
+    const f = FIT[k];
+    return {
+      ax: f[0], ay: f[1], sc: f[2],
+      wKatana: k === 'katana', wOdachi: k === 'odachi', wKunai: k === 'kunai', wShuriken: k === 'shuriken',
+      wBo: k === 'bo', wNunchaku: k === 'nunchaku', wKusarigama: k === 'kusarigama', wTessen: k === 'tessen'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.yoniraich.ninjamath",
+  "appName": "נינג׳ה המספרים",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#0B0B14"
+  }
+}

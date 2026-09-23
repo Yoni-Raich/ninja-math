@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>עולמות – ארבעה רקעים מתחלפים</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 915px; height: 412px; position: relative; overflow: hidden; background: #0B0B14;">
+
+<sc-if value="{{isBamboo}}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; left: 0; top: 0; width: 915px; height: 412px;">
+<svg width="915" height="412" viewBox="0 0 915 412" style="position: absolute; left: 0; top: 0;">
+<defs>
+<linearGradient id="sk-bamboo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34405E"></stop><stop offset="0.5" stop-color="#C98B72"></stop><stop offset="1" stop-color="#F4CFA0"></stop></linearGradient>
+<radialGradient id="sun-bamboo"><stop offset="0" stop-color="#FFF1D0" stop-opacity="0.9"></stop><stop offset="1" stop-color="#FFD8A0" stop-opacity="0"></stop></radialGradient>
+</defs>
+<rect width="915" height="412" fill="url(#sk-bamboo)"></rect>
+<circle cx="610" cy="190" r="150" fill="url(#sun-bamboo)"></circle>
+<circle cx="610" cy="190" r="62" fill="#FFE9C4"></circle>
+<path d="M0 214 H915 M120 232 H760 M300 246 H915" stroke="#FFF3DD" stroke-width="7" opacity="0.35" stroke-linecap="round"></path>
+</svg>
+<div class="par par-far" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 250 L60 206 L110 228 L170 168 L230 214 L300 188 L360 230 L430 150 L500 208 L570 184 L640 224 L700 172 L780 218 L850 194 L915 250 L915 412 L0 412 Z" fill="#8D86A0" opacity="0.75"></path>
+<g fill="#6C6887" opacity="0.85">
+<rect x="424" y="120" width="12" height="34"></rect>
+<path d="M408 124 Q430 112 452 124 L446 128 L414 128 Z"></path>
+<path d="M412 108 Q430 98 448 108 L443 112 L417 112 Z"></path>
+<path d="M416 94 Q430 86 444 94 L440 97 L420 97 Z"></path>
+<path d="M430 80 L430 90" stroke="#6C6887" stroke-width="2"></path>
+</g>
+<path d="M0 282 C 120 250, 240 276, 360 262 S 600 240, 720 268 S 860 272, 915 282 L915 412 L0 412 Z" fill="#5D6A6E"></path>
+<g fill="#4B5A58" opacity="0.9">
+<rect x="40" y="120" width="6" height="170"></rect><rect x="64" y="90" width="5" height="190"></rect><rect x="210" y="110" width="6" height="170"></rect><rect x="236" y="140" width="5" height="140"></rect><rect x="520" y="100" width="6" height="170"></rect><rect x="548" y="130" width="5" height="140"></rect><rect x="790" y="96" width="6" height="180"></rect><rect x="820" y="126" width="5" height="150"></rect>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-mid" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<g>
+<rect x="80" y="-10" width="14" height="340" fill="#3D6B3E"></rect><rect x="84" y="-10" width="3" height="340" fill="#6FA35E"></rect>
+<path d="M78 60 H96 M78 130 H96 M78 200 H96 M78 270 H96" stroke="#2A4B2C" stroke-width="3"></path>
+<path d="M94 60 Q120 44 146 50 Q120 56 94 64 Z M94 130 Q124 120 150 132 Q120 132 94 134 Z M80 200 Q56 186 30 192 Q56 198 80 204 Z" fill="#4F8A48"></path>
+<rect x="300" y="-10" width="18" height="340" fill="#35603A"></rect><rect x="305" y="-10" width="4" height="340" fill="#6FA35E"></rect>
+<path d="M298 40 H320 M298 120 H320 M298 200 H320 M298 280 H320" stroke="#24442A" stroke-width="3"></path>
+<path d="M318 120 Q344 104 372 110 Q346 118 318 124 Z M300 200 Q274 190 250 198 Q276 204 300 204 Z M318 40 Q340 30 360 36 Q340 42 318 44 Z" fill="#4F8A48"></path>
+<rect x="470" y="-10" width="12" height="340" fill="#437547"></rect><rect x="473" y="-10" width="3" height="340" fill="#7BB36A"></rect>
+<path d="M468 90 H484 M468 170 H484 M468 250 H484" stroke="#2A4B2C" stroke-width="3"></path>
+<path d="M482 90 Q506 78 530 84 Q506 92 482 94 Z M470 170 Q448 160 424 166 Q448 172 470 174 Z" fill="#5C9A52"></path>
+<rect x="660" y="-10" width="16" height="340" fill="#35603A"></rect><rect x="664" y="-10" width="4" height="340" fill="#6FA35E"></rect>
+<path d="M658 70 H678 M658 150 H678 M658 230 H678" stroke="#24442A" stroke-width="3"></path>
+<path d="M676 70 Q700 58 726 62 Q700 72 676 74 Z M660 150 Q636 140 612 146 Q636 152 660 154 Z" fill="#4F8A48"></path>
+<rect x="840" y="-10" width="13" height="340" fill="#3D6B3E"></rect><rect x="843" y="-10" width="3" height="340" fill="#6FA35E"></rect>
+<path d="M838 110 H855 M838 190 H855" stroke="#2A4B2C" stroke-width="3"></path>
+<path d="M853 110 Q876 100 900 106 Q876 114 853 114 Z" fill="#5C9A52"></path>
+</g>
+<path d="M0 330 C 150 318, 300 336, 460 326 S 760 318, 915 330 L915 412 L0 412 Z" fill="#2F4A32"></path>
+<g transform="translate(560 330)">
+<rect x="-10" y="-8" width="20" height="10" fill="#6F7577"></rect>
+<rect x="-5" y="-30" width="10" height="22" fill="#7E8486"></rect>
+<rect x="-12" y="-44" width="24" height="14" fill="#8A9093"></rect>
+<rect x="-7" y="-41" width="14" height="8" fill="#FFB84D" class="flicker"></rect>
+<path d="M-18 -44 L0 -58 L18 -44 Z" fill="#6F7577"></path>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-near" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<rect x="0" y="350" width="915" height="62" fill="#4A3628"></rect>
+<path d="M0 350 H915 V358 H0 Z" fill="#2E2219"></path>
+<g fill="#7E8185" stroke="#2E2219" stroke-width="2">
+<ellipse cx="60" cy="372" rx="34" ry="9"></ellipse><ellipse cx="170" cy="380" rx="40" ry="10"></ellipse><ellipse cx="290" cy="370" rx="32" ry="8"></ellipse><ellipse cx="400" cy="382" rx="42" ry="10"></ellipse><ellipse cx="520" cy="371" rx="34" ry="9"></ellipse><ellipse cx="640" cy="381" rx="40" ry="10"></ellipse><ellipse cx="760" cy="372" rx="36" ry="9"></ellipse><ellipse cx="872" cy="380" rx="38" ry="10"></ellipse>
+</g>
+<g fill="#A3A6A9"><ellipse cx="54" cy="369" rx="18" ry="3"></ellipse><ellipse cx="164" cy="377" rx="20" ry="3"></ellipse><ellipse cx="394" cy="379" rx="20" ry="3"></ellipse><ellipse cx="634" cy="378" rx="20" ry="3"></ellipse><ellipse cx="866" cy="377" rx="18" ry="3"></ellipse></g>
+<path d="M0 352 l6 -12 l4 10 l6 -14 l4 16 M220 352 l5 -10 l4 8 l6 -12 l4 14 M480 352 l6 -12 l4 10 l6 -14 l4 16 M700 352 l5 -10 l4 8 l6 -12 l4 14" stroke="#4F7A3A" stroke-width="3" fill="none" stroke-linejoin="round"></path>
+<rect x="760" y="-20" width="30" height="372" fill="#1F3A22"></rect>
+<rect x="766" y="-20" width="6" height="372" fill="#3D6B3E"></rect>
+<path d="M756 40 H794 M756 150 H794 M756 260 H794" stroke="#0F1F12" stroke-width="5"></path>
+<path d="M790 150 Q830 130 870 140 Q830 152 790 158 Z M760 260 Q720 246 686 254 Q722 264 760 266 Z" fill="#2A4B2C"></path>
+</svg>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isRooftops}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: 0; top: 0; width: 915px; height: 412px;">
+<svg width="915" height="412" viewBox="0 0 915 412" style="position: absolute; left: 0; top: 0;">
+<defs>
+<linearGradient id="sk-roof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070A1E"></stop><stop offset="1" stop-color="#27325F"></stop></linearGradient>
+<radialGradient id="moon-glow"><stop offset="0" stop-color="#FFF4D6" stop-opacity="0.55"></stop><stop offset="1" stop-color="#FFF4D6" stop-opacity="0"></stop></radialGradient>
+</defs>
+<rect width="915" height="412" fill="url(#sk-roof)"></rect>
+<g fill="#FFFFFF">
+<circle cx="40" cy="30" r="1.4"></circle><circle cx="120" cy="80" r="1"></circle><circle cx="180" cy="24" r="1.6"></circle><circle cx="250" cy="60" r="1"></circle><circle cx="520" cy="30" r="1.5"></circle><circle cx="580" cy="90" r="1"></circle><circle cx="640" cy="40" r="1.2"></circle><circle cx="720" cy="20" r="1.6"></circle><circle cx="790" cy="70" r="1"></circle><circle cx="860" cy="36" r="1.4"></circle><circle cx="900" cy="100" r="1"></circle><circle cx="470" cy="110" r="1"></circle>
+</g>
+<circle cx="360" cy="130" r="150" fill="url(#moon-glow)"></circle>
+<circle cx="360" cy="130" r="84" fill="#F4EBD0"></circle>
+<g fill="#E1D5B2"><circle cx="330" cy="104" r="14"></circle><circle cx="388" cy="150" r="20"></circle><circle cx="350" cy="170" r="8"></circle><circle cx="400" cy="100" r="7"></circle></g>
+</svg>
+<div class="par par-sky" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M240 150 H470 M290 164 H520 M600 70 H780" stroke="#3A4577" stroke-width="9" stroke-linecap="round" opacity="0.8"></path>
+</svg>
+</sc-for>
+</div>
+<div class="par par-far" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<g fill="#161C3E">
+<path d="M0 262 H915 V412 H0 Z"></path>
+<rect x="640" y="150" width="90" height="112"></rect>
+<path d="M620 156 Q685 128 750 156 L740 162 L630 162 Z"></path>
+<rect x="655" y="112" width="60" height="44"></rect>
+<path d="M638 118 Q685 94 732 118 L724 124 L646 124 Z"></path>
+<rect x="668" y="84" width="34" height="34"></rect>
+<path d="M654 88 Q685 68 716 88 L710 93 L660 93 Z"></path>
+<path d="M660 84 L646 76 M710 84 L724 76" stroke="#161C3E" stroke-width="4"></path>
+<rect x="90" y="206" width="70" height="56"></rect><path d="M74 210 Q125 190 176 210 L168 216 L82 216 Z"></path>
+<rect x="300" y="222" width="80" height="40"></rect><path d="M284 226 Q340 208 396 226 L388 232 L292 232 Z"></path>
+<rect x="840" y="214" width="60" height="48"></rect><path d="M826 218 Q870 200 914 218 L906 224 L834 224 Z"></path>
+</g>
+<g fill="#F5B82E" opacity="0.8">
+<rect x="664" y="176" width="6" height="8"></rect><rect x="684" y="176" width="6" height="8"></rect><rect x="704" y="176" width="6" height="8"></rect><rect x="676" y="130" width="5" height="7"></rect><rect x="692" y="130" width="5" height="7"></rect><rect x="110" y="226" width="6" height="7"></rect><rect x="130" y="226" width="6" height="7"></rect><rect x="320" y="238" width="6" height="7"></rect><rect x="350" y="238" width="6" height="7"></rect>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-mid" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<rect x="0" y="300" width="915" height="112" fill="#1E2548"></rect>
+<g>
+<rect x="40" y="250" width="170" height="60" fill="#2E3560"></rect>
+<path d="M20 256 Q125 222 230 256 L222 264 L28 264 Z" fill="#232A52" stroke="#11152E" stroke-width="2"></path>
+<path d="M36 252 Q125 226 214 252" stroke="#4A5591" stroke-width="2" fill="none"></path>
+<rect x="64" y="272" width="44" height="30" fill="#F7C873"></rect><rect x="126" y="272" width="44" height="30" fill="#F2B95C"></rect>
+<path d="M86 272 V302 M64 287 H108 M148 272 V302 M126 287 H170" stroke="#6B4A1E" stroke-width="2"></path>
+<rect x="340" y="236" width="200" height="74" fill="#2B3159"></rect>
+<path d="M316 242 Q440 204 564 242 L556 250 L324 250 Z" fill="#20274D" stroke="#11152E" stroke-width="2"></path>
+<path d="M334 238 Q440 212 546 238" stroke="#4A5591" stroke-width="2" fill="none"></path>
+<rect x="364" y="262" width="54" height="36" fill="#F7C873"></rect><rect x="444" y="262" width="54" height="36" fill="#F7C873"></rect>
+<path d="M391 262 V298 M364 280 H418 M471 262 V298 M444 280 H498" stroke="#6B4A1E" stroke-width="2"></path>
+<rect x="660" y="256" width="160" height="54" fill="#2E3560"></rect>
+<path d="M640 262 Q740 230 840 262 L832 270 L648 270 Z" fill="#232A52" stroke="#11152E" stroke-width="2"></path>
+<rect x="690" y="278" width="40" height="26" fill="#F2B95C"></rect><rect x="750" y="278" width="40" height="26" fill="#F7C873"></rect>
+</g>
+<g class="flicker">
+<path d="M250 250 Q280 240 310 250" stroke="#0B0B14" stroke-width="1.5" fill="none"></path>
+<ellipse cx="262" cy="262" rx="8" ry="11" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></ellipse>
+<ellipse cx="282" cy="266" rx="8" ry="11" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></ellipse>
+<ellipse cx="302" cy="262" rx="8" ry="11" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></ellipse>
+<circle cx="282" cy="264" r="22" fill="#FF6B6B" opacity="0.18"></circle>
+<path d="M580 244 Q610 234 640 244" stroke="#0B0B14" stroke-width="1.5" fill="none"></path>
+<ellipse cx="596" cy="256" rx="8" ry="11" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></ellipse>
+<ellipse cx="624" cy="256" rx="8" ry="11" fill="#E63946" stroke="#0B0B14" stroke-width="1.5"></ellipse>
+<circle cx="610" cy="258" r="22" fill="#FF6B6B" opacity="0.18"></circle>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-near" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 346 H915 V412 H0 Z" fill="#2B3462"></path>
+<path d="M0 346 H915 V354 H0 Z" fill="#48538C"></path>
+<path d="M0 346 H915" stroke="#6C79B8" stroke-width="2"></path>
+<g stroke="#1B2147" stroke-width="3">
+<path d="M0 372 q15.25 -8 30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0" fill="none"></path>
+<path d="M0 396 q15.25 -8 30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0 t30.5 0" fill="none"></path>
+</g>
+<g transform="translate(300 346)">
+<path d="M-18 0 L-14 -26 Q0 -34 14 -26 L18 0 Z" fill="#48538C" stroke="#1B2147" stroke-width="2.5"></path>
+<circle cx="0" cy="-16" r="6" fill="#1B2147"></circle>
+</g>
+<g transform="translate(760 346)">
+<path d="M-18 0 L-14 -26 Q0 -34 14 -26 L18 0 Z" fill="#48538C" stroke="#1B2147" stroke-width="2.5"></path>
+<circle cx="0" cy="-16" r="6" fill="#1B2147"></circle>
+</g>
+</svg>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSnow}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: 0; top: 0; width: 915px; height: 412px;">
+<svg width="915" height="412" viewBox="0 0 915 412" style="position: absolute; left: 0; top: 0;">
+<defs>
+<linearGradient id="sk-snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6F93B8"></stop><stop offset="1" stop-color="#DDE9F3"></stop></linearGradient>
+</defs>
+<rect width="915" height="412" fill="url(#sk-snow)"></rect>
+<circle cx="200" cy="100" r="44" fill="#F4F8FB" opacity="0.8"></circle>
+</svg>
+<div class="par par-far" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 260 L110 140 L190 210 L300 96 L420 230 L520 150 L620 220 L740 110 L850 210 L915 260 L915 412 L0 412 Z" fill="#B4C8DD"></path>
+<path d="M110 140 L140 172 L126 168 L116 182 L100 160 Z M300 96 L338 138 L318 132 L306 150 L286 126 L276 122 Z M740 110 L778 152 L760 146 L748 160 L730 136 Z M520 150 L546 176 L526 172 L512 164 Z" fill="#F4F8FB"></path>
+<path d="M300 96 L420 230 L360 230 Z M740 110 L850 210 L800 220 Z" fill="#94ADC6" opacity="0.7"></path>
+<path d="M0 290 C 160 262, 300 286, 460 276 S 760 264, 915 290 L915 412 L0 412 Z" fill="#CFDDEA"></path>
+</svg>
+</sc-for>
+</div>
+<div class="par par-mid" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 320 C 200 304, 400 326, 600 312 S 820 316, 915 320 L915 412 L0 412 Z" fill="#E6EEF6"></path>
+<g transform="translate(90 320)">
+<path d="M0 -110 L34 -40 L18 -40 L44 6 L-44 6 L-18 -40 L-34 -40 Z" fill="#244B52" stroke="#16333A" stroke-width="2"></path>
+<path d="M0 -110 L14 -82 L-2 -86 L-14 -80 Z M-18 -40 L-8 -36 L4 -42 L18 -40 L12 -50 L-10 -50 Z" fill="#F4F8FB"></path>
+<rect x="-5" y="6" width="10" height="12" fill="#5B3A29"></rect>
+</g>
+<g transform="translate(250 322) scale(0.75)">
+<path d="M0 -110 L34 -40 L18 -40 L44 6 L-44 6 L-18 -40 L-34 -40 Z" fill="#2F5D62" stroke="#16333A" stroke-width="2"></path>
+<path d="M0 -110 L14 -82 L-2 -86 L-14 -80 Z" fill="#F4F8FB"></path>
+</g>
+<g transform="translate(520 318)">
+<rect x="-70" y="-94" width="10" height="100" fill="#C9302C" stroke="#7A1411" stroke-width="2"></rect>
+<rect x="60" y="-94" width="10" height="100" fill="#C9302C" stroke="#7A1411" stroke-width="2"></rect>
+<rect x="-78" y="-80" width="156" height="9" fill="#C9302C" stroke="#7A1411" stroke-width="2"></rect>
+<path d="M-96 -104 Q0 -92 96 -104 L90 -94 Q0 -86 -90 -94 Z" fill="#1A1418"></path>
+<path d="M-92 -106 Q0 -96 92 -106" stroke="#F4F8FB" stroke-width="5" fill="none" stroke-linecap="round"></path>
+<rect x="-8" y="-80" width="16" height="16" fill="#1A1418"></rect>
+<rect x="-5" y="-77" width="10" height="10" fill="#F5B82E"></rect>
+<path d="M-40 6 H40 L32 -4 H-32 Z" fill="#9AA5B1"></path>
+</g>
+<g transform="translate(790 320) scale(0.9)">
+<path d="M0 -110 L34 -40 L18 -40 L44 6 L-44 6 L-18 -40 L-34 -40 Z" fill="#244B52" stroke="#16333A" stroke-width="2"></path>
+<path d="M0 -110 L14 -82 L-2 -86 L-14 -80 Z M18 -40 L8 -36 L-4 -42 L-18 -40 L-12 -50 L10 -50 Z" fill="#F4F8FB"></path>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-near" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 350 H915 V412 H0 Z" fill="#F4F8FB"></path>
+<path d="M0 350 Q228 342 457 350 T915 350" fill="none" stroke="#FFFFFF" stroke-width="4"></path>
+<g fill="#CADCEC">
+<ellipse cx="120" cy="380" rx="60" ry="6"></ellipse><ellipse cx="420" cy="392" rx="80" ry="7"></ellipse><ellipse cx="720" cy="378" rx="70" ry="6"></ellipse>
+<ellipse cx="220" cy="372" rx="5" ry="3"></ellipse><ellipse cx="240" cy="376" rx="5" ry="3"></ellipse><ellipse cx="262" cy="372" rx="5" ry="3"></ellipse><ellipse cx="284" cy="376" rx="5" ry="3"></ellipse>
+</g>
+<g transform="translate(600 350)">
+<ellipse cx="0" cy="0" rx="26" ry="10" fill="#6F7577"></ellipse>
+<ellipse cx="0" cy="-6" rx="22" ry="7" fill="#F4F8FB"></ellipse>
+</g>
+<g transform="translate(860 350)">
+<rect x="-5" y="-30" width="10" height="30" fill="#7E8486"></rect>
+<rect x="-12" y="-44" width="24" height="14" fill="#8A9093"></rect>
+<rect x="-7" y="-41" width="14" height="8" fill="#FFB84D" class="flicker"></rect>
+<path d="M-20 -44 L0 -58 L20 -44 Z" fill="#F4F8FB" stroke="#CADCEC" stroke-width="2"></path>
+</g>
+</svg>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isVolcano}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: 0; top: 0; width: 915px; height: 412px;">
+<svg width="915" height="412" viewBox="0 0 915 412" style="position: absolute; left: 0; top: 0;">
+<defs>
+<linearGradient id="sk-lava" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A0A0E"></stop><stop offset="0.55" stop-color="#6E1A14"></stop><stop offset="1" stop-color="#E0521E"></stop></linearGradient>
+<radialGradient id="crater"><stop offset="0" stop-color="#FFD43B" stop-opacity="0.9"></stop><stop offset="1" stop-color="#FF5A1F" stop-opacity="0"></stop></radialGradient>
+</defs>
+<rect width="915" height="412" fill="url(#sk-lava)"></rect>
+<g fill="#2A1216" opacity="0.8">
+<ellipse cx="560" cy="60" rx="120" ry="34"></ellipse><ellipse cx="660" cy="40" rx="90" ry="28"></ellipse><ellipse cx="480" cy="30" rx="70" ry="20"></ellipse>
+</g>
+<circle cx="600" cy="150" r="90" fill="url(#crater)" class="lava"></circle>
+<path d="M440 300 L560 140 L640 140 L780 300 Z" fill="#3A1512"></path>
+<path d="M560 140 L640 140 L620 150 L580 150 Z" fill="#FF7A1A" class="lava"></path>
+<path d="M592 150 Q586 190 600 220 Q590 250 604 290" stroke="#FF6A13" stroke-width="6" fill="none" class="lava"></path>
+<path d="M616 150 Q630 200 622 240" stroke="#FF8A2A" stroke-width="4" fill="none" class="lava"></path>
+</svg>
+<div class="par par-far" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 282 L90 250 L150 266 L220 236 L300 260 L380 244 L450 270 L540 250 L620 268 L700 240 L790 262 L860 248 L915 282 L915 412 L0 412 Z" fill="#2A1216"></path>
+<g fill="#1C0B0E">
+<rect x="130" y="176" width="80" height="80"></rect>
+<path d="M120 180 L170 150 L220 180 Z"></path>
+<path d="M126 176 L126 150 L134 176 Z M206 176 L214 150 L214 176 Z"></path>
+<rect x="160" y="140" width="20" height="16"></rect>
+<path d="M156 142 L170 120 L184 142 Z"></path>
+</g>
+<g fill="#FF6A13" class="lava"><rect x="146" y="196" width="8" height="12"></rect><rect x="186" y="196" width="8" height="12"></rect><rect x="166" y="160" width="8" height="10"></rect></g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-mid" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 318 L915 318 L915 412 L0 412 Z" fill="#1E1114"></path>
+<g fill="#2A1A1E" stroke="#140A0C" stroke-width="2">
+<path d="M60 320 L80 200 L100 180 L116 220 L130 320 Z"></path>
+<path d="M330 320 L346 230 L370 210 L386 250 L400 320 Z"></path>
+<path d="M600 320 L614 180 L640 150 L660 200 L676 320 Z"></path>
+<path d="M820 320 L836 240 L856 226 L870 260 L884 320 Z"></path>
+</g>
+<g stroke="#FF6A13" stroke-width="2.5" fill="none" class="lava">
+<path d="M90 206 L96 240 L88 270 L98 300"></path>
+<path d="M366 226 L372 260 L364 290"></path>
+<path d="M636 160 L640 210 L630 250 L644 300"></path>
+<path d="M852 236 L856 270 L850 300"></path>
+</g>
+</svg>
+</sc-for>
+</div>
+<div class="par par-near" style="position: absolute; left: -915px; top: 0; width: 1830px; height: 412px; display: flex; animation-play-state: {{play}};">
+<sc-for list="{{twice}}" as="t" hint-placeholder-count="2">
+<svg width="915" height="412" viewBox="0 0 915 412" style="display: block; flex-shrink: 0;">
+<path d="M0 350 H915 V412 H0 Z" fill="#1A1113"></path>
+<path d="M0 350 L60 346 L130 352 L200 347 L290 352 L380 346 L460 351 L540 346 L640 352 L720 347 L810 352 L915 350" fill="none" stroke="#3A2226" stroke-width="4"></path>
+<g stroke="#FF5A1F" stroke-width="3" fill="none" class="lava">
+<path d="M40 362 L90 372 L130 364 L170 380 L220 372"></path>
+<path d="M300 390 L340 380 L390 392 L430 384"></path>
+<path d="M520 366 L570 378 L610 370 L660 386"></path>
+<path d="M720 392 L770 382 L820 394 L880 380"></path>
+</g>
+<g stroke="#FFD43B" stroke-width="1.2" fill="none" class="lava">
+<path d="M90 372 L130 364"></path><path d="M340 380 L390 392"></path><path d="M570 378 L610 370"></path><path d="M770 382 L820 394"></path>
+</g>
+<g fill="#2A1A1E" stroke="#0B0B14" stroke-width="2">
+<path d="M240 350 L252 330 L270 334 L278 350 Z"></path>
+<path d="M690 350 L700 336 L716 338 L722 350 Z"></path>
+</g>
+</svg>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-for list="{{parts}}" as="p" hint-placeholder-count="0">
+<div class="{{p.cls}}" style="position: absolute; left: {{p.x}}px; top: {{p.y}}px; width: 14px; height: 14px; animation-delay: {{p.d}}s; animation-duration: {{p.t}}s;">
+<svg width="14" height="14" viewBox="0 0 14 14"><ellipse cx="7" cy="7" rx="{{p.rx}}" ry="{{p.ry}}" fill="{{p.c}}" transform="rotate(35 7 7)"></ellipse></svg>
+</div>
+</sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"world":{"editor":"enum","options":["bamboo","rooftops","snow","volcano"],"default":"bamboo"},"moving":{"editor":"boolean","default":true},"$preview":{"width":915,"height":412}}'>
+const PT = {
+  bamboo: { cls: 'pt-fall', c: ['#9CCB5E', '#D8C25A', '#7FB24E'], rx: 5.5, ry: 2, top: true },
+  rooftops: { cls: 'pt-fall', c: ['#FFB3C7', '#FFD6E2', '#FF8FB1'], rx: 4, ry: 2.8, top: true },
+  snow: { cls: 'pt-snow', c: ['#FFFFFF', '#F1F6FB', '#FFFFFF'], rx: 2.8, ry: 2.8, top: true },
+  volcano: { cls: 'pt-rise', c: ['#FFD43B', '#FF8A2A', '#FF5A1F'], rx: 2.4, ry: 2.4, top: false }
+};
+class Component extends DCLogic {
+  renderVals() {
+    const world = PT[this.props.world] ? this.props.world : 'bamboo';
+    const moving = this.props.moving ?? true;
+    const pt = PT[world];
+    const parts = [];
+    for (let i = 0; i < 16; i++) {
+      const r1 = ((i * 73) % 100) / 100, r2 = ((i * 37 + 11) % 100) / 100;
+      parts.push({
+        cls: pt.cls, c: pt.c[i % 3], rx: pt.rx * (0.7 + r2 * 0.5), ry: pt.ry * (0.7 + r1 * 0.5),
+        x: Math.round(r1 * 900) - (pt.top ? 120 : -20), y: pt.top ? -10 : 380 - Math.round(r2 * 40),
+        d: -(r2 * 8).toFixed(2), t: (pt.top ? 6 : 4) + Math.round(r1 * 40) / 10
+      });
+    }
+    return {
+      isBamboo: world === 'bamboo', isRooftops: world === 'rooftops', isSnow: world === 'snow', isVolcano: world === 'volcano',
+      play: moving ? 'running' : 'paused', twice: [1, 2], parts
+    };
+  }
+}
+</script>
+</body>
+</html>
