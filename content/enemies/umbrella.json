@@ -11,5 +11,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "a playful one-eyed Japanese paper umbrella ghost (kasa-obake) hopping on a single wooden leg, a long red tongue, purple and red paper umbrella canopy, tiny arms."
-  }
+  },
+  "charge": true
 }

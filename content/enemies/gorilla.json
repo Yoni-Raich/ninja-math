@@ -1,0 +1,15 @@
+{
+  "id": "gorilla",
+  "name": "מלך הגורילות",
+  "tag": "בוס · אגרופי זהב",
+  "type": "boss",
+  "hp": 7,
+  "reward": 30,
+  "attack": "melee",
+  "color": "#F5B82E",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a huge silverback gorilla king with golden gauntlets on his fists, a leaf crown, ancient jungle-temple armor pieces, beating his chest."
+  },
+  "charge": true
+}

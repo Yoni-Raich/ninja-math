@@ -1,0 +1,12 @@
+{
+  "id": "flame",
+  "name": "להבה",
+  "tag": "נינג׳ת האש",
+  "price": 750,
+  "belt": 2,
+  "weapon": "katana",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a fire ninja boy in a red-and-black outfit with flaming hair and fists wreathed in fire, a burning katana."
+  }
+}

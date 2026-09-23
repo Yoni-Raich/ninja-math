@@ -1,0 +1,15 @@
+{
+  "id": "skeleton",
+  "name": "סמוראי העצמות",
+  "tag": "חרב עתיקה",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 13,
+  "attack": "melee",
+  "color": "#DEE2E6",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a goofy cartoon skeleton samurai (kid-friendly, not scary) wearing a dented red samurai helmet, holding an old chipped katana, a loose jaw grinning."
+  },
+  "charge": true
+}

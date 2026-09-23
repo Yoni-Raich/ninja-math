@@ -1,0 +1,12 @@
+{
+  "id": "moonpriest",
+  "name": "לונה",
+  "tag": "לוחמת הירח",
+  "price": 1900,
+  "belt": 4,
+  "weapon": "kusarigama",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a moon priestess warrior in a silver-and-violet kimono with a crescent moon crown, holding a glowing crescent glaive."
+  }
+}

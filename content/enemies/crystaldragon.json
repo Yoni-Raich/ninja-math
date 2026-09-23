@@ -1,0 +1,15 @@
+{
+  "id": "crystaldragon",
+  "name": "דרקון הקריסטל",
+  "tag": "בוס · קרן יהלום",
+  "type": "boss",
+  "hp": 6,
+  "reward": 28,
+  "attack": "magic",
+  "color": "#63E6BE",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a majestic dragon made of glowing translucent teal and violet crystals, crystal wings spread, sparkling, roaring."
+  },
+  "charge": true
+}

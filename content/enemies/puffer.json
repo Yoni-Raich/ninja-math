@@ -1,0 +1,16 @@
+{
+  "id": "puffer",
+  "name": "דג הקוצים",
+  "tag": "יורה קוצים",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 10,
+  "attack": "projectile",
+  "color": "#FFD43B",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a round spiky yellow pufferfish ninja with a tiny red headband, puffed up, little fins like arms, spikes all over."
+  },
+  "projectile": "needle",
+  "charge": true
+}

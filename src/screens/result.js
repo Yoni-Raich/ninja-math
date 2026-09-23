@@ -2,7 +2,8 @@ import { worldScene } from '../game/art.js';
 import Fighter from '../art/Fighter.js';
 import TreasureChest from '../art/TreasureChest.js';
 import { load } from '../game/save.js';
-import { WORLDS, SKILLS } from '../game/data.js';
+import { WORLDS, SKILLS, FIGHTERS } from '../game/data.js';
+import { heroArt } from '../game/art.js';
 import { coin, star, belt } from '../ui.js';
 
 // Victory (boss beaten) or defeat (out of hearts) summary.
@@ -20,7 +21,7 @@ export default function result(root, { go, params }) {
   <div style="position:absolute;inset:0;background:${won ? 'rgba(11,11,20,.45)' : 'rgba(40,0,8,.55)'};"></div>
   <div style="position:absolute;right:50px;bottom:44px;width:200px;height:220px;">
     <div style="width:200px;height:220px;transform:scaleX(-1) scale(1.05);transform-origin:50% 100%;">
-      <div class="${won ? 'pose-win' : 'pose-idle'}" style="${won ? '' : 'filter:saturate(.5) brightness(.8);'}">${Fighter({ kind: s.eq.fighter, weapon: s.eq.weapon, aura: won ? 'fire' : 'none' })}</div>
+      <div class="${won ? 'pose-win' : 'pose-idle'}" style="${won ? '' : 'filter:saturate(.5) brightness(.8);'}">${heroArt(FIGHTERS.find((f) => f.id === s.eq.fighter) || FIGHTERS[0], { weapon: s.eq.weapon, aura: won ? 'fire' : 'none' })}</div>
     </div>
   </div>
   ${won ? `<div style="position:absolute;left:40px;bottom:48px;width:180px;height:150px;transform:scale(1.1);transform-origin:50% 100%;">${TreasureChest({ open: true })}</div>` : ''}
@@ -40,6 +41,7 @@ export default function result(root, { go, params }) {
         <div style="padding:6px 4px;display:flex;flex-direction:column;align-items:center;background:#0B0B14;border:1px solid #2E3350;"><span style="font-size:12px;color:#B9C0D8;">קומבו שיא</span><span dir="ltr" class="num" style="font-size:22px;color:#F5B82E;">x${params.maxCombo || 0}</span></div>
         <div style="padding:6px 4px;display:flex;flex-direction:column;align-items:center;background:#0B0B14;border:1px solid #2E3350;"><span style="font-size:12px;color:#B9C0D8;">מטבעות</span><span class="num" style="display:flex;align-items:center;gap:3px;font-size:22px;color:#F5B82E;">${coin(18)}<span dir="ltr">+${params.earned || 0}</span></span></div>
       </div>
+      ${params.interrupts ? `<div class="num" style="text-align:center;font-size:14px;color:#22D3EE;">עצרת ${params.interrupts} מתקפות בזמן!</div>` : ''}
       ${params.newBelt ? (() => { const b = SKILLS.find((k) => k.id === params.newBelt); return `<div class="pop-in" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:6px;background:#1E2238;border:1px dashed #F5B82E;animation-delay:.8s;">${belt(b.color, 46, 24)}<span class="num" style="font-size:17px;color:#F5B82E;">חגורה ${b.belt}! עכשיו: ${b.name}</span></div>`; })() : ''}
       <p style="margin:0;font-size:14px;color:#D0D4E4;text-align:center;">${won
         ? (isLast ? 'ניצחת את כל העולמות! אפשר לחזור ולאסוף 3 כוכבים בכל עולם.' : `נפתח עולם חדש: ${WORLDS[next].name}`)

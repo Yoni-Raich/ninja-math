@@ -1,0 +1,15 @@
+{
+  "id": "windbow",
+  "name": "קשת הרוח",
+  "tag": "חצים של רוח",
+  "price": 700,
+  "belt": 2,
+  "dmg": 1,
+  "crit": 18,
+  "ranged": true,
+  "color": "#A5D8FF",
+  "art": {
+    "kind": "image",
+    "prompt": "an elegant white-and-teal recurve bow with swirling wind ribbons around it. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

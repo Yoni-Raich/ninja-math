@@ -1,0 +1,16 @@
+{
+  "id": "crystalbat",
+  "name": "עטלף הקריסטל",
+  "tag": "יורה רסיסים",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 13,
+  "attack": "projectile",
+  "color": "#63E6BE",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a cute bat with wings made of glowing teal crystal shards, big shiny eyes, small fangs, flapping."
+  },
+  "projectile": "crystal",
+  "charge": true
+}

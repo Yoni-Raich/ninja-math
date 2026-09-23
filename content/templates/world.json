@@ -4,8 +4,8 @@
   "name": "שם העולם",
   "scene": "image",
   "layers": [
-    { "src": "backgrounds/my-world-far.png", "speed": 70, "y": 0, "height": 412, "prompt": "A wide panoramic side-scrolling game BACKGROUND (about 3:1) of ... No characters, no text. Left and right edges must tile seamlessly. Keep the lower third simple." },
-    { "src": "backgrounds/my-world-ground.png", "speed": 7, "y": 318, "height": 94, "prompt": "A long horizontal game GROUND STRIP (about 6:1) on a TRANSPARENT background: ... Side view, flat top edge. Left and right edges must tile seamlessly." }
+    { "src": "backgrounds/my-world-far.webp", "speed": 70, "y": 0, "height": 412, "prompt": "A wide panoramic side-scrolling game BACKGROUND (about 3:1) of ... No characters, no text. Left and right edges must tile seamlessly. Keep the lower third simple." },
+    { "src": "backgrounds/my-world-ground.webp", "speed": 7, "y": 318, "height": 94, "prompt": "A long horizontal game GROUND STRIP (about 6:1) on a TRANSPARENT background: ... Side view, flat top edge. Left and right edges must tile seamlessly." }
   ],
   "music": { "bpm": 100, "scale": "in" },
   "path": ["my-enemy", "my-enemy", "chest", "my-enemy", "my-boss"]

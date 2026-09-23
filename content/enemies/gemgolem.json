@@ -1,0 +1,15 @@
+{
+  "id": "gemgolem",
+  "name": "גולם האבנים",
+  "tag": "אגרוף יהלום",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 15,
+  "attack": "melee",
+  "color": "#BE4BDB",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a stocky rock golem studded with big glowing purple and pink gems, one giant crystal fist raised."
+  },
+  "charge": true
+}

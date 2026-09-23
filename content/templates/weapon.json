@@ -1,0 +1,12 @@
+{
+  "id": "my-weapon",
+  "name": "שם הנשק",
+  "tag": "תיאור קצר",
+  "price": 600,
+  "belt": 2,
+  "dmg": 1,
+  "crit": 15,
+  "ranged": false,
+  "color": "#FF6B1A",
+  "art": { "kind": "image", "prompt": "describe the weapon. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible." }
+}

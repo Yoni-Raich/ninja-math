@@ -1,0 +1,15 @@
+{
+  "id": "flamekatana",
+  "name": "להב הלהבה",
+  "tag": "חרב עוטפת אש",
+  "price": 350,
+  "belt": 1,
+  "dmg": 1,
+  "crit": 12,
+  "ranged": false,
+  "color": "#FF6B1A",
+  "art": {
+    "kind": "image",
+    "prompt": "a katana whose blade is wreathed in orange flames, black-and-red wrapped handle, gold guard. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

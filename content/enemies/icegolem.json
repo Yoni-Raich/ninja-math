@@ -10,5 +10,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "a chunky golem made of translucent ice-blue crystal blocks with glowing cyan eyes and a frosty stone core in its chest, big fists."
-  }
+  },
+  "charge": true
 }

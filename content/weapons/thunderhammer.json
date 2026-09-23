@@ -1,0 +1,15 @@
+{
+  "id": "thunderhammer",
+  "name": "פטיש הרעם",
+  "tag": "פטיש של ברקים",
+  "price": 600,
+  "belt": 2,
+  "dmg": 2,
+  "crit": 8,
+  "ranged": false,
+  "color": "#FCC419",
+  "art": {
+    "kind": "image",
+    "prompt": "a heavy war hammer with a steel head crackling with yellow lightning, a wooden handle with gold rings. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "pumpkin",
+  "name": "נינג׳ת הדלעת",
+  "tag": "זורקת זרעים בוערים",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 12,
+  "attack": "projectile",
+  "color": "#FF922B",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a pumpkin-headed ninja with a cheeky carved grin glowing orange inside, black ninja outfit, a vine scarf, holding a small flaming seed."
+  },
+  "projectile": "fireball",
+  "charge": true
+}

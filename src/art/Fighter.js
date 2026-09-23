@@ -23,9 +23,10 @@ class Component extends DCLogic {
     return Object.assign({ hood: '#1E2238', hair: '#1A1A1A', mask: '#1E2238', helm: '#1C1C24', armor: '#B42318', armor2: '#7A1411' }, f, {
       kind, legW, legO: legW + 6, hakama: !!f.hakama,
       isKage: kind === 'kage', isSakura: kind === 'sakura', isRyu: kind === 'ryu', isJin: kind === 'jin', isRaiden: kind === 'raiden', isRyuko: kind === 'ryuko',
-      wAngle: ANGLES[weapon],
-      wKatana: weapon === 'katana', wOdachi: weapon === 'odachi', wKunai: weapon === 'kunai', wShuriken: weapon === 'shuriken',
-      wBo: weapon === 'bo', wNunchaku: weapon === 'nunchaku', wKusarigama: weapon === 'kusarigama', wTessen: weapon === 'tessen',
+      wAngle: this.props.weaponImage ? 28 : ANGLES[weapon],
+      wKatana: !this.props.weaponImage && weapon === 'katana', wOdachi: !this.props.weaponImage && weapon === 'odachi', wKunai: !this.props.weaponImage && weapon === 'kunai', wShuriken: !this.props.weaponImage && weapon === 'shuriken',
+      wBo: !this.props.weaponImage && weapon === 'bo', wNunchaku: !this.props.weaponImage && weapon === 'nunchaku', wKusarigama: !this.props.weaponImage && weapon === 'kusarigama', wTessen: !this.props.weaponImage && weapon === 'tessen',
+      wImage: !!this.props.weaponImage, wImageSrc: this.props.weaponImage || '', wImgW: 128 * (this.props.weaponRatio || 0.3), wImgH: 128, wImgX: -64 * (this.props.weaponRatio || 0.3), wImgY: -104,
       hasAura: !!aura, aura: aura || '#FFFFFF', auraKey: auraName
     });
   }
@@ -359,6 +360,7 @@ ${(v.isRyu) ? `
 <path d="M139 105 L149 99" stroke="#0B0B14" stroke-width="11" stroke-linecap="round"></path>
 <path d="M139 105 L149 99" stroke="${v.bracer}" stroke-width="7" stroke-linecap="round"></path>
 <g transform="translate(152 96) rotate(${v.wAngle})">
+${(v.wImage) ? `<image href="${v.wImageSrc}" x="${v.wImgX}" y="${v.wImgY}" width="${v.wImgW}" height="${v.wImgH}" preserveAspectRatio="xMidYMid meet"></image>` : ''}
 ${(v.wKatana) ? `
 <g>
 <rect x="-4.5" y="-17" width="9" height="36" rx="3" fill="#15151C" stroke="#0B0B14" stroke-width="2"></rect>

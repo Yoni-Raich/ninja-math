@@ -130,3 +130,12 @@ export function winBelt() {
 }
 
 export function currentSkill() { return SKILLS[load().level]; }
+
+// The child's own recent pace on the current skill (median of the last 10 correct first tries),
+// used to size enemy wind-up timers so they challenge without being impossible.
+export function recentMedianMs(s = load()) {
+  const sk = SKILLS[s.level];
+  const log = (s.skills && s.skills[sk.id] && s.skills[sk.id].log) || [];
+  const ok = log.filter((e) => e.ok).map((e) => e.ms).slice(-10);
+  return ok.length >= 3 ? median(ok) : 0;
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tiger",
+  "name": "לוחם הנמר",
+  "tag": "טפרים ומהירות",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 14,
+  "attack": "melee",
+  "color": "#FD7E14",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an orange tiger warrior standing upright in a green martial-arts gi with a black belt, claws out, fierce grin."
+  },
+  "charge": true
+}

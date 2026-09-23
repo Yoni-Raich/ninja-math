@@ -1,0 +1,16 @@
+{
+  "id": "cobra",
+  "name": "קוברה הקשתית",
+  "tag": "חצים מהירים",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 12,
+  "attack": "projectile",
+  "color": "#2FB380",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a green cobra archer standing upright on its coiled tail, wearing a golden desert headdress, holding a small bow with an arrow."
+  },
+  "projectile": "arrow",
+  "charge": true
+}

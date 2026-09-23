@@ -1,0 +1,36 @@
+{
+  "order": 11,
+  "id": "neon",
+  "name": "עיר הניאון",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/neon-far.webp",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): a futuristic neon ninja city at night — skyscrapers shaped like pagodas, pink and cyan neon signs (no readable text), flying cars, a big glowing moon. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple because game characters stand there."
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: a metal rooftop walkway with glowing cyan neon lines and small vents along the front edge. Side view, flat top edge where characters stand. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 124,
+    "scale": "in"
+  },
+  "path": [
+    "drone",
+    "cyberninja",
+    "hoverbike",
+    "chest",
+    "drone",
+    "hoverbike",
+    "cyberninja",
+    "megamecha"
+  ]
+}

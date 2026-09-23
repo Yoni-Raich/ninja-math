@@ -1,0 +1,12 @@
+{
+  "id": "panda",
+  "name": "פנדה",
+  "tag": "נזיר קונג פו רך ועוצמתי",
+  "price": 300,
+  "belt": 0,
+  "weapon": "bo",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a chubby panda kung-fu monk in an orange vest with a red sash, holding a bamboo staff, confident smile."
+  }
+}

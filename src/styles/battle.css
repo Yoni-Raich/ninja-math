@@ -76,3 +76,40 @@
 .zoom { animation: zoomIn 1.2s ease-in-out both; transform-origin: 30% 70%; }
 @keyframes urgent { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
 .urgent { animation: urgent .5s ease-in-out infinite; }
+
+/* ---- generated sprite heroes: same pose classes as the SVG fighters ---- */
+@keyframes spRunBob { 0%, 100% { transform: translateY(0) rotate(4deg); } 50% { transform: translateY(-9px) rotate(4deg); } }
+.pose-run .hero-sprite { animation: spIdle .3s steps(1) infinite, spRunBob .3s ease-in-out infinite; }
+@keyframes spWin { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-22px) scale(1.04); } }
+.pose-win .hero-sprite { animation: spWin .7s cubic-bezier(.3, .7, .4, 1) infinite; background-position: 66.666% 0; }
+.pose-block .hero-sprite { animation: none; background-position: 0% 0; transform: rotate(-8deg) translateX(-6px); }
+.pose-down .hero-sprite { transform: rotate(-78deg) translate(-40px, 30px); transition: transform .6s; filter: grayscale(.6); }
+.pose-strike .hero-sprite { animation: none; background-position: 66.666% 0; }
+
+/* ---- enemy wind-up (charge) ---- */
+@keyframes chargeFill { from { width: 0%; } to { width: 100%; } }
+.charge-fill { animation: chargeFill linear both; }
+@keyframes chargeGlow { 0% { opacity: .15; transform: scale(.9); } 100% { opacity: .9; transform: scale(1.15); } }
+.charge-glow { animation: chargeGlow linear both; }
+@keyframes warnShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.charge-warn { animation: warnShake .18s linear infinite; }
+@keyframes stunSpin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+.stun { animation: stunSpin 1s linear infinite; }
+@keyframes chargeJump { 0% { filter: brightness(1); } 50% { filter: brightness(2.2); } 100% { filter: brightness(1); } }
+.charge-jump { animation: chargeJump .4s ease-out; }
+
+/* ---- super attacks ---- */
+@keyframes fallIn { 0% { transform: translate(var(--fx0), var(--fy0)) rotate(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translate(0, 0) rotate(900deg); opacity: 1; } }
+.fall-in { animation: fallIn var(--t, .5s) cubic-bezier(.5, 0, .9, .5) both; }
+@keyframes sweepLeft { 0% { transform: translateX(0) scale(var(--s, 1)); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateX(var(--dx)) scale(var(--s, 1)); opacity: 0; } }
+.sweep { animation: sweepLeft var(--t, 1s) cubic-bezier(.4, .1, .6, .9) both; }
+@keyframes erupt { 0% { transform: scaleY(0); opacity: 0; } 30% { transform: scaleY(1.15); opacity: 1; } 70% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+.erupt { transform-origin: 50% 100%; animation: erupt .9s cubic-bezier(.2, .9, .3, 1) both; }
+@keyframes boltStrike { 0% { opacity: 0; transform: scaleY(0); } 20% { opacity: 1; transform: scaleY(1); } 60% { opacity: 1; } 100% { opacity: 0; } }
+.bolt { transform-origin: 50% 0; animation: boltStrike .5s ease-out both; }
+@keyframes spiral { 0% { transform: rotate(0) translate(var(--r)) rotate(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: rotate(720deg) translate(0) rotate(-720deg); opacity: 1; } }
+.spiral { animation: spiral 1s cubic-bezier(.4, 0, .6, 1) both; }
+@keyframes cloneDash { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: .75; } 70% { transform: translateX(var(--dx)); opacity: .75; } 100% { transform: translateX(var(--dx)); opacity: 0; } }
+.clone { animation: cloneDash .7s cubic-bezier(.3, .8, .3, 1) both; }
+@keyframes critZoom { 0% { transform: scale(2.4) rotate(-10deg); opacity: 0; } 25% { transform: scale(1) rotate(-10deg); opacity: 1; } 80% { opacity: 1; } 100% { transform: scale(1.1) rotate(-10deg) translateY(-16px); opacity: 0; } }
+.crit { animation: critZoom 1s ease-out both; }

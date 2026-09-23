@@ -1,0 +1,9 @@
+{
+  "id": "my-fighter",
+  "name": "שם הלוחם",
+  "tag": "תיאור קצר",
+  "price": 800,
+  "belt": 2,
+  "weapon": "katana",
+  "art": { "kind": "sprite", "prompt": "describe the hero in English: species/look, outfit colors, the weapon they hold, personality." }
+}

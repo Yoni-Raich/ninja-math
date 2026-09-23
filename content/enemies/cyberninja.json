@@ -1,0 +1,15 @@
+{
+  "id": "cyberninja",
+  "name": "נינג׳ת הסייבר",
+  "tag": "להב ניאון",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 16,
+  "attack": "melee",
+  "color": "#F06595",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a sleek cyber ninja in black armor with glowing pink neon lines, a visor mask, holding a glowing pink energy katana."
+  },
+  "charge": true
+}

@@ -1,0 +1,15 @@
+{
+  "id": "cosmicdragon",
+  "name": "קיסר הכוכבים",
+  "tag": "בוס · נובה",
+  "type": "boss",
+  "hp": 8,
+  "reward": 40,
+  "attack": "magic",
+  "color": "#9775FA",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an enormous cosmic dragon emperor whose body is a starry night sky with galaxies inside, golden horns and armor, a crown of planets orbiting its head, glowing violet eyes."
+  },
+  "charge": true
+}

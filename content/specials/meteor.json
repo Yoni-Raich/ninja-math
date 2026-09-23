@@ -1,0 +1,13 @@
+{
+  "id": "meteor",
+  "name": "נפילת המטאור",
+  "tag": "מטאור בוער מהשמיים",
+  "price": 1800,
+  "belt": 4,
+  "fx": "meteor",
+  "color": "#FF922B",
+  "art": {
+    "kind": "image",
+    "prompt": "a flaming meteor rock falling diagonally down-left with a long bright fire trail behind it (trail toward the upper right). A single effect on a fully TRANSPARENT background, no ground, no text."
+  }
+}

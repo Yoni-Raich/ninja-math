@@ -1,0 +1,15 @@
+{
+  "id": "jelly",
+  "name": "מדוזת הברקים",
+  "tag": "עוקצת בחשמל",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 11,
+  "attack": "magic",
+  "color": "#DA77F2",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a glowing pink-purple jellyfish spirit with long wavy tentacles crackling with small electric sparks, cute angry eyes, floating."
+  },
+  "charge": true
+}

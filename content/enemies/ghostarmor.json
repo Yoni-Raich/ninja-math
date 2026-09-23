@@ -1,0 +1,15 @@
+{
+  "id": "ghostarmor",
+  "name": "שריון הרפאים",
+  "tag": "מרחף ומכשף",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 13,
+  "attack": "magic",
+  "color": "#74C0FC",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an empty floating samurai armor haunted by a friendly blue ghost flame inside the helmet, glowing blue eyes, ghostly wisps instead of legs."
+  },
+  "charge": true
+}

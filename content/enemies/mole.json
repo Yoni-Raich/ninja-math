@@ -1,0 +1,15 @@
+{
+  "id": "mole",
+  "name": "חפרפרת הכורה",
+  "tag": "מכוש מסתובב",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 14,
+  "attack": "melee",
+  "color": "#A47148",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a brown mole ninja miner with a headlamp helmet, goggles, a black scarf, swinging a pickaxe."
+  },
+  "charge": true
+}

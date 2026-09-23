@@ -1,0 +1,12 @@
+{
+  "id": "icenin",
+  "name": "שלג",
+  "tag": "נינג׳ת הקרח",
+  "price": 750,
+  "belt": 2,
+  "weapon": "odachi",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an ice ninja girl in a white-and-ice-blue outfit, frosty hair, holding a long ice odachi sword that glows."
+  }
+}

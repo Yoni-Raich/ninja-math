@@ -1,0 +1,62 @@
+{
+  "crystalsword": {
+    "w": 215,
+    "h": 640
+  },
+  "dragonclaws": {
+    "w": 367,
+    "h": 640
+  },
+  "firedragon": {
+    "w": 640,
+    "h": 268
+  },
+  "flamekatana": {
+    "w": 86,
+    "h": 640
+  },
+  "galaxyblade": {
+    "w": 75,
+    "h": 640
+  },
+  "icespear": {
+    "w": 116,
+    "h": 640
+  },
+  "icespikes": {
+    "w": 640,
+    "h": 626
+  },
+  "meteor": {
+    "w": 640,
+    "h": 452
+  },
+  "moonscythe": {
+    "w": 332,
+    "h": 640
+  },
+  "starshuriken": {
+    "w": 436,
+    "h": 640
+  },
+  "sunstaff": {
+    "w": 218,
+    "h": 640
+  },
+  "thunderhammer": {
+    "w": 371,
+    "h": 640
+  },
+  "tornado": {
+    "w": 418,
+    "h": 640
+  },
+  "tsunami": {
+    "w": 640,
+    "h": 423
+  },
+  "windbow": {
+    "w": 155,
+    "h": 640
+  }
+}

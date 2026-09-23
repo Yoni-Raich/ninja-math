@@ -1,0 +1,12 @@
+{
+  "id": "spacenin",
+  "name": "אסטרו",
+  "tag": "נינג׳ת החלל",
+  "price": 1600,
+  "belt": 4,
+  "weapon": "katana",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a space ninja in a sleek dark-blue space suit with a clear bubble visor over a ninja mask, glowing purple energy katana, jetpack."
+  }
+}

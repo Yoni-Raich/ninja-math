@@ -1,0 +1,36 @@
+{
+  "order": 10,
+  "id": "jungle",
+  "name": "חורבות הג׳ונגל",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/jungle-far.webp",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): lush jungle ruins — a mossy stepped stone temple, giant tropical leaves, vines, a tall waterfall, colorful birds, golden light. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple because game characters stand there."
+    },
+    {
+      "src": "backgrounds/jungle-ground.webp",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: mossy ancient stone tiles with ferns and vines along the front edge. Side view, flat top edge where characters stand. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 116,
+    "scale": "yo"
+  },
+  "path": [
+    "tiger",
+    "frog",
+    "parrot",
+    "chest",
+    "frog",
+    "tiger",
+    "parrot",
+    "gorilla"
+  ]
+}

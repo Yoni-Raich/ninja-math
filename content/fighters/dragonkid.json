@@ -1,0 +1,12 @@
+{
+  "id": "dragonkid",
+  "name": "דרקו",
+  "tag": "לוחם הדרקון הצעיר",
+  "price": 1100,
+  "belt": 3,
+  "weapon": "nunchaku",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a young dragon-boy warrior with small green horns, a dragon tail, jade armor vest, holding nunchaku."
+  }
+}

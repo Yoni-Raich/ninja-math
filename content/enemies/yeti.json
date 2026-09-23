@@ -11,5 +11,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "a big fluffy white yeti with a light blue face and small horns, wearing a straw rope belt, holding a huge snowball ready to throw."
-  }
+  },
+  "charge": true
 }

@@ -1,0 +1,36 @@
+{
+  "order": 12,
+  "id": "moon",
+  "name": "מקדש הירח",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/moon-far.webp",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): a temple on the moon — grey lunar landscape with craters, a glowing white pagoda temple, planet Earth rising in a starry purple sky, shooting stars. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple because game characters stand there."
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: a grey lunar rock surface with small craters and softly glowing blue runes along the front edge. Side view, flat top edge where characters stand. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 88,
+    "scale": "hira"
+  },
+  "path": [
+    "moonrabbit",
+    "alienblob",
+    "starspirit",
+    "chest",
+    "alienblob",
+    "moonrabbit",
+    "starspirit",
+    "cosmicdragon"
+  ]
+}

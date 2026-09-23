@@ -1,0 +1,36 @@
+{
+  "order": 9,
+  "id": "crystal",
+  "name": "מערות הקריסטל",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/crystal-far.webp",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): a vast glowing crystal cave — huge teal, violet and pink crystal clusters, an underground waterfall, sparkling light beams, a mining track bridge. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple because game characters stand there."
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: a rocky cave floor studded with small glowing crystals, with a front edge of dark stones. Side view, flat top edge where characters stand. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 100,
+    "scale": "yo"
+  },
+  "path": [
+    "crystalbat",
+    "mole",
+    "gemgolem",
+    "chest",
+    "crystalbat",
+    "gemgolem",
+    "mole",
+    "crystaldragon"
+  ]
+}

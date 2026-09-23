@@ -1,0 +1,15 @@
+{
+  "id": "icespear",
+  "name": "חנית הקרח",
+  "tag": "חנית קפואה",
+  "price": 400,
+  "belt": 1,
+  "dmg": 1,
+  "crit": 14,
+  "ranged": false,
+  "color": "#74C0FC",
+  "art": {
+    "kind": "image",
+    "prompt": "a spear with a long ice-crystal spearhead, a silver shaft wrapped in blue cloth, frost sparkles. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

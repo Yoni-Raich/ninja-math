@@ -10,5 +10,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "a giant magma demon king made of dark volcanic rock with glowing orange lava cracks, horns of fire, a molten gold crown, holding a flaming war hammer."
-  }
+  },
+  "charge": true
 }

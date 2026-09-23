@@ -1,0 +1,12 @@
+{
+  "id": "goldninja",
+  "name": "זהבי",
+  "tag": "נינג׳ת הזהב האגדית",
+  "price": 2500,
+  "belt": 4,
+  "weapon": "katana",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a legendary ninja in shining golden armor with a flowing red scarf, golden mask, glowing golden katana, heroic pose."
+  }
+}

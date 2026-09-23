@@ -1,0 +1,16 @@
+{
+  "id": "starspirit",
+  "name": "רוח הכוכב",
+  "tag": "יורה כוכבים",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 17,
+  "attack": "projectile",
+  "color": "#FFD43B",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a small glowing golden star spirit with a happy-angry face, a trail of sparkles, tiny arms holding a star shuriken."
+  },
+  "projectile": "star",
+  "charge": true
+}

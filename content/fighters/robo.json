@@ -1,0 +1,12 @@
+{
+  "id": "robo",
+  "name": "טק",
+  "tag": "נינג׳ה רובוט קטן",
+  "price": 500,
+  "belt": 1,
+  "weapon": "kunai",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a small friendly white robot ninja with a cyan visor face, a red scarf, glowing energy kunai in each hand."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "yokaiking",
+  "name": "מלך הרוחות",
+  "tag": "בוס · לפידים כחולים",
+  "type": "boss",
+  "hp": 6,
+  "reward": 26,
+  "attack": "magic",
+  "color": "#4DABF7",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a giant grinning yokai king ghost made of purple smoke with a crown of floating paper lanterns, long flowing sleeves, holding a lantern staff with blue fire."
+  },
+  "charge": true
+}

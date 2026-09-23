@@ -33,9 +33,27 @@ public/backgrounds/*.png       image-world background layers
 | `hp` | hits needed (bosses 3-4) |
 | `reward` | coins per hit |
 | `attack` | how it hits back on a wrong answer: `melee` (lunges), `projectile` (throws), `magic` (charge + beam) |
-| `projectile` | `feather`, `wisp`, `water`, `snowball`, `fireball`, `laser`, `bolt`, `shuriken` |
+| `projectile` | `feather`, `wisp`, `water`, `snowball`, `fireball`, `laser`, `bolt`, `shuriken`, `arrow`, `needle`, `sand`, `poison`, `crystal`, `star` |
 | `color` | effect color for sparks, beams and projectiles |
+| `charge` | `true` = winds up an attack with a visible bar while the question is open. Answering in time interrupts it (stun + bonus coins); a wrong answer speeds it up. The wind-up time adapts to the child's own recent speed (never under 6.5 s). Bosses in a belt fight use the strict belt timer. |
 | `art.kind` | `sprite` (Codex-generated) or `svg` (hand-drawn components in `src/art`) |
+
+## Add a fighter, weapon or super attack
+
+Copy the matching template from `templates/` into `fighters/`, `weapons/` or `specials/`, then generate its art:
+
+```bash
+npm run sprites -- my-fighter      # fighters: 4-frame sprite sheet (same as enemies)
+npm run images -- my-weapon        # weapons and super attacks: one transparent image
+```
+
+- `belt`: the belt level (0 = white ... 4 = black) needed before it can be bought. Belt-locked items show a lock and
+  the belt name in the shop, so learning progress unlocks new things to discover.
+- Weapons: `dmg` damage per hit, `crit` % chance of a double-damage critical, `ranged` thrown instead of a dash.
+  Every weapon upgrades in the shop to level 5 (more damage at 3 and 5, more crits, a glowing trail that changes color).
+- Super attacks: `fx` picks the cinematic — `slashes`, `rain`, `petals`, `lightning`, `clones` (no image needed),
+  or `spikes`, `tornado`, `dragon`, `wave`, `meteor` (use the generated image).
+- Anything whose art hasn't been generated yet is simply hidden from the shop.
 
 ## Add a world
 

@@ -1,0 +1,15 @@
+{
+  "id": "moonrabbit",
+  "name": "ארנב הירח",
+  "tag": "פטיש מוצ׳י",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 17,
+  "attack": "melee",
+  "color": "#F8F9FA",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a white moon rabbit ninja with long ears tied with a purple ribbon, holding a big wooden mochi hammer, determined face."
+  },
+  "charge": true
+}

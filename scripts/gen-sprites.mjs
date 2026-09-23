@@ -22,9 +22,9 @@ const FRAMES = ['idle fighting stance', 'idle stance, slightly lower (breathing)
 mkdirSync('content/sprites/raw', { recursive: true });
 mkdirSync('public/sprites', { recursive: true });
 
-const specs = readdirSync('content/enemies').filter((f) => f.endsWith('.json'))
-  .map((f) => JSON.parse(readFileSync('content/enemies/' + f, 'utf8')))
-  .filter((e) => e.art && e.art.kind === 'sprite');
+// Enemies and sprite heroes (content/fighters) share the same 4-frame sheet format.
+const readDir = (d) => (existsSync(d) ? readdirSync(d).filter((f) => f.endsWith('.json')).map((f) => ({ ...JSON.parse(readFileSync(d + '/' + f, 'utf8')), hero: d.endsWith('fighters') })) : []);
+const specs = [...readDir('content/enemies'), ...readDir('content/fighters')].filter((e) => e.art && e.art.kind === 'sprite');
 
 const args = process.argv.slice(2);
 const onlyProcess = args.includes('--process');
@@ -33,11 +33,11 @@ const ids = args.filter((a) => !a.startsWith('--'));
 function prompt(e, out) {
   const frames = (e.art.frames || FRAMES).map((f, i) => `${i + 1}) ${f}`).join(', ');
   return `Use your image generation tool to create ONE image, then save it as a PNG file at exactly this path: ${out}
-Do not write any code or modify any other files. If the file already exists, overwrite it.
+Do not write any code or modify any other files. Save ONLY the image you generate in this conversation: copy the exact file path your image tool reports. Never copy or reuse any other existing image file.
 
 Image: a game sprite sheet on a fully TRANSPARENT background (alpha channel, no backdrop, no ground, no shadow, no text, no frame borders).
 Exactly 4 frames of the SAME character in ONE horizontal row, equal-width cells, generous empty spacing between frames, full body visible in every frame, identical size and scale in every frame, feet (or lowest point) on the same baseline.
-Character: ${e.art.prompt} Side view FACING RIGHT.${e.type === 'boss' ? ' This is a big, imposing BOSS character — powerful and dramatic, but still kid-friendly (not gory or scary).' : ''}
+Character: ${e.art.prompt} Side view FACING RIGHT.${e.hero ? ' This is a playable HERO — heroic, appealing and cool, holding their weapon.' : ''}${e.type === 'boss' ? ' This is a big, imposing BOSS character — powerful and dramatic, but still kid-friendly (not gory or scary).' : ''}
 Frames left to right: ${frames}.
 Art style: match the attached reference exactly — flat cartoon vector look, thick dark navy outlines (#0B0B14), bold flat colors with simple cel shading, kid-friendly but cool ninja-action style.`;
 }
@@ -52,7 +52,7 @@ function runCodex(e) {
     p.on('close', () => {
       // Parallel Codex runs can pick up each other's image; treat an exact copy of another sheet as a failure.
       const hash = (f) => createHash('sha1').update(readFileSync(f)).digest('hex');
-      const dup = existsSync(out) && readdirSync('content/sprites/raw').some((f) => f !== e.id + '.png' && hash('content/sprites/raw/' + f) === hash(out));
+      const dup = existsSync(out) && readdirSync('content/sprites/raw').some((f) => f.endsWith('.png') && f !== e.id + '.png' && hash('content/sprites/raw/' + f) === hash(out));
       if (dup) unlinkSync(out);
       const ok = existsSync(out);
       console.log(`${ok ? 'OK  ' : 'FAIL'} ${e.id} (${Math.round((Date.now() - t0) / 1000)}s)`);
@@ -162,8 +162,10 @@ async function main() {
   for (const e of specs) {
     if (!existsSync(`content/sprites/raw/${e.id}.png`)) continue;
     if (ids.length && !ids.includes(e.id) && manifest[e.id]) continue;
-    manifest[e.id] = await processSheet(e.id);
-    console.log('processed', e.id);
+    try {
+      manifest[e.id] = await processSheet(e.id);
+      console.log('processed', e.id);
+    } catch (err) { console.log('PROCESS FAIL', e.id, err.message); }
   }
   writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 }

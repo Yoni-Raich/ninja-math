@@ -1,0 +1,13 @@
+{
+  "id": "icespikes",
+  "name": "סופת הקרח",
+  "tag": "קוצי קרח מהאדמה",
+  "price": 800,
+  "belt": 2,
+  "fx": "spikes",
+  "color": "#74C0FC",
+  "art": {
+    "kind": "image",
+    "prompt": "a cluster of sharp glowing ice crystal spikes erupting upward from the ground, frosty sparkles, wide at the base. A single effect on a fully TRANSPARENT background, no ground, no text."
+  }
+}

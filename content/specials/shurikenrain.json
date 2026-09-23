@@ -1,0 +1,9 @@
+{
+  "id": "shurikenrain",
+  "name": "גשם שוריקנים",
+  "tag": "מטר כוכבים מהשמיים",
+  "price": 250,
+  "belt": 0,
+  "fx": "rain",
+  "color": "#C9D3DF"
+}

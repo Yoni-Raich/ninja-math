@@ -1,0 +1,12 @@
+{
+  "id": "bear",
+  "name": "גריזלי",
+  "tag": "סמוראי הדוב",
+  "price": 900,
+  "belt": 2,
+  "weapon": "odachi",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a big brown grizzly bear samurai in green lacquered armor holding a giant battle axe, friendly scar on the eyebrow."
+  }
+}

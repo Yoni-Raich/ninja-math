@@ -1,0 +1,12 @@
+{
+  "id": "sunknight",
+  "name": "שמש",
+  "tag": "אביר השמש",
+  "price": 1300,
+  "belt": 3,
+  "weapon": "bo",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a monk-knight in white and gold robes with a glowing sun emblem, a golden staff topped with a radiant sun."
+  }
+}

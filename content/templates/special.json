@@ -1,0 +1,10 @@
+{
+  "id": "my-special",
+  "name": "שם המתקפה",
+  "tag": "תיאור קצר",
+  "price": 900,
+  "belt": 2,
+  "fx": "tornado",
+  "color": "#A5D8FF",
+  "art": { "kind": "image", "prompt": "describe the effect art. A single effect on a fully TRANSPARENT background, no ground, no text." }
+}

@@ -1,0 +1,36 @@
+{
+  "order": 8,
+  "id": "haunted",
+  "name": "טירת הרפאים",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/haunted-far.webp",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): a spooky but kid-friendly haunted Japanese castle at night — purple sky, a giant full moon, floating paper lanterns, crooked pagoda towers, friendly bats silhouettes, glowing windows. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple because game characters stand there."
+    },
+    {
+      "src": "backgrounds/haunted-ground.webp",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: a cobblestone castle courtyard with carved glowing jack-o-lanterns and small candles along the front edge. Side view, flat top edge where characters stand. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 98,
+    "scale": "hira"
+  },
+  "path": [
+    "skeleton",
+    "pumpkin",
+    "ghostarmor",
+    "chest",
+    "pumpkin",
+    "skeleton",
+    "ghostarmor",
+    "yokaiking"
+  ]
+}

@@ -9,29 +9,10 @@ export const SKILLS = [
 ];
 
 // Enemies and worlds are data: see content/README.md.
-export { FOES, WORLDS } from './content.js';
+export { FOES, WORLDS, FIGHTERS, WEAPONS, SPECIALS, IMAGES } from './content.js';
 export const MAX_HEARTS = 3;
 
-export const FIGHTERS = [
-  { id: 'kage', name: 'קאגה', tag: 'נינג׳ת הצללים — שקט ומהיר', special: 'סערת צללים', price: 0, glow: '#E63946' },
-  { id: 'sakura', name: 'סאקורה', tag: 'קונואיצ׳י עם זוג קונאי', special: 'גשם פריחה', price: 150, glow: '#FF8FB1' },
-  { id: 'raiden', name: 'ריידן', tag: 'נינג׳ת הברק והשוריקן', special: 'שוריקן ברק', price: 220, glow: '#FCC419' },
-  { id: 'jin', name: 'ג׳ין', tag: 'נזיר קונג פו עם מקל בו', special: 'מקל הרעם', price: 280, glow: '#E8590C' },
-  { id: 'ryuko', name: 'ריוקו', tag: 'לוחמת הדרקון', special: 'אגרוף הדרקון', price: 350, glow: '#20C997' },
-  { id: 'ryu', name: 'ריו', tag: 'סמוראי בשריון אדום', special: 'חרב השחר', price: 450, glow: '#B42318' }
-];
-
-export const WEAPONS = [
-  { id: 'auto', name: 'נשק הבית', tag: 'הנשק של הלוחם', price: 0, icon: 'katana' },
-  { id: 'katana', name: 'קטאנה', tag: 'חרב קלאסית', price: 40 },
-  { id: 'kunai', name: 'קונאי', tag: 'להב קצר ומהיר', price: 60 },
-  { id: 'shuriken', name: 'שוריקן', tag: 'כוכב מסתובב', price: 80 },
-  { id: 'bo', name: 'מקל בו', tag: 'מקל ארוך', price: 90 },
-  { id: 'nunchaku', name: 'נונצ׳אקו', tag: 'שני מקלות ושרשרת', price: 110 },
-  { id: 'odachi', name: 'אודאצ׳י', tag: 'חרב ענקית', price: 150 },
-  { id: 'kusarigama', name: 'קוסאריגמה', tag: 'מגל ושרשרת', price: 180 },
-  { id: 'tessen', name: 'מניפת קרב', tag: 'מניפת מתכת', price: 220 }
-];
+export * from './base.js';
 
 export const AURAS = [
   { id: 'none', name: 'ללא', tag: 'בלי הילה', price: 0, glow: '#3A3F5C' },
@@ -43,5 +24,3 @@ export const AURAS = [
 ];
 
 export const HITS = ['פגיעה!', 'בול!', 'מכה חזקה!', 'מושלם!', 'חתך!'];
-
-export const SIGNATURE = { kage: 'katana', sakura: 'kunai', ryu: 'odachi', jin: 'bo', raiden: 'shuriken', ryuko: 'nunchaku' };

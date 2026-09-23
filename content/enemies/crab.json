@@ -1,0 +1,15 @@
+{
+  "id": "crab",
+  "name": "סרטן הסמוראי",
+  "tag": "צבת ברזל",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 12,
+  "attack": "melee",
+  "color": "#FF6B5B",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a red crab samurai standing upright on its back legs, wearing a small samurai helmet, two huge claws raised like swords."
+  },
+  "charge": true
+}

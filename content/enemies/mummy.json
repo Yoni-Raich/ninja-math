@@ -1,0 +1,16 @@
+{
+  "id": "mummy",
+  "name": "נינג׳ת התחבושות",
+  "tag": "זורקת חול",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 11,
+  "attack": "projectile",
+  "color": "#E9D8A6",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a playful mummy ninja wrapped in loose white bandages with one glowing blue eye peeking out, a red scarf, throwing a swirl of sand."
+  },
+  "projectile": "sand",
+  "charge": true
+}

@@ -1,0 +1,15 @@
+{
+  "id": "dragonclaws",
+  "name": "טפרי הדרקון",
+  "tag": "טפרים ירוקים",
+  "price": 650,
+  "belt": 2,
+  "dmg": 1,
+  "crit": 22,
+  "ranged": false,
+  "color": "#20C997",
+  "art": {
+    "kind": "image",
+    "prompt": "a pair of jade dragon-claw gauntlet blades, three curved green blades on a golden gauntlet. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

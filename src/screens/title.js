@@ -1,7 +1,8 @@
 import Scene from '../art/Scene.js';
 import Fighter from '../art/Fighter.js';
 import { load, update } from '../game/save.js';
-import { WORLDS } from '../game/data.js';
+import { WORLDS, FIGHTERS } from '../game/data.js';
+import { heroArt } from '../game/art.js';
 import { coin, speakerIcon } from '../ui.js';
 import { sfx, startMusic, stopMusic, unlockAudio } from '../audio.js';
 
@@ -13,7 +14,7 @@ export default function title(root, { go }) {
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 55%, rgba(11,11,20,0) 40%, rgba(11,11,20,.75) 100%);"></div>
   <div style="position:absolute;left:30px;bottom:46px;width:200px;height:220px;transform:scale(.95);transform-origin:50% 100%;filter:brightness(.7);"><div class="pose-idle">${Fighter({ kind: others[0] })}</div></div>
   <div style="position:absolute;left:300px;bottom:46px;width:200px;height:220px;transform:scale(.95);transform-origin:50% 100%;filter:brightness(.7);"><div class="pose-idle">${Fighter({ kind: others[1] })}</div></div>
-  <div style="position:absolute;left:160px;bottom:36px;width:200px;height:220px;transform:scale(1.25);transform-origin:50% 100%;"><div class="pose-idle">${Fighter({ kind: s.eq.fighter, weapon: s.eq.weapon, aura: s.eq.aura === 'none' ? 'shadow' : s.eq.aura })}</div></div>
+  <div style="position:absolute;left:160px;bottom:36px;width:200px;height:220px;transform:scale(1.25);transform-origin:50% 100%;"><div class="pose-idle">${heroArt(FIGHTERS.find((f) => f.id === s.eq.fighter) || FIGHTERS[0], { weapon: s.eq.weapon, aura: s.eq.aura === 'none' ? 'shadow' : s.eq.aura })}</div></div>
 
   <div style="position:absolute;top:40px;right:40px;width:400px;display:flex;flex-direction:column;align-items:center;">
     <span class="num sk" style="padding:2px 16px;background:#B42318;color:#FFFFFF;font-size:16px;">קרבות חשבון</span>

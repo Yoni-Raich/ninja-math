@@ -1,0 +1,12 @@
+{
+  "id": "foxgirl",
+  "name": "קיטסונה",
+  "tag": "שועלת האש הכחולה",
+  "price": 600,
+  "belt": 1,
+  "weapon": "tessen",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a fox-girl kunoichi with orange fox ears and two fluffy tails, a blue kimono, a war fan, blue fox-fire floating around her."
+  }
+}

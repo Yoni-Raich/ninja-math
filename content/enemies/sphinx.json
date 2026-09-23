@@ -1,0 +1,15 @@
+{
+  "id": "sphinx",
+  "name": "ספינקס החולות",
+  "tag": "בוס · סופת חול",
+  "type": "boss",
+  "hp": 5,
+  "reward": 24,
+  "attack": "magic",
+  "color": "#F5B82E",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a huge golden sphinx lion warrior with a blue-and-gold pharaoh headdress, glowing eyes, standing on all fours with sand swirling around its paws, majestic."
+  },
+  "charge": true
+}

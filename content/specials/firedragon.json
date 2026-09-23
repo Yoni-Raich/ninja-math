@@ -1,0 +1,13 @@
+{
+  "id": "firedragon",
+  "name": "דרקון האש",
+  "tag": "דרקון להבות עף",
+  "price": 1200,
+  "belt": 3,
+  "fx": "dragon",
+  "color": "#FF6B1A",
+  "art": {
+    "kind": "image",
+    "prompt": "a long serpentine eastern dragon made entirely of orange and yellow flames, flying horizontally facing LEFT, mouth open. A single effect on a fully TRANSPARENT background, no ground, no text."
+  }
+}

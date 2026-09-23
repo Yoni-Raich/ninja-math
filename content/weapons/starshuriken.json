@@ -1,0 +1,15 @@
+{
+  "id": "starshuriken",
+  "name": "שוריקן הכוכבים",
+  "tag": "כוכב זהב שחוזר",
+  "price": 450,
+  "belt": 1,
+  "dmg": 1,
+  "crit": 16,
+  "ranged": true,
+  "color": "#FFD43B",
+  "art": {
+    "kind": "image",
+    "prompt": "a large golden eight-pointed star shuriken glowing with sparkles. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

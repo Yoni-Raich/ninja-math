@@ -1,0 +1,16 @@
+{
+  "id": "parrot",
+  "name": "תוכי הקשת",
+  "tag": "חצים צבעוניים",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 14,
+  "attack": "projectile",
+  "color": "#FA5252",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a colorful scarlet macaw parrot archer with rainbow feathers, a leaf headband, holding a wooden bow, one wing drawing an arrow."
+  },
+  "projectile": "arrow",
+  "charge": true
+}

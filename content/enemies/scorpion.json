@@ -1,0 +1,15 @@
+{
+  "id": "scorpion",
+  "name": "עקרב המדבר",
+  "tag": "עוקץ חד",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 12,
+  "attack": "melee",
+  "color": "#E8A33D",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a sand-colored scorpion warrior with a bronze armored shell, a glowing stinger tail curled up high, big pincers, fierce but cute."
+  },
+  "charge": true
+}

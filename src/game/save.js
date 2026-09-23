@@ -3,8 +3,10 @@ const KEY = 'ninja-math-save-v1';
 function fresh() {
   return {
     coins: 0,
-    owned: { kage: true, auto: true, none: true },
-    eq: { fighter: 'kage', weapon: 'auto', aura: 'none' },
+    owned: { kage: true, auto: true, none: true, blades: true },
+    eq: { fighter: 'kage', weapon: 'auto', aura: 'none', special: 'blades' },
+    wlv: {},
+    seen: {},
     level: 0,
     hist: [],
     skills: {},
@@ -31,6 +33,7 @@ export function load() {
       data.eq = Object.assign(fresh().eq, saved.eq || {});
       // v1 saves leveled up on accuracy alone; restart the belt ladder under the timed rules (coins and items stay).
       if ((saved.version || 1) < 2) { data.level = 0; data.hist = []; data.skills = {}; }
+      data.owned = Object.assign({ blades: true }, data.owned);
       data.version = 2;
     }
   } catch (e) {

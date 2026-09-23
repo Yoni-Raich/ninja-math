@@ -1,0 +1,16 @@
+{
+  "id": "frog",
+  "name": "צפרדע הרעל",
+  "tag": "יורקת רעל",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 14,
+  "attack": "projectile",
+  "color": "#40C057",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a bright blue-and-yellow poison dart frog ninja with a red scarf, crouched, cheeks puffed about to spit a green poison ball."
+  },
+  "projectile": "poison",
+  "charge": true
+}

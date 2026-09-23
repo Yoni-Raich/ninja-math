@@ -103,6 +103,7 @@ function dashboard(root, go) {
           <span><b>2. שטף:</b> לפחות ${FAST_NEEDED} מהן מהר מהיעד. הזמן נמדד בשקט, בלי טיימר על המסך.</span>
           <span><b>3. קרב חגורה:</b> הבוס הבא מגיע עם טיימר (פי ${CHALLENGE_FACTOR} מהיעד). מנצחים = חגורה חדשה.</span>
           <span style="color:#5A5A6E;">הרבה טעויות ברצף ← צעד אחורה, בשקט. בכל עולם 3 לבבות.</span>
+          <span style="color:#5A5A6E;">אויבים עם מד טעינה: הזמן מותאם לקצב של הילד (פי 2 מהזמן הרגיל שלו, לפחות 6.5 שנ׳). עונים בזמן = עוצרים את המתקפה.</span>
         </div>
         <div style="padding:6px 12px;background:#FFFFFF;border:1px solid #DCD2BE;display:flex;flex-direction:column;">
           ${toggle('hints', 'רמזים חזותיים (נקודות ומסגרת עשר)', s.settings.hints)}

@@ -1,0 +1,15 @@
+{
+  "id": "kraken",
+  "name": "שוגון התמנון",
+  "tag": "בוס · דיו וזרועות",
+  "type": "boss",
+  "hp": 5,
+  "reward": 22,
+  "attack": "magic",
+  "color": "#7048E8",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a giant purple octopus shogun wearing a golden samurai kabuto helmet and a flowing captain cape, eight tentacles each holding a small weapon, big glowing eyes."
+  },
+  "charge": true
+}

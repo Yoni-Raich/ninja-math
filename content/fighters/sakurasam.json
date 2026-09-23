@@ -1,0 +1,12 @@
+{
+  "id": "sakurasam",
+  "name": "יוקי",
+  "tag": "סמוראית הדובדבן",
+  "price": 400,
+  "belt": 0,
+  "weapon": "katana",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a young samurai girl in pink and white armor with cherry-blossom patterns, a high ponytail, holding a katana, determined."
+  }
+}

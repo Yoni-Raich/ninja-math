@@ -1,0 +1,16 @@
+{
+  "id": "drone",
+  "name": "רחפן הצלפים",
+  "tag": "לייזר מדויק",
+  "type": "enemy",
+  "hp": 3,
+  "reward": 15,
+  "attack": "projectile",
+  "color": "#22D3EE",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a small hovering combat drone with a cute single glowing cyan eye lens, four propellers, a small blaster underneath, neon stripes."
+  },
+  "projectile": "laser",
+  "charge": true
+}

@@ -1,0 +1,15 @@
+{
+  "id": "alienblob",
+  "name": "חייזר הג׳לי",
+  "tag": "גלי אנרגיה",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 17,
+  "attack": "magic",
+  "color": "#94D82D",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a round lime-green jelly alien with three eyes and a tiny ninja headband, wobbly body, glowing antennae."
+  },
+  "charge": true
+}

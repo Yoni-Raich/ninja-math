@@ -1,0 +1,13 @@
+{
+  "id": "tsunami",
+  "name": "גל הצונאמי",
+  "tag": "גל ענק שוטף",
+  "price": 1400,
+  "belt": 3,
+  "fx": "wave",
+  "color": "#339AF0",
+  "art": {
+    "kind": "image",
+    "prompt": "a giant curling ocean wave in the style of a Japanese woodblock print, deep blue with white foam claws, the wave crashing toward the LEFT. A single effect on a fully TRANSPARENT background, no ground, no text."
+  }
+}

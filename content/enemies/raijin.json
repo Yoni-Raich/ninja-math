@@ -10,5 +10,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "Raijin the thunder god as a big muscular blue-skinned warrior with wild white hair, small horns, a tiger-striped loincloth, and a ring of taiko drums floating behind him crackling with yellow lightning, holding drumsticks."
-  }
+  },
+  "charge": true
 }

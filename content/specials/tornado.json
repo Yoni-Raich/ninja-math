@@ -1,0 +1,13 @@
+{
+  "id": "tornado",
+  "name": "הטורנדו",
+  "tag": "מערבולת ענקית",
+  "price": 950,
+  "belt": 2,
+  "fx": "tornado",
+  "color": "#A5D8FF",
+  "art": {
+    "kind": "image",
+    "prompt": "a tall spinning cartoon tornado of wind with leaves and sparkles swirling in it, narrow at the bottom, wide at the top. A single effect on a fully TRANSPARENT background, no ground, no text."
+  }
+}

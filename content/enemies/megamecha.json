@@ -1,0 +1,15 @@
+{
+  "id": "megamecha",
+  "name": "רובו־שוגון",
+  "tag": "בוס · תותח פלזמה",
+  "type": "boss",
+  "hp": 7,
+  "reward": 32,
+  "attack": "magic",
+  "color": "#22D3EE",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a giant samurai mecha robot with red and white armor plates, glowing cyan eyes and chest core, a huge energy katana on its back and a plasma cannon arm."
+  },
+  "charge": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "blades",
+  "name": "סערת להבים",
+  "tag": "חתכים בצורת X",
+  "price": 0,
+  "belt": 0,
+  "fx": "slashes",
+  "color": "#E63946"
+}

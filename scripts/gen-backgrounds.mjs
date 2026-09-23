@@ -21,7 +21,7 @@ function codex(promptText, out) {
     if (existsSync(out)) unlinkSync(out);
     const p = spawn(CODEX, ['exec', '-m', MODEL, '--skip-git-repo-check', '-s', 'workspace-write', '-C', resolve('content'), '--image=' + resolve('content/ref/style-reference.png'), '-'], { stdio: ['pipe', 'ignore', 'ignore'] });
     p.stdin.end(`Use your image generation tool to create ONE image, then save it as a PNG file at exactly this path: ${out}
-Do not write any code or modify any other files.
+Do not write any code or modify any other files. Save ONLY the image you generate in this conversation: copy the exact file path your image tool reports. Never copy or reuse any other existing image file.
 ${promptText}
 Art style: match the attached reference — flat cartoon vector look, clean shapes, thick dark navy outlines (#0B0B14) on near elements, bold flat colors with simple cel shading.`);
     p.on('close', () => res(existsSync(out)));
@@ -29,12 +29,13 @@ Art style: match the attached reference — flat cartoon vector look, clean shap
 }
 
 const jobs = [];
+const JOBS = Number(process.env.BG_JOBS || 2);
 for (const w of worlds) for (const layer of w.layers || []) {
   if (!layer.prompt) continue;
   const raw = resolve('content/backgrounds/raw', layer.src.split('/').pop());
   const dst = resolve('public', layer.src);
   if (!only.length && existsSync(dst)) continue;
-  jobs.push((async () => {
+  jobs.push(async () => {
     mkdirSync(dirname(raw), { recursive: true });
     mkdirSync(dirname(dst), { recursive: true });
     const ok = (await codex(layer.prompt, raw)) || (await codex(layer.prompt, raw));
@@ -46,6 +47,7 @@ for (const w of worlds) for (const layer of w.layers || []) {
       .composite([{ input: tile, left: 0, top: 0 }, { input: mirrored, left: meta.width, top: 0 }])
       .png({ compressionLevel: 9 }).toFile(dst);
     console.log('OK', layer.src, meta.width * 2 + 'x' + layer.height);
-  })());
+  });
 }
-await Promise.all(jobs);
+console.log(`generating ${jobs.length} background layer(s)...`);
+await Promise.all(Array.from({ length: JOBS }, async () => { while (jobs.length) await jobs.shift()(); }));

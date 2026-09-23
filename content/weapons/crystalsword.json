@@ -1,0 +1,15 @@
+{
+  "id": "crystalsword",
+  "name": "חרב הקריסטל",
+  "tag": "להב יהלום",
+  "price": 900,
+  "belt": 3,
+  "dmg": 2,
+  "crit": 12,
+  "ranged": false,
+  "color": "#BE4BDB",
+  "art": {
+    "kind": "image",
+    "prompt": "a sword with a translucent purple crystal blade glowing from within, silver handle. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

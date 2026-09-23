@@ -1,0 +1,16 @@
+{
+  "id": "hoverbike",
+  "name": "שודד הריחוף",
+  "tag": "רוכב ויורה",
+  "type": "enemy",
+  "hp": 4,
+  "reward": 16,
+  "attack": "projectile",
+  "color": "#FCC419",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a punk raccoon bandit riding a small hover-bike with yellow neon lights, wearing goggles and a scarf, pointing a blaster forward."
+  },
+  "projectile": "laser",
+  "charge": true
+}

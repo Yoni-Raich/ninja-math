@@ -128,5 +128,405 @@
       279,
       313
     ]
+  },
+  "alienblob": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      28,
+      32,
+      292,
+      314
+    ]
+  },
+  "cobra": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      48,
+      0,
+      272,
+      312
+    ]
+  },
+  "cosmicdragon": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      39,
+      52,
+      281,
+      316
+    ]
+  },
+  "crab": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      53,
+      71,
+      268,
+      316
+    ]
+  },
+  "crystalbat": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      43,
+      54,
+      278,
+      316
+    ]
+  },
+  "crystaldragon": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      29,
+      63,
+      291,
+      316
+    ]
+  },
+  "cyberninja": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      64,
+      93,
+      257,
+      316
+    ]
+  },
+  "drone": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      34,
+      92,
+      286,
+      300
+    ]
+  },
+  "frog": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      71,
+      158,
+      249,
+      316
+    ]
+  },
+  "gemgolem": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      39,
+      90,
+      282,
+      316
+    ]
+  },
+  "ghostarmor": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      68,
+      69,
+      253,
+      316
+    ]
+  },
+  "gorilla": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      57,
+      51,
+      263,
+      316
+    ]
+  },
+  "hoverbike": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      23,
+      94,
+      297,
+      314
+    ]
+  },
+  "jelly": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      55,
+      70,
+      266,
+      315
+    ]
+  },
+  "kraken": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      37,
+      68,
+      284,
+      305
+    ]
+  },
+  "megamecha": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      56,
+      50,
+      265,
+      316
+    ]
+  },
+  "mole": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      42,
+      101,
+      279,
+      313
+    ]
+  },
+  "moonrabbit": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      48,
+      73,
+      273,
+      315
+    ]
+  },
+  "mummy": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      59,
+      93,
+      262,
+      312
+    ]
+  },
+  "parrot": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      33,
+      73,
+      287,
+      312
+    ]
+  },
+  "puffer": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      30,
+      67,
+      291,
+      311
+    ]
+  },
+  "pumpkin": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      45,
+      42,
+      275,
+      313
+    ]
+  },
+  "scorpion": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      40,
+      70,
+      280,
+      313
+    ]
+  },
+  "skeleton": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      59,
+      90,
+      262,
+      315
+    ]
+  },
+  "sphinx": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      35,
+      103,
+      285,
+      315
+    ]
+  },
+  "starspirit": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      34,
+      119,
+      286,
+      315
+    ]
+  },
+  "tiger": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      67,
+      85,
+      254,
+      316
+    ]
+  },
+  "yokaiking": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      60,
+      75,
+      260,
+      314
+    ]
+  },
+  "bear": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      46,
+      85,
+      274,
+      313
+    ]
+  },
+  "dragonkid": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      61,
+      81,
+      259,
+      312
+    ]
+  },
+  "flame": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      47,
+      65,
+      274,
+      311
+    ]
+  },
+  "foxgirl": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      53,
+      100,
+      268,
+      316
+    ]
+  },
+  "goldninja": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      49,
+      52,
+      271,
+      315
+    ]
+  },
+  "icenin": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      42,
+      86,
+      279,
+      316
+    ]
+  },
+  "moonpriest": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      47,
+      111,
+      273,
+      315
+    ]
+  },
+  "panda": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      50,
+      116,
+      270,
+      312
+    ]
+  },
+  "robo": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      42,
+      96,
+      279,
+      316
+    ]
+  },
+  "sakurasam": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      43,
+      80,
+      277,
+      316
+    ]
+  },
+  "spacenin": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      45,
+      95,
+      275,
+      313
+    ]
+  },
+  "sunknight": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      59,
+      75,
+      261,
+      315
+    ]
   }
 }

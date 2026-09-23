@@ -1,0 +1,15 @@
+{
+  "id": "galaxyblade",
+  "name": "להב הגלקסיה",
+  "tag": "חרב של כוכבים",
+  "price": 1800,
+  "belt": 4,
+  "dmg": 3,
+  "crit": 20,
+  "ranged": false,
+  "color": "#7048E8",
+  "art": {
+    "kind": "image",
+    "prompt": "a katana whose blade contains a swirling purple-and-blue galaxy with tiny stars, a black and gold handle. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sunstaff",
+  "name": "מטה השמש",
+  "tag": "מטה זהב זוהר",
+  "price": 1300,
+  "belt": 4,
+  "dmg": 2,
+  "crit": 18,
+  "ranged": false,
+  "color": "#F5B82E",
+  "art": {
+    "kind": "image",
+    "prompt": "a golden monk staff topped with a radiant sun disc emitting light rays. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

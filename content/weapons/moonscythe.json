@@ -1,0 +1,15 @@
+{
+  "id": "moonscythe",
+  "name": "חרמש הירח",
+  "tag": "להב סהר",
+  "price": 1100,
+  "belt": 3,
+  "dmg": 2,
+  "crit": 16,
+  "ranged": false,
+  "color": "#9775FA",
+  "art": {
+    "kind": "image",
+    "prompt": "a scythe with a glowing silver crescent-moon blade on a dark violet staff with a star charm. A single weapon, pointing straight UP with the handle at the bottom, centered, full weapon visible."
+  }
+}

@@ -10,5 +10,6 @@
   "art": {
     "kind": "sprite",
     "prompt": "a mischievous bamboo-forest monkey ninja wearing a green headband and leaf-green gi, holding a bamboo staff."
-  }
+  },
+  "charge": true
 }
