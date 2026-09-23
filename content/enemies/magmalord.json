@@ -1,0 +1,14 @@
+{
+  "id": "magmalord",
+  "name": "אדון המאגמה",
+  "tag": "בוס · פטיש אש",
+  "type": "boss",
+  "hp": 3,
+  "reward": 16,
+  "attack": "magic",
+  "color": "#FF5A1F",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a giant magma demon king made of dark volcanic rock with glowing orange lava cracks, horns of fire, a molten gold crown, holding a flaming war hammer."
+  }
+}

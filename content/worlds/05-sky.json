@@ -1,0 +1,36 @@
+{
+  "order": 5,
+  "id": "sky",
+  "name": "מקדש השמיים",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/sky-far.png",
+      "speed": 70,
+      "y": 0,
+      "height": 412,
+      "prompt": "A wide panoramic side-scrolling game BACKGROUND (landscape, about 3:1): a sky temple world — floating mountain islands with red-roofed pagodas and torii gates, waterfalls falling into a sea of fluffy clouds, a big golden sun low in a turquoise-to-peach sky. No characters, no text, no UI. The LEFT and RIGHT edges must match so the image tiles seamlessly horizontally. Keep the lower third calm and simple (soft clouds) because game characters stand there."
+    },
+    {
+      "src": "backgrounds/sky-ground.png",
+      "speed": 7,
+      "y": 318,
+      "height": 94,
+      "prompt": "A long horizontal game GROUND STRIP (landscape, about 6:1) on a TRANSPARENT background: a stone temple walkway floating on clouds — flat grey-blue stone tiles on top with a red lacquered wooden railing edge along the front and puffy white clouds hanging underneath. Side view, flat top edge. No characters, no text. Left and right edges must tile seamlessly."
+    }
+  ],
+  "music": {
+    "bpm": 120,
+    "scale": "yo"
+  },
+  "path": [
+    "crane",
+    "cloudspirit",
+    "kitefox",
+    "chest",
+    "crane",
+    "cloudspirit",
+    "kitefox",
+    "raijin"
+  ]
+}

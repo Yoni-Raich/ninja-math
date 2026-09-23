@@ -1,0 +1,14 @@
+{
+  "id": "kitefox",
+  "name": "שועל העפיפון",
+  "tag": "גולש ברוח",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 9,
+  "attack": "melee",
+  "color": "#FF922B",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an orange kitsune fox ninja gliding under a red paper kite-glider strapped to its back, with a blue scarf and a small kunai, two fluffy tails."
+  }
+}

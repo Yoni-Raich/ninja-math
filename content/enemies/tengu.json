@@ -1,0 +1,23 @@
+{
+  "id": "tengu",
+  "name": "טנגו העורב",
+  "tag": "יורה נוצות",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 6,
+  "attack": "projectile",
+  "projectile": "feather",
+  "color": "#6C7AA8",
+  "art": {
+    "kind": "svg",
+    "component": "Enemy",
+    "props": {
+      "kind": "tengu"
+    },
+    "portrait": [
+      -75,
+      -27,
+      0.8
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "chest",
+  "name": "תיבת אוצר",
+  "tag": "מטבעות ולב",
+  "type": "chest",
+  "hp": 1,
+  "reward": 15,
+  "attack": "none",
+  "color": "#F5B82E",
+  "art": {
+    "kind": "svg",
+    "component": "TreasureChest",
+    "props": {}
+  }
+}

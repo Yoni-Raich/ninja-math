@@ -1,0 +1,19 @@
+{
+  "order": 4,
+  "id": "volcano",
+  "name": "מבצר הלבה",
+  "scene": "volcano",
+  "music": {
+    "bpm": 112,
+    "scale": "in"
+  },
+  "path": [
+    "salamander",
+    "mecha",
+    "oni",
+    "chest",
+    "salamander",
+    "oni",
+    "magmalord"
+  ]
+}

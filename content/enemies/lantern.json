@@ -1,0 +1,23 @@
+{
+  "id": "lantern",
+  "name": "פנס רפאים",
+  "tag": "יורה להבות כחולות",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 6,
+  "attack": "projectile",
+  "projectile": "wisp",
+  "color": "#74C0FC",
+  "art": {
+    "kind": "svg",
+    "component": "Enemy",
+    "props": {
+      "kind": "lantern"
+    },
+    "portrait": [
+      -39,
+      -31,
+      0.55
+    ]
+  }
+}

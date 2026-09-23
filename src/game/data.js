@@ -1,30 +1,15 @@
+// targetMs: a "fast" answer for this skill — the child must be accurate AND usually this quick
+// before the belt fight unlocks. Measured silently; only the belt fight shows a timer.
 export const SKILLS = [
-  { id: 'add5', name: 'חיבור עד 5', belt: 'לבנה', color: '#F8F9FA' },
-  { id: 'add10', name: 'חיבור עד 10', belt: 'צהובה', color: '#FCC419' },
-  { id: 'sub10', name: 'חיסור עד 10', belt: 'כתומה', color: '#FD7E14' },
-  { id: 'bond10', name: 'השלמה ל־10', belt: 'ירוקה', color: '#2FB380' },
-  { id: 'add20', name: 'חיבור עד 20', belt: 'שחורה', color: '#0B0B14' }
+  { id: 'add5', name: 'חיבור עד 5', belt: 'לבנה', color: '#F8F9FA', targetMs: 4000 },
+  { id: 'add10', name: 'חיבור עד 10', belt: 'צהובה', color: '#FCC419', targetMs: 5000 },
+  { id: 'sub10', name: 'חיסור עד 10', belt: 'כתומה', color: '#FD7E14', targetMs: 6000 },
+  { id: 'bond10', name: 'השלמה ל־10', belt: 'ירוקה', color: '#2FB380', targetMs: 5500 },
+  { id: 'add20', name: 'חיבור עד 20', belt: 'שחורה', color: '#0B0B14', targetMs: 7000 }
 ];
 
-// p = portrait crop [left, top, scale] inside the 36px HUD frame
-export const FOES = {
-  redninja: { type: 'enemy', name: 'שומר אדום', hp: 1, reward: 5, p: [-73, -28, 0.8] },
-  tengu: { type: 'enemy', name: 'טנגו העורב', hp: 1, reward: 5, p: [-75, -27, 0.8] },
-  lantern: { type: 'enemy', name: 'פנס רפאים', hp: 1, reward: 5, p: [-39, -31, 0.55] },
-  oni: { type: 'enemy', name: 'אוני הענק', hp: 2, reward: 8, p: [-66, -23, 0.7] },
-  mecha: { type: 'enemy', name: 'נינג׳ה כרום', hp: 2, reward: 8, p: [-75, -27, 0.8] },
-  chest: { type: 'chest', name: 'תיבת אוצר', hp: 1, reward: 15, p: [0, 0, 1] },
-  shogun: { type: 'boss', name: 'שוגון הצללים', hp: 3, reward: 12, p: [-79, -29, 0.6] },
-  dragon: { type: 'boss', name: 'דרקון הסערה', hp: 3, reward: 12, p: [-105, -27, 0.6] }
-};
-
-export const WORLDS = [
-  { id: 'bamboo', name: 'יער הבמבוק', path: ['redninja', 'tengu', 'chest', 'oni', 'shogun'] },
-  { id: 'rooftops', name: 'גגות העיר', path: ['redninja', 'lantern', 'chest', 'lantern', 'dragon'] },
-  { id: 'snow', name: 'מקדש השלג', path: ['tengu', 'oni', 'chest', 'redninja', 'shogun'] },
-  { id: 'volcano', name: 'מבצר הלבה', path: ['mecha', 'lantern', 'chest', 'mecha', 'dragon'] }
-];
-
+// Enemies and worlds are data: see content/README.md.
+export { FOES, WORLDS } from './content.js';
 export const MAX_HEARTS = 3;
 
 export const FIGHTERS = [
@@ -58,3 +43,5 @@ export const AURAS = [
 ];
 
 export const HITS = ['פגיעה!', 'בול!', 'מכה חזקה!', 'מושלם!', 'חתך!'];
+
+export const SIGNATURE = { kage: 'katana', sakura: 'kunai', ryu: 'odachi', jin: 'bo', raiden: 'shuriken', ryuko: 'nunchaku' };

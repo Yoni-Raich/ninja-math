@@ -1,0 +1,14 @@
+{
+  "id": "monkey",
+  "name": "קוף הבמבוק",
+  "tag": "זריז · מקל במבוק",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 8,
+  "attack": "melee",
+  "color": "#7FB24E",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a mischievous bamboo-forest monkey ninja wearing a green headband and leaf-green gi, holding a bamboo staff."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "shadowcat",
+  "name": "חתול הצללים",
+  "tag": "טפרים חדים",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 6,
+  "attack": "melee",
+  "color": "#9775FA",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a sleek black cat ninja standing upright on two legs, purple scarf, glowing yellow eyes, sharp claws raised, a small katana strapped to its back."
+  }
+}

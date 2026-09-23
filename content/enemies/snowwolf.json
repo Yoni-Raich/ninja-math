@@ -1,0 +1,14 @@
+{
+  "id": "snowwolf",
+  "name": "זאב השלג",
+  "tag": "נושך מהר",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 6,
+  "attack": "melee",
+  "color": "#A5D8FF",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a white and ice-blue wolf warrior crouched on all fours, wearing a red samurai scarf and small ice-armor shoulder plates, fierce but cute."
+  }
+}

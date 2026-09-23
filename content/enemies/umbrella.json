@@ -1,0 +1,15 @@
+{
+  "id": "umbrella",
+  "name": "מטריית רפאים",
+  "tag": "קופצת ומסתחררת",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 8,
+  "attack": "projectile",
+  "projectile": "water",
+  "color": "#4DABF7",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a playful one-eyed Japanese paper umbrella ghost (kasa-obake) hopping on a single wooden leg, a long red tongue, purple and red paper umbrella canopy, tiny arms."
+  }
+}

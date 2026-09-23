@@ -1,0 +1,19 @@
+{
+  "order": 1,
+  "id": "bamboo",
+  "name": "יער הבמבוק",
+  "scene": "bamboo",
+  "music": {
+    "bpm": 96,
+    "scale": "in"
+  },
+  "path": [
+    "redninja",
+    "tengu",
+    "monkey",
+    "chest",
+    "redninja",
+    "monkey",
+    "shogun"
+  ]
+}

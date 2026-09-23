@@ -1,0 +1,22 @@
+{
+  "id": "oni",
+  "name": "אוני הענק",
+  "tag": "אלת ברזל",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 9,
+  "attack": "melee",
+  "color": "#E63946",
+  "art": {
+    "kind": "svg",
+    "component": "Enemy",
+    "props": {
+      "kind": "oni"
+    },
+    "portrait": [
+      -66,
+      -23,
+      0.7
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "cloudspirit",
+  "name": "רוח הענן",
+  "tag": "יורה ברקים קטנים",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 9,
+  "attack": "projectile",
+  "projectile": "bolt",
+  "color": "#FCC419",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a grumpy little storm cloud spirit with a round face, tiny arms, and small lightning bolts crackling around it, floating above a swirl of wind."
+  }
+}

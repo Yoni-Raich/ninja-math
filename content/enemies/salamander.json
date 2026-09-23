@@ -1,0 +1,15 @@
+{
+  "id": "salamander",
+  "name": "סלמנדרת האש",
+  "tag": "יורקת כדורי אש",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 7,
+  "attack": "projectile",
+  "projectile": "fireball",
+  "color": "#FF6B1A",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an orange-red fire salamander lizard warrior standing upright, small flames along its back and tail tip, wearing a black ninja mask."
+  }
+}

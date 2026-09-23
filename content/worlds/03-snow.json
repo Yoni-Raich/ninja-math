@@ -1,0 +1,19 @@
+{
+  "order": 3,
+  "id": "snow",
+  "name": "מקדש השלג",
+  "scene": "snow",
+  "music": {
+    "bpm": 90,
+    "scale": "hira"
+  },
+  "path": [
+    "snowwolf",
+    "yeti",
+    "icegolem",
+    "chest",
+    "snowwolf",
+    "yeti",
+    "icequeen"
+  ]
+}

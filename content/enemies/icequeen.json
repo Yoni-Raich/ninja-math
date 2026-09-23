@@ -1,0 +1,14 @@
+{
+  "id": "icequeen",
+  "name": "מלכת הקרח",
+  "tag": "בוס · סערת קרח",
+  "type": "boss",
+  "hp": 3,
+  "reward": 14,
+  "attack": "magic",
+  "color": "#A5F3FC",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an ice sorceress queen in a flowing white-and-blue kimono with a crystal crown, holding a tall ice staff topped with a glowing snowflake, floating slightly with snowflakes swirling around her."
+  }
+}

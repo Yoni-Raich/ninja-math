@@ -1,0 +1,23 @@
+{
+  "id": "mecha",
+  "name": "נינג׳ה כרום",
+  "tag": "לייזר ולהב אנרגיה",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 9,
+  "attack": "projectile",
+  "projectile": "laser",
+  "color": "#22D3EE",
+  "art": {
+    "kind": "svg",
+    "component": "Enemy",
+    "props": {
+      "kind": "mecha"
+    },
+    "portrait": [
+      -75,
+      -27,
+      0.8
+    ]
+  }
+}

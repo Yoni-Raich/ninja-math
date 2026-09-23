@@ -1,0 +1,15 @@
+{
+  "id": "my-enemy",
+  "name": "שם בעברית",
+  "tag": "תיאור קצר בכרטיס",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 6,
+  "attack": "projectile",
+  "projectile": "fireball",
+  "color": "#FF6B1A",
+  "art": {
+    "kind": "sprite",
+    "prompt": "describe the character in English: body, outfit, weapon, colors, personality."
+  }
+}

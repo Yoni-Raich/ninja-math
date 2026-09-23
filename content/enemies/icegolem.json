@@ -1,0 +1,14 @@
+{
+  "id": "icegolem",
+  "name": "גולם הקרח",
+  "tag": "מכת רצפה",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 8,
+  "attack": "melee",
+  "color": "#74C0FC",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a chunky golem made of translucent ice-blue crystal blocks with glowing cyan eyes and a frosty stone core in its chest, big fists."
+  }
+}

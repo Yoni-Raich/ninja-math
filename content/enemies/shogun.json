@@ -1,0 +1,22 @@
+{
+  "id": "shogun",
+  "name": "שוגון הצללים",
+  "tag": "בוס · נגינאטה",
+  "type": "boss",
+  "hp": 3,
+  "reward": 12,
+  "attack": "magic",
+  "color": "#9775FA",
+  "art": {
+    "kind": "svg",
+    "component": "Warlord",
+    "props": {
+      "kind": "shogun"
+    },
+    "portrait": [
+      -79,
+      -29,
+      0.6
+    ]
+  }
+}

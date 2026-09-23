@@ -1,0 +1,22 @@
+{
+  "id": "dragon",
+  "name": "דרקון הסערה",
+  "tag": "בוס · ברקים",
+  "type": "boss",
+  "hp": 3,
+  "reward": 12,
+  "attack": "magic",
+  "color": "#22D3EE",
+  "art": {
+    "kind": "svg",
+    "component": "Warlord",
+    "props": {
+      "kind": "dragon"
+    },
+    "portrait": [
+      -105,
+      -27,
+      0.6
+    ]
+  }
+}

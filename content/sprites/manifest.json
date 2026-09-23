@@ -1,0 +1,132 @@
+{
+  "monkey": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      47,
+      114,
+      273,
+      313
+    ]
+  },
+  "icegolem": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      56,
+      73,
+      264,
+      316
+    ]
+  },
+  "icequeen": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      66,
+      82,
+      254,
+      316
+    ]
+  },
+  "magmalord": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      46,
+      62,
+      275,
+      313
+    ]
+  },
+  "salamander": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      54,
+      76,
+      267,
+      316
+    ]
+  },
+  "shadowcat": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      50,
+      65,
+      270,
+      313
+    ]
+  },
+  "snowwolf": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      37,
+      128,
+      284,
+      316
+    ]
+  },
+  "umbrella": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      39,
+      13,
+      281,
+      312
+    ]
+  },
+  "yeti": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      74,
+      85,
+      247,
+      316
+    ]
+  },
+  "cloudspirit": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      42,
+      12,
+      278,
+      312
+    ]
+  },
+  "crane": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      59,
+      95,
+      262,
+      316
+    ]
+  },
+  "kitefox": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      41,
+      68,
+      280,
+      316
+    ]
+  },
+  "raijin": {
+    "frames": 4,
+    "cell": 320,
+    "box": [
+      41,
+      1,
+      279,
+      313
+    ]
+  }
+}

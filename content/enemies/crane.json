@@ -1,0 +1,15 @@
+{
+  "id": "crane",
+  "name": "לוחם העגור",
+  "tag": "כנפיים חדות",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 8,
+  "attack": "projectile",
+  "projectile": "feather",
+  "color": "#F8F9FA",
+  "art": {
+    "kind": "sprite",
+    "prompt": "an elegant white crane bird warrior standing upright in a red-and-white samurai hakama, holding a naginata spear, wings folded like a cape."
+  }
+}

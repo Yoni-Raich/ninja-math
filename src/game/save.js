@@ -7,6 +7,8 @@ function fresh() {
     eq: { fighter: 'kage', weapon: 'auto', aura: 'none' },
     level: 0,
     hist: [],
+    skills: {},
+    version: 2,
     stats: {},
     unlocked: 1,
     stars: [0, 0, 0, 0],
@@ -27,6 +29,9 @@ export function load() {
       data = Object.assign(fresh(), saved);
       data.settings = Object.assign(fresh().settings, saved.settings || {});
       data.eq = Object.assign(fresh().eq, saved.eq || {});
+      // v1 saves leveled up on accuracy alone; restart the belt ladder under the timed rules (coins and items stay).
+      if ((saved.version || 1) < 2) { data.level = 0; data.hist = []; data.skills = {}; }
+      data.version = 2;
     }
   } catch (e) {
     data = fresh();

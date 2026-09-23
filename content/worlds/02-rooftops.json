@@ -1,0 +1,19 @@
+{
+  "order": 2,
+  "id": "rooftops",
+  "name": "גגות העיר",
+  "scene": "rooftops",
+  "music": {
+    "bpm": 104,
+    "scale": "yo"
+  },
+  "path": [
+    "shadowcat",
+    "lantern",
+    "umbrella",
+    "chest",
+    "shadowcat",
+    "umbrella",
+    "dragon"
+  ]
+}

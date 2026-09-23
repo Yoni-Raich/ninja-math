@@ -1,11 +1,10 @@
 import Fighter from '../art/Fighter.js';
 import Weapon from '../art/Weapon.js';
 import { load, update } from '../game/save.js';
-import { FIGHTERS, WEAPONS, AURAS } from '../game/data.js';
+import { FIGHTERS, WEAPONS, AURAS, SIGNATURE } from '../game/data.js';
 import { coin, backIcon } from '../ui.js';
 import { sfx, haptic } from '../audio.js';
 
-const SIGNATURE = { kage: 'katana', sakura: 'kunai', ryu: 'odachi', jin: 'bo', raiden: 'shuriken', ryuko: 'nunchaku' };
 const TABS = [
   { id: 'fighter', label: 'לוחמים', dot: '#E63946', list: FIGHTERS },
   { id: 'weapon', label: 'נשקים', dot: '#D0D7E0', list: WEAPONS },

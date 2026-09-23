@@ -1,0 +1,22 @@
+{
+  "id": "redninja",
+  "name": "שומר אדום",
+  "tag": "מכה אחת · קאמה",
+  "type": "enemy",
+  "hp": 1,
+  "reward": 5,
+  "attack": "melee",
+  "color": "#E63946",
+  "art": {
+    "kind": "svg",
+    "component": "Enemy",
+    "props": {
+      "kind": "redninja"
+    },
+    "portrait": [
+      -73,
+      -28,
+      0.8
+    ]
+  }
+}

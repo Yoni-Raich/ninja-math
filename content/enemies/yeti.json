@@ -1,0 +1,15 @@
+{
+  "id": "yeti",
+  "name": "יטי ההרים",
+  "tag": "זורק כדורי שלג",
+  "type": "enemy",
+  "hp": 2,
+  "reward": 8,
+  "attack": "projectile",
+  "projectile": "snowball",
+  "color": "#F1F6FB",
+  "art": {
+    "kind": "sprite",
+    "prompt": "a big fluffy white yeti with a light blue face and small horns, wearing a straw rope belt, holding a huge snowball ready to throw."
+  }
+}

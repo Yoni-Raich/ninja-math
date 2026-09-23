@@ -9,3 +9,4 @@ android/app/release/
 .DS_Store
 *.apk
 assets/
+*.log
