@@ -69,3 +69,29 @@ npm run images -- my-weapon        # weapons and super attacks: one transparent 
 5. `path`: the encounters in order. The last one should be a boss; a `chest` restores a heart.
 
 The map, HUD, and battle adapt to any number of worlds and stages.
+
+## Voice-over (Hebrew narration)
+
+All speech comes from Gemini TTS (Google AI Studio "Generate speech"). Everything is described in
+`content/voice/lines.json`; `npm run voice` turns it into small Opus files in `public/voice/`.
+
+- **Digits and questions** — `n_0..n_20` (numbers) plus `op_plus`, `op_minus`, `op_howmuch`, `op_bond`.
+  `src/voice.js` stitches them into "שלוש ועוד ארבע, כמה זה?"; the answer is spoken from `a_<n>`.
+- **Battle cries** — groups `attack`, `crit`, `combo`, `special`, `interrupt`, `hurt`, `start`, `warn`, `praise`,
+  `speedy`, `retry`, `stronger`, `ko`, `boss`, plus single lines (`victory`, `defeat`, `beltwin`, ...).
+  Add a line to a group's `lines` array and rerun: variants are picked at random automatically.
+- **Names** — specials (`sp_<id>`), worlds (`world_<id>`), bosses (`foe_<id>`), fighters (`fighter_<id>`) and
+  weapons (`weapon_<id>`) are read from their JSON files, so new content gets a voice with one command.
+
+```
+$env:GEMINI_API_KEY = "..."      # an AI Studio key
+npm run voice                    # generates only the clips that are still missing (resumable)
+npm run voice -- n_3 praise_1    # regenerate specific clips
+npm run voice -- --process       # re-trim / re-encode existing raw clips
+npm run voice -- --verify        # transcribe every clip back and flag mismatches
+```
+
+The free tier allows only ~10 requests per model per day, so clips are generated in batches (one request reads
+~16 lines, cut apart on the silences) and each voice role has its own model in `lines.json`. If a model's daily
+quota runs out the script stops cleanly; run it again after the quota resets. Models named `*native-audio*` use the
+Live API instead (one clip per session). A clip that is missing is simply skipped in the game.

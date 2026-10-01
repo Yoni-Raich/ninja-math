@@ -1,0 +1,270 @@
+{
+  "_doc": "Voice library spec. `voices` maps a role to a Gemini TTS prebuilt voice + default delivery style (English, never read aloud). `groups` expand to clips: an array gives ids <group>_<start+i>, an object gives explicit ids. Clips for specials, worlds, bosses, fighters and weapons are added automatically from content/*. Run: npm run voice  (see content/README.md). Each voice has its own model so every role stays consistent and uses a separate free-tier quota (the free tier allows ~10 requests per model per day).",
+  "model": "gemini-3.8-flash-tts",
+  "voices": {
+    "narrator": {
+      "voice": "Achird",
+      "style": "in a clear, warm, friendly voice for a six year old child, steady medium pace, neutral calm intonation",
+      "model": "gemini-3.1-flash-tts-preview"
+    },
+    "hero": {
+      "voice": "Fenrir",
+      "style": "as a brave, energetic young ninja warrior, loud and powerful, full of fighting spirit",
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "announcer": {
+      "voice": "Charon",
+      "style": "in a deep, dramatic, epic movie-trailer announcer voice, slow and powerful",
+      "model": "gemini-2.5-flash-preview-tts"
+    }
+  },
+  "groups": {
+    "n": {
+      "voice": "narrator",
+      "start": 0,
+      "lines": [
+        "אפס",
+        "אחת",
+        "שתיים",
+        "שלוש",
+        "ארבע",
+        "חמש",
+        "שש",
+        "שבע",
+        "שמונה",
+        "תשע",
+        "עשר",
+        "אחת עשרה",
+        "שתים עשרה",
+        "שלוש עשרה",
+        "ארבע עשרה",
+        "חמש עשרה",
+        "שש עשרה",
+        "שבע עשרה",
+        "שמונה עשרה",
+        "תשע עשרה",
+        "עשרים"
+      ],
+      "model": "gemini-2.5-flash-native-audio-latest"
+    },
+    "a": {
+      "voice": "narrator",
+      "start": 0,
+      "style": "warm, proud and cheerful",
+      "lines": [
+        "אפס!",
+        "אחת!",
+        "שתיים!",
+        "שלוש!",
+        "ארבע!",
+        "חמש!",
+        "שש!",
+        "שבע!",
+        "שמונה!",
+        "תשע!",
+        "עשר!",
+        "אחת עשרה!",
+        "שתים עשרה!",
+        "שלוש עשרה!",
+        "ארבע עשרה!",
+        "חמש עשרה!",
+        "שש עשרה!",
+        "שבע עשרה!",
+        "שמונה עשרה!",
+        "תשע עשרה!",
+        "עשרים!"
+      ]
+    },
+    "op": {
+      "voice": "narrator",
+      "lines": {
+        "op_plus": "ועוד",
+        "op_minus": "פחות",
+        "op_howmuch": "כמה זה?",
+        "op_bond": "ועוד כמה שווה עשר?"
+      },
+      "model": "gemini-2.5-flash-native-audio-latest"
+    },
+    "praise": {
+      "voice": "narrator",
+      "style": "warm, proud and cheerful",
+      "lines": [
+        "מצוין!",
+        "כל הכבוד!",
+        "יפה מאוד!",
+        "אלוף!",
+        "נכון מאוד!",
+        "וואו, בדיוק!",
+        "מעולה!",
+        "איזה יופי!"
+      ]
+    },
+    "speedy": {
+      "voice": "narrator",
+      "style": "warm, proud and cheerful",
+      "lines": [
+        "וואו, כמה מהר!",
+        "מהיר כמו ברק!",
+        "זריז כמו נינג'ה!"
+      ]
+    },
+    "retry": {
+      "voice": "narrator",
+      "style": "gentle, kind and encouraging",
+      "lines": [
+        "כמעט! נסו שוב.",
+        "לא נורא, נסו שוב!",
+        "חשבו עוד רגע, אתם יכולים!",
+        "בדקו שוב, אתם קרובים!"
+      ]
+    },
+    "stronger": {
+      "voice": "narrator",
+      "style": "gentle, kind and encouraging",
+      "lines": [
+        "טעות... האויב מתחזק!",
+        "אוי, הוא מתחזק! נסו שוב!"
+      ]
+    },
+    "attack": {
+      "voice": "hero",
+      "style": "shouting a short ninja battle cry while striking",
+      "lines": [
+        "היאה!",
+        "הא!",
+        "קייה!",
+        "יאאאה!",
+        "טה!",
+        "האיי!"
+      ]
+    },
+    "crit": {
+      "voice": "hero",
+      "lines": [
+        "מכה קריטית!",
+        "קריטי!",
+        "ישר בנקודה החלשה!"
+      ]
+    },
+    "combo": {
+      "voice": "hero",
+      "lines": [
+        "קומבו!",
+        "קומבו כפול!",
+        "אי אפשר לעצור אותי!",
+        "עוד מכה!"
+      ]
+    },
+    "special": {
+      "voice": "hero",
+      "style": "roaring an ultimate attack, very loud and dramatic",
+      "lines": [
+        "סופר מתקפה!",
+        "עכשיו! סופר מתקפה!",
+        "קבלו את זה!"
+      ]
+    },
+    "interrupt": {
+      "voice": "hero",
+      "lines": [
+        "עצרתי אותך!",
+        "נקטע!",
+        "לא הפעם!",
+        "בלמתי את המתקפה!"
+      ]
+    },
+    "warn": {
+      "voice": "narrator",
+      "style": "urgent and tense but not scary, a bit faster",
+      "lines": [
+        "הוא מכין מתקפה! מהר!",
+        "זהירות, עוד רגע הוא תוקף!",
+        "מהרו, לפני שזה מוכן!",
+        "עוד רגע! ענו מהר!"
+      ]
+    },
+    "hurt": {
+      "voice": "hero",
+      "style": "grunting in pain, short and not too dramatic",
+      "lines": [
+        "אוי!",
+        "אאוץ'!",
+        "איי, זה כאב!"
+      ]
+    },
+    "start": {
+      "voice": "hero",
+      "lines": [
+        "בואו נילחם!",
+        "קדימה!",
+        "אני מוכן!"
+      ]
+    },
+    "ko": {
+      "voice": "narrator",
+      "style": "warm, proud and cheerful",
+      "lines": [
+        "הובס!",
+        "ניצחתם את האויב!",
+        "יופי, הבא בתור!"
+      ]
+    },
+    "boss": {
+      "voice": "announcer",
+      "lines": [
+        "זהירות, בוס מתקרב!",
+        "הגיע הבוס!",
+        "זה הבוס! היזהרו!"
+      ]
+    },
+    "misc": {
+      "voice": "announcer",
+      "lines": {
+        "beltfight": "קרב חגורה! ענו מהר ונכון!",
+        "beltunlock": "אתגר חגורה נפתח! הבוס הבא יהיה קרב חגורה.",
+        "beltwin": "חגורה חדשה! כל הכבוד אלוף!",
+        "victory": "ניצחון! כל הכבוד!",
+        "title": "נינג'ה המספרים! מוכנים להרפתקה?"
+      }
+    },
+    "soft": {
+      "voice": "narrator",
+      "style": "gentle, kind and encouraging",
+      "lines": {
+        "defeat": "לא נורא, כל לוחם נופל לפעמים. ננסה שוב!",
+        "chest": "תיבת אוצר! פתרו כדי לפתוח אותה!",
+        "chestopen": "מטמון! קיבלתם לב!",
+        "heart": "לב חדש!",
+        "buy": "קנייה מעולה!",
+        "upgrade": "הנשק שודרג!",
+        "broke": "אין מספיק מטבעות. בואו נילחם עוד!",
+        "resume": "ממשיכים!"
+      }
+    }
+  },
+  "dynamic": {
+    "special": {
+      "voice": "hero",
+      "style": "roaring the name of an ultimate attack, very loud and dramatic",
+      "text": "{name}!"
+    },
+    "world": {
+      "voice": "announcer",
+      "text": "עולם {order}. {name}."
+    },
+    "boss": {
+      "voice": "announcer",
+      "text": "{name}!"
+    },
+    "fighter": {
+      "voice": "narrator",
+      "style": "warm, proud and cheerful",
+      "text": "{name}!"
+    },
+    "weapon": {
+      "voice": "narrator",
+      "style": "warm, proud and cheerful",
+      "text": "{name}!"
+    }
+  }
+}

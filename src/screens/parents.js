@@ -3,6 +3,7 @@ import { SKILLS } from '../game/data.js';
 import { shuffle, median, WINDOW, ACC_NEEDED, FAST_NEEDED, CHALLENGE_FACTOR } from '../game/learning.js';
 import { backIcon } from '../ui.js';
 import { sfx, startMusic, stopMusic } from '../audio.js';
+import { sayRandom, stopVoice } from '../voice.js';
 
 // Parent gate: a multiplication a first-grader is unlikely to solve.
 function gate(root, onPass, onBack) {
@@ -109,6 +110,7 @@ function dashboard(root, go) {
           ${toggle('hints', 'רמזים חזותיים (נקודות ומסגרת עשר)', s.settings.hints)}
           ${toggle('speed', 'טיימר של 10 שניות בכל תרגיל (לא רק בקרב חגורה)', s.settings.speed)}
           ${toggle('sound', 'צלילים ומוזיקה', s.settings.sound)}
+          ${toggle('voice', 'קריינות: הקראת התרגילים וקריאות קרב', s.settings.voice !== false)}
         </div>
         <button id="reset" style="height:40px;border:1px solid #B42318;background:#FFFFFF;color:#B42318;font-family:'Secular One',sans-serif;font-size:14px;cursor:pointer;">איפוס התקדמות</button>
       </div>
@@ -122,6 +124,7 @@ function dashboard(root, go) {
     update((d) => { d.settings.sound = e.target.checked; d.settings.music = e.target.checked; });
     if (e.target.checked) startMusic(); else stopMusic();
   };
+  root.querySelector('#voice').onchange = (e) => { update((d) => { d.settings.voice = e.target.checked; }); if (e.target.checked) sayRandom('praise'); else stopVoice(); };
   const resetBtn = root.querySelector('#reset');
   resetBtn.onclick = () => {
     if (resetBtn.dataset.armed) { reset(); dashboard(root, go); return; }

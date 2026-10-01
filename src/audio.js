@@ -6,6 +6,8 @@ let ctx = null;
 let master = null;
 let musicGain = null;
 let musicTimer = null;
+let voiceGain = null;
+let duckTimer = null;
 let noiseBuf = null;
 
 function ac() {
@@ -19,6 +21,9 @@ function ac() {
     musicGain = ctx.createGain();
     musicGain.gain.value = 0.22;
     musicGain.connect(master);
+    voiceGain = ctx.createGain();
+    voiceGain.gain.value = 1.5;
+    voiceGain.connect(master);
     noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
     const d = noiseBuf.getChannelData(0);
     for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
@@ -28,6 +33,18 @@ function ac() {
 }
 
 export function unlockAudio() { ac(); }
+export const audioContext = () => ac();
+export const voiceDestination = () => { ac(); return voiceGain; };
+
+// Lower the music while a voice line plays, then bring it back.
+export function duckMusic(ms) {
+  const c = ac(); if (!c || !musicGain) return;
+  const t = c.currentTime;
+  musicGain.gain.cancelScheduledValues(t);
+  musicGain.gain.setTargetAtTime(0.07, t, 0.08);
+  clearTimeout(duckTimer);
+  duckTimer = setTimeout(() => musicGain.gain.setTargetAtTime(0.22, c.currentTime, 0.25), ms);
+}
 
 function tone(freq, dur, { type = 'sine', vol = 0.3, slide = 0, delay = 0, dest = null } = {}) {
   const c = ac(); if (!c) return;

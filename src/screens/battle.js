@@ -7,6 +7,7 @@ import { load, update } from '../game/save.js';
 import { makeQuestion, record, progress, challengeSeconds, winBelt, recentMedianMs } from '../game/learning.js';
 import { sfx, haptic, setMusicStyle, startMusic } from '../audio.js';
 import { coin, heart, belt, replay } from '../ui.js';
+import { say, sayRandom, sayQuestion, stopVoice, warmUpVoice, variant } from '../voice.js';
 
 const LINES = [
   { y: 120, w: 180, h: 2, o: 0.35, d: 0 }, { y: 170, w: 120, h: 3, o: 0.25, d: -0.12 },
@@ -74,6 +75,7 @@ export default function battle(root, { go, params }) {
 
   setMusicStyle(W.music);
   startMusic();
+  warmUpVoice();
 
   root.innerHTML = `
   <div class="battle" style="position:absolute;inset:0;">
@@ -223,6 +225,9 @@ export default function battle(root, { go, params }) {
         <div style="width:100%;display:flex;align-items:center;gap:8px;">
           <span class="num" style="padding:2px 10px;background:${isBoss ? '#7048E8' : isChest ? '#C98A12' : '#B42318'};color:#FFFFFF;font-size:12px;white-space:nowrap;transform:skewX(-12deg);">${f.name}</span>
           <span class="num" style="flex-grow:1;font-size:15px;color:${color};">${msg}</span>
+          <button id="sayBtn" aria-label="הקראה חוזרת" style="width:44px;height:44px;flex-shrink:0;margin:-6px 0;border-radius:50%;border:2px solid #22D3EE;background:#12152A;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z" fill="#22D3EE"></path><path d="M16 8.5 Q18.5 12 16 15.5 M18.5 6 Q22.5 12 18.5 18" stroke="#22D3EE" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
+          </button>
           <button id="hintBtn" aria-label="רמז: הצג נקודות" style="width:44px;height:44px;flex-shrink:0;margin:-6px 0;border-radius:50%;border:2px solid #F5B82E;background:${S.hint ? '#F5B82E' : '#12152A'};display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;">
             <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12 Q12 3 22 12 Q12 21 2 12 Z" fill="none" stroke="${S.hint ? '#0B0B14' : '#F5B82E'}" stroke-width="2" stroke-linejoin="round"></path><circle cx="12" cy="12" r="3.5" fill="${S.hint ? '#0B0B14' : '#F5B82E'}"></circle></svg>
           </button>
@@ -234,6 +239,7 @@ export default function battle(root, { go, params }) {
       </div>
     </div>`;
     $('hintBtn').onclick = () => { S.hint = !S.hint; sfx('tap'); renderPanel(false); };
+    $('sayBtn').onclick = () => { sfx('tap'); sayQuestion(q, { interrupt: true }); };
   }
 
   function renderChoices() {
@@ -349,6 +355,7 @@ export default function battle(root, { go, params }) {
     S.charge.timers.push(later(left, chargedAttack));
   }
   function renderCharge2Warn() {
+    if (S.phase === 'ask' || S.phase === 'oops') sayRandom('warn');
     S.charge.elapsed += performance.now() - S.charge.start;
     S.charge.start = performance.now();
     renderCharge();
@@ -400,6 +407,7 @@ export default function battle(root, { go, params }) {
     if (enc === 0) {
       $('overlay').innerHTML = `<div class="banner" style="position:absolute;top:150px;right:150px;padding:8px 40px;background:#0B0B14;border-top:3px solid #F5B82E;border-bottom:3px solid #F5B82E;"><div class="num" style="font-size:14px;color:#F5B82E;transform:skewX(12deg);">עולם ${worldIdx + 1}</div><div class="title-xl" style="font-size:58px;color:#FFFFFF;transform:skewX(12deg);">${W.name}</div></div>`;
       later(1900, () => { if (S.phase === 'run') $('overlay').innerHTML = ''; });
+      later(300, () => say(`world_${W.id}`).then(() => sayRandom('start', { interrupt: false })));
     }
     sfx('whoosh');
     if (foe().type === 'boss') later(1700, bossIntro);
@@ -422,6 +430,7 @@ export default function battle(root, { go, params }) {
         <div class="title-xl" style="font-size:80px;color:#FFFFFF;transform:skewX(12deg);text-shadow:4px 4px 0 #0B0B14;">${f.name}</div>
       </div>`;
     if (S.beltFight) later(300, () => sfx('gong'));
+    later(450, () => (S.beltFight ? say('beltfight') : sayRandom('boss')).then(() => say(`foe_${foeKey()}`, { interrupt: false })));
     later(2200, () => { $('overlay').innerHTML = ''; ask(); });
   }
 
@@ -439,6 +448,9 @@ export default function battle(root, { go, params }) {
     renderPanel(true); renderChoices(); renderCombo();
     S.shownAt = performance.now(); S.pausedMs = 0;
     startCharge();
+    const q = S.q;
+    if (foe().type === 'chest') say('chest', { interrupt: false });
+    later(300, () => { if (S.q === q && (S.phase === 'ask' || S.phase === 'oops')) sayQuestion(q, { interrupt: false }); });
   }
 
   const answerMs = () => performance.now() - S.shownAt - S.pausedMs;
@@ -456,6 +468,7 @@ export default function battle(root, { go, params }) {
         const next = SKILLS[Math.min(load().level + 1, SKILLS.length - 1)];
         toast('אתגר חגורה נפתח!', 'נכון ומהיר! הבוס הבא יהיה קרב חגורה', next.color, 3600);
         sfx('gong');
+        say('beltunlock', { interrupt: false });
       });
     }
     renderBelt();
@@ -468,7 +481,8 @@ export default function battle(root, { go, params }) {
     stopCharge();
     S.answered += first ? 1 : 0;
     if (first) S.firstOk += 1;
-    if (first) afterRecord(record(S.q, true, answerMs()));
+    S.lastMs = answerMs();
+    if (first) afterRecord(record(S.q, true, S.lastMs));
     const isSpecial = first && S.energy >= 4 && f.type !== 'chest';
     S.crit = !isSpecial && f.type !== 'chest' && Math.random() * 100 < stats.crit;
     let dmg = isSpecial ? (f.type === 'boss' ? stats.dmg + 2 : f.hp) : stats.dmg * (S.crit ? 2 : 1);
@@ -584,12 +598,27 @@ export default function battle(root, { go, params }) {
     return 360;
   }
 
+  // Voice: a battle cry matched to the blow, then the answer is spoken (reinforces the number), then sometimes praise.
+  function battleCry() {
+    const f = foe();
+    if (f.type === 'chest') { say(S.hearts < MAX_HEARTS ? 'chestopen' : variant('praise')); return; }
+    const first = S.tries === 0;
+    if (S.special) { say(variant('special')).then(() => say(`sp_${special.id}`, { interrupt: false })); return; }
+    const cry = S.crit ? variant('crit') : S.interrupted ? variant('interrupt') : S.double ? variant('combo') : variant('attack');
+    say(cry);
+    say(`a_${S.q.ans}`, { interrupt: false });
+    const fast = S.lastMs <= SKILLS[load().level].targetMs * 0.6;
+    if (first && Math.random() < (fast ? 0.7 : 0.35)) sayRandom(fast ? 'speedy' : 'praise', { interrupt: false });
+    else if (!first && Math.random() < 0.4) sayRandom('praise', { interrupt: false });
+  }
+
   function strike() {
     const f = foe();
     const isBoss = f.type === 'boss', isChest = f.type === 'chest';
     const c = foeCenter();
     S.phase = 'hit';
     renderPanel(); renderChoices(); renderCombo(); renderHud();
+    battleCry();
     if (isChest) {
       heroPose('pose-win');
       $('foePose').innerHTML = TreasureChest({ open: true });
@@ -633,6 +662,7 @@ export default function battle(root, { go, params }) {
     if (S.hp > 0) { ask(); return; }
     S.phase = 'ko';
     if (f.type !== 'chest') {
+      if (f.type !== 'boss' && Math.random() < 0.3) sayRandom('ko', { interrupt: false });
       foePose('pose-hurt');
       foeMove('enc-ko');
       const c = foeCenter();
@@ -683,6 +713,7 @@ export default function battle(root, { go, params }) {
       flash('red'); shake(); hitstop(big ? 140 : 80);
       sparks(HERO.x - 20, HERO.y - 20, ['#E63946', '#FFFFFF'], big ? 16 : 10);
       damage(HERO.x - 20, HERO.y - 110, '-1', '#FF4D5E');
+      if (S.hearts > 0) sayRandom('hurt');
       renderHud();
       const lost = root.querySelector(`#hearts [data-h="${S.hearts}"]`);
       if (lost) lost.className = 'heart-lose';
@@ -699,6 +730,7 @@ export default function battle(root, { go, params }) {
     S.tries += 1;
     S.hint = true;
     S.combo = 0;
+    if (S.hearts > 1 || f.type === 'chest') sayRandom(S.charge.dur && f.type !== 'chest' ? 'stronger' : 'retry');
     if (f.type === 'chest') {
       S.phase = 'counter';
       renderPanel(); renderChoices(); renderCombo();
@@ -729,6 +761,7 @@ export default function battle(root, { go, params }) {
     renderPanel(); renderChoices(); renderCombo();
     heroPose('pose-down');
     sfx('lose');
+    say('defeat');
     $('overlay').innerHTML = `
       <div style="position:absolute;inset:0;background:rgba(40,0,8,.55);"></div>
       <div class="defeat" style="position:absolute;left:0;right:0;top:110px;display:flex;flex-direction:column;align-items:center;">
@@ -742,6 +775,7 @@ export default function battle(root, { go, params }) {
     stopCharge();
     heroPose('pose-win');
     sfx('win');
+    say('victory');
     const stars = Math.max(1, S.hearts);
     const newBelt = S.beltFight ? winBelt() : null;
     update((s) => {
@@ -753,7 +787,7 @@ export default function battle(root, { go, params }) {
       <div class="victory" style="position:absolute;left:0;right:0;top:96px;display:flex;flex-direction:column;align-items:center;">
         <span class="title-xl" style="font-size:150px;color:#F5B82E;text-shadow:5px 5px 0 #B42318,-3px -3px 0 #0B0B14,3px -3px 0 #0B0B14,-3px 3px 0 #0B0B14;">ניצחון!</span>
       </div>`;
-    if (newBelt) later(600, () => sfx('levelup'));
+    if (newBelt) later(600, () => { sfx('levelup'); say('beltwin', { interrupt: false }); });
     later(2200, () => go('result', { world: worldIdx, won: true, stars, earned: S.earned, answered: S.answered, firstOk: S.firstOk, maxCombo: S.maxCombo, interrupts: S.interrupts, newBelt: newBelt && newBelt.id }));
   }
 
@@ -769,6 +803,7 @@ export default function battle(root, { go, params }) {
   function openPause() {
     if (S.phase === 'defeat' || S.phase === 'clear') return;
     sfx('tap');
+    stopVoice();
     pauseClock();
     const box = document.createElement('div');
     box.id = 'pauseBox';
@@ -792,5 +827,5 @@ export default function battle(root, { go, params }) {
   renderHero();
   run(0);
 
-  return { unmount() { timers.forEach(clearTimeout); clearChargeTimers(); document.removeEventListener('visibilitychange', onVisibility); } };
+  return { unmount() { stopVoice(); timers.forEach(clearTimeout); clearChargeTimers(); document.removeEventListener('visibilitychange', onVisibility); } };
 }

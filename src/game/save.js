@@ -14,7 +14,7 @@ function fresh() {
     stats: {},
     unlocked: 1,
     stars: [0, 0, 0, 0],
-    settings: { hints: true, speed: false, sound: true, music: true },
+    settings: { hints: true, speed: false, sound: true, music: true, voice: true },
     days: {}
   };
 }

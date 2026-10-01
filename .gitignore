@@ -10,3 +10,4 @@ android/app/release/
 *.apk
 assets/
 *.log
+content/voice/raw/

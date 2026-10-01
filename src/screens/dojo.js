@@ -3,6 +3,7 @@ import { FIGHTERS, WEAPONS, SPECIALS, AURAS, SKILLS, MAX_WEAPON_LEVEL, upgradeCo
 import { heroArt, weaponIcon, specialArt } from '../game/art.js';
 import { coin, backIcon } from '../ui.js';
 import { sfx, haptic } from '../audio.js';
+import { say, stopVoice } from '../voice.js';
 
 const TABS = [
   { id: 'fighter', label: 'לוחמים', dot: '#E63946', list: () => FIGHTERS },
@@ -127,15 +128,18 @@ export default function dojo(root, { go }) {
         sel[tab] = b.dataset.id;
         update((x) => { x.seen = x.seen || {}; x.seen[b.dataset.id] = true; });
         sfx('tap'); draw(true);
+        const prefix = { fighter: 'fighter_', weapon: 'weapon_', special: 'sp_' }[tab];
+        if (prefix) say(prefix + b.dataset.id);
       };
     });
     root.querySelector('#act').onclick = () => {
       if (equipped) return;
       if (locked) { sfx('block'); return; }
       if (!owned) {
-        if (!afford) { sfx('block'); return; }
+        if (!afford) { sfx('block'); say('broke'); return; }
         update((x) => { x.coins -= cur.price; x.owned[cur.id] = true; x.eq[tab] = cur.id; });
         sfx('coin'); sfx('levelup'); haptic('medium');
+        say('buy');
       } else {
         update((x) => { x.eq[tab] = cur.id; });
         sfx('tap');
@@ -148,9 +152,10 @@ export default function dojo(root, { go }) {
       if (level >= MAX_WEAPON_LEVEL || load().coins < cost) { sfx('block'); return; }
       update((x) => { x.coins -= cost; x.wlv = x.wlv || {}; x.wlv[cur.id] = level + 1; });
       sfx('levelup'); sfx('combo'); haptic('heavy');
+      say('upgrade');
       draw(true);
     };
   }
   draw(false);
-  return { unmount() {} };
+  return { unmount() { stopVoice(); } };
 }

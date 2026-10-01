@@ -1,7 +1,7 @@
 {
   "name": "ninja-math",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "art": "node scripts/convert-art.mjs",
@@ -12,7 +12,8 @@
     "sprites": "node scripts/gen-sprites.mjs",
     "backgrounds": "node scripts/gen-backgrounds.mjs",
     "style-ref": "node scripts/style-ref.mjs",
-    "images": "node scripts/gen-images.mjs"
+    "images": "node scripts/gen-images.mjs",
+    "voice": "node scripts/gen-voice.mjs"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
