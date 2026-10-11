@@ -6,6 +6,7 @@ import '@fontsource/assistant/600.css';
 import '@fontsource/assistant/700.css';
 import './styles/anim.css';
 import './styles/battle.css';
+import './styles/variety.css';
 import './styles/app.css';
 import { unlockAudio, startMusic, sfx } from './audio.js';
 import { load } from './game/save.js';

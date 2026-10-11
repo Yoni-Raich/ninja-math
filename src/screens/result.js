@@ -33,8 +33,8 @@ export default function result(root, { go, params }) {
     <h1 class="title-xl" style="margin:0;font-size:120px;line-height:.85;color:${won ? '#F5B82E' : '#E63946'};text-shadow:5px 5px 0 ${won ? '#B42318' : '#0B0B14'},-3px -3px 0 #0B0B14,3px -3px 0 #0B0B14,-3px 3px 0 #0B0B14;">${won ? 'ניצחון!' : 'הובסת!'}</h1>
   </div>
 
-  <div class="panel-frame pop-in" style="position:absolute;left:272px;top:128px;width:372px;background:${won ? '#F5B82E' : '#E63946'};animation-delay:.4s;">
-    <div class="panel-body" style="padding:10px 28px 14px;display:flex;flex-direction:column;gap:9px;">
+  <div class="panel-frame pop-in" style="position:absolute;left:246px;top:116px;width:422px;background:${won ? '#F5B82E' : '#E63946'};animation-delay:.4s;">
+    <div class="panel-body" style="padding:8px 16px 12px;display:flex;flex-direction:column;gap:7px;">
       <div style="display:flex;align-items:center;justify-content:space-between;">
         <span class="num" style="font-size:16px;">${w.name} · ${won ? 'הושלם' : `נפלת בשלב ${(params.stage ?? 0) + 1} מתוך ${params.stages || w.path.length}`}</span>
         ${won ? `<div style="display:flex;gap:4px;" aria-label="${stars} כוכבים מתוך 3">${[0, 1, 2].map((i) => star(i < stars ? '#F5B82E' : '#3A3F5C', 26)).join('')}</div>` : ''}
@@ -44,7 +44,10 @@ export default function result(root, { go, params }) {
         <div style="padding:6px 4px;display:flex;flex-direction:column;align-items:center;background:#0B0B14;border:1px solid #2E3350;"><span style="font-size:12px;color:#B9C0D8;">קומבו שיא</span><span dir="ltr" class="num" style="font-size:22px;color:#F5B82E;">x${params.maxCombo || 0}</span></div>
         <div style="padding:6px 4px;display:flex;flex-direction:column;align-items:center;background:#0B0B14;border:1px solid #2E3350;"><span style="font-size:12px;color:#B9C0D8;">מטבעות</span><span class="num" style="display:flex;align-items:center;gap:3px;font-size:22px;color:#F5B82E;">${coin(18)}<span dir="ltr">+${params.earned || 0}</span></span></div>
       </div>
-      ${params.interrupts ? `<div class="num" style="text-align:center;font-size:14px;color:#22D3EE;">עצרת ${params.interrupts} מתקפות בזמן!</div>` : ''}
+      ${params.interrupts || params.activities ? `<div class="num" style="text-align:center;font-size:14px;color:#8CE9B9;">${[
+        params.activities ? `${params.activities} הרפתקאות בדרך` : '',
+        params.interrupts ? `${params.interrupts} מתקפות שנעצרו` : ''
+      ].filter(Boolean).join(' · ')}</div>` : ''}
       ${params.newBelt ? (() => { const b = SKILLS.find((k) => k.id === params.newBelt); return `<div class="pop-in" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:6px;background:#1E2238;border:1px dashed #F5B82E;animation-delay:.8s;">${belt(b.color, 46, 24)}<span class="num" style="font-size:17px;color:#F5B82E;">חגורה ${b.belt}! עכשיו: ${b.name}</span></div>`; })() : ''}
       <p style="margin:0;font-size:14px;color:#D0D4E4;text-align:center;">${won
         ? (isLast ? 'ניצחת את כל העולמות! אפשר לחזור ולאסוף 3 כוכבים בכל עולם.' : nextPlayable ? `נפתח עולם חדש: ${WORLDS[next].name}` : `העולם הבא מחכה לחגורה ${SKILLS[nextAccess.belt].belt}. התאמנו בעולמות הפתוחים ונצחו בקרב חגורה!`)
