@@ -5,6 +5,8 @@ import { FOES, WORLDS, FIGHTERS, WEAPONS, SPECIALS, IMAGES, HITS, SKILLS, MAX_HE
 import { foeArt, foePortrait, spritePortrait, foeBox, worldScene, startLayers, setSceneMoving, heroArt } from '../game/art.js';
 import { load, update } from '../game/save.js';
 import { worldAccess } from '../game/access.js';
+import { routeActivity, bossStyle, BOSS_STYLES, shieldCount, defenseMoves } from '../game/variety.js';
+import activity from './activity.js';
 import { makeQuestion, record, progress, challengeSeconds, winBelt, recentMedianMs } from '../game/learning.js';
 import { sfx, haptic, setMusicStyle, startMusic } from '../audio.js';
 import { coin, heart, belt, replay } from '../ui.js';
@@ -65,14 +67,24 @@ export default function battle(root, { go, params }) {
   const special = SPECIALS.find((s) => s.id === save.eq.special) || SPECIALS[0];
   const heroWeapon = save.eq.weapon;
   const timers = [];
-  const later = (ms, fn) => { const t = setTimeout(fn, ms); timers.push(t); return t; };
+  let alive = true, activeActivity = null;
+  const deferred = [];
+  const later = (ms, fn) => {
+    const t = setTimeout(() => {
+      if (!alive) return;
+      if (document.hidden || root.querySelector('#pauseBox')) deferred.push(fn);
+      else fn();
+    }, ms);
+    timers.push(t); return t;
+  };
 
   const S = {
     enc: 0, phase: 'run', hp: 1, hearts: MAX_HEARTS, combo: 0, maxCombo: 0, energy: 0,
     q: null, wrong: [], tries: 0, hint: true, earned: 0, answered: 0, firstOk: 0, special: false,
     hitText: '', gain: 0, aura: 'none', beltFight: false, dmg: 1, crit: false, interrupted: false, interrupts: 0,
     shownAt: 0, pausedMs: 0, pauseStart: 0,
-    charge: { dur: 0, elapsed: 0, start: 0, timers: [] }
+    charge: { dur: 0, elapsed: 0, start: 0, timers: [] },
+    activities: new Set(), completedActivities: 0, pattern: null, shields: 0, defenseTurn: 0, brokeShield: false
   };
   const foeKey = () => W.path[S.enc];
   const foe = () => FOES[foeKey()];
@@ -106,6 +118,8 @@ export default function battle(root, { go, params }) {
     <div id="float"></div>
     <div id="toast"></div>
     <div id="overlay"></div>
+    <div id="bossPattern"></div>
+    <div id="activityLayer"></div>
   </div>`;
   const $ = (id) => root.querySelector('#' + id);
   startLayers(root);
@@ -121,7 +135,13 @@ export default function battle(root, { go, params }) {
     const f = foe();
     const b = foeBox(f);
     const art = f.type === 'chest' ? TreasureChest({ open: false }) : foeArt(f);
-    $('foe').innerHTML = `<div id="foeMove" style="position:absolute;left:${foeLeft()}px;bottom:50px;width:${f.type === 'chest' ? 180 : b}px;height:${b}px;"><div id="foeGlow"></div><div id="foePose" class="pose-idle" style="position:relative;">${art}</div></div>`;
+    $('foe').innerHTML = `<div id="foeMove" style="position:absolute;left:${foeLeft()}px;bottom:50px;width:${f.type === 'chest' ? 180 : b}px;height:${b}px;"><div id="foeGlow"></div><div id="foePose" class="pose-idle" style="position:relative;">${art}</div><div id="foeShield"></div></div>`;
+    renderBossPattern();
+  }
+  function renderBossPattern() {
+    const p = BOSS_STYLES[S.pattern];
+    $('bossPattern').innerHTML = p ? `<div class="boss-pattern" data-pattern="${S.pattern}" data-shields="${S.shields}" style="--pattern-color:${p.color}">${p.name}${S.shields ? ` · ${S.shields} מגנים` : ''}</div>` : '';
+    if ($('foeShield')) $('foeShield').innerHTML = S.shields ? '<div class="boss-shield"></div>' : '';
   }
   const foeMove = (cls) => replay($('foeMove'), '', cls);
   const heroMove = (cls) => replay($('heroMove'), '', cls);
@@ -214,7 +234,7 @@ export default function battle(root, { go, params }) {
   function renderPanel(pop) {
     const q = S.q;
     const ph = S.phase;
-    if (!q || ph === 'run' || ph === 'defeat' || ph === 'clear') { $('panel').innerHTML = ''; return; }
+    if (!q || ph === 'run' || ph === 'activity' || ph === 'defeat' || ph === 'clear') { $('panel').innerHTML = ''; return; }
     const f = foe();
     const done = ph === 'hit' || ph === 'special' || ph === 'ko';
     const isBoss = f.type === 'boss', isChest = f.type === 'chest';
@@ -251,7 +271,7 @@ export default function battle(root, { go, params }) {
   function renderChoices() {
     const q = S.q;
     const ph = S.phase;
-    if (!q || ph === 'run' || ph === 'defeat' || ph === 'clear') { $('choices').innerHTML = ''; return; }
+    if (!q || ph === 'run' || ph === 'activity' || ph === 'defeat' || ph === 'clear') { $('choices').innerHTML = ''; return; }
     const done = ph === 'hit' || ph === 'special' || ph === 'ko';
     $('choices').innerHTML = `
     <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:22px;">
@@ -403,6 +423,16 @@ export default function battle(root, { go, params }) {
     stopCharge();
     S.enc = enc; S.phase = 'run'; S.q = null; S.wrong = []; S.tries = 0; S.hp = foe().hp;
     S.beltFight = foe().type === 'boss' && progress().phase === 'challenge';
+    S.pattern = bossStyle(W, foe()); S.shields = shieldCount(W, S.pattern); S.defenseTurn = 0;
+    $('heroMove').style.transform = '';
+    $('foe').style.visibility = '';
+    const route = routeActivity(W, enc);
+    if (route && !S.activities.has(enc)) {
+      S.activities.add(enc);
+      renderFoe(); renderHud(); renderBelt(); renderCombo();
+      beginActivity(route, () => run(enc));
+      return;
+    }
     setSceneMoving(root, true);
     $('speed').style.display = '';
     renderFoe();
@@ -420,6 +450,58 @@ export default function battle(root, { go, params }) {
     else later(1900, ask);
   }
 
+  function beginActivity(config, next, fail) {
+    if (config.kind === 'defense') {
+      clearChargeTimers(); S.charge.start = 0;
+      $('chargeBar').innerHTML = '';
+    } else stopCharge();
+    S.phase = 'activity';
+    renderPanel(); renderChoices();
+    setSceneMoving(root, false);
+    $('speed').style.display = 'none';
+    $('overlay').innerHTML = '';
+    $('foe').style.visibility = config.kind === 'defense' ? '' : 'hidden';
+    $('heroMove').style.visibility = config.kind === 'gate' ? 'hidden' : '';
+    $('heroMove').style.transform = config.kind === 'jump' ? 'translateX(-65px)' : '';
+    heroPose('pose-idle'); heroMove('');
+    const q = config.kind === 'gate' ? makeQuestion(load().level) : null;
+    const restore = () => {
+      activeActivity = null;
+      $('foe').style.visibility = '';
+      $('heroMove').style.visibility = '';
+      $('heroMove').style.transform = '';
+      heroMove(''); heroPose('pose-idle');
+    };
+    activeActivity = activity($('activityLayer'), config, {
+      question: q, later,
+      isPaused: () => document.hidden || !!root.querySelector('#pauseBox'),
+      onMove(action, step, kind) {
+        if (action === 'jump') {
+          const from = kind === 'jump' ? -65 - 180 * step : 0;
+          const to = kind === 'jump' ? -65 - 180 * (step + 1) : 0;
+          $('heroMove').style.setProperty('--hop-from', from + 'px');
+          $('heroMove').style.setProperty('--hop-to', to + 'px');
+          heroPose('pose-run'); heroMove('route-hop');
+        } else { heroPose('pose-idle'); heroMove('route-block'); }
+      },
+      onAttempt(question, ok, ms) {
+        S.answered += 1;
+        if (ok) S.firstOk += 1;
+        afterRecord(record(question, ok, ms));
+      },
+      onDone() {
+        restore();
+        if (config.kind !== 'defense') {
+          S.completedActivities += 1; S.earned += config.reward;
+          update((s) => { s.coins += config.reward; });
+        }
+        next();
+      },
+      onFail() { restore(); fail(); }
+    });
+    if (q) sayQuestion(q, { interrupt: true });
+  }
+
   function bossIntro() {
     const f = foe();
     setSceneMoving(root, false);
@@ -434,6 +516,7 @@ export default function battle(root, { go, params }) {
       <div class="boss-intro" style="position:absolute;top:118px;left:-40px;right:-40px;padding:10px 0;background:${S.beltFight ? '#0B0B14' : '#1B1530'};border-top:4px solid ${S.beltFight ? next.color : '#9775FA'};border-bottom:4px solid ${S.beltFight ? next.color : '#9775FA'};display:flex;flex-direction:column;align-items:center;">
         <div class="num" style="font-size:18px;color:${S.beltFight ? '#F5B82E' : '#C4B5FD'};transform:skewX(12deg);">${S.beltFight ? `קרב חגורה ${next.belt}! ענו לפני שהמתקפה מוכנה (${challengeSeconds()} שניות)` : 'בוס!'}</div>
         <div class="title-xl" style="font-size:80px;color:#FFFFFF;transform:skewX(12deg);text-shadow:4px 4px 0 #0B0B14;">${f.name}</div>
+        <div style="font-size:17px;color:#E5DCF9;transform:skewX(12deg);">${BOSS_STYLES[S.pattern].hint}</div>
       </div>`;
     if (S.beltFight) later(300, () => sfx('gong'));
     later(450, () => (S.beltFight ? say('beltfight') : sayRandom('boss')).then(() => say(`foe_${foeKey()}`, { interrupt: false })));
@@ -492,6 +575,8 @@ export default function battle(root, { go, params }) {
     const isSpecial = first && S.energy >= 4 && f.type !== 'chest';
     S.crit = !isSpecial && f.type !== 'chest' && Math.random() * 100 < stats.crit;
     let dmg = isSpecial ? (f.type === 'boss' ? stats.dmg + 2 : f.hp) : stats.dmg * (S.crit ? 2 : 1);
+    S.brokeShield = S.shields > 0;
+    if (S.brokeShield) { S.shields -= 1; dmg = 0; S.crit = false; }
     if (f.type === 'chest') dmg = 1;
     S.dmg = Math.min(dmg, S.hp);
     S.interrupted = wasCharging && f.type !== 'chest';
@@ -504,7 +589,7 @@ export default function battle(root, { go, params }) {
     S.earned += S.gain;
     S.special = isSpecial;
     S.double = !isSpecial && S.combo >= 3 && f.type !== 'chest';
-    S.hitText = isSpecial ? special.name : f.type === 'chest' ? 'נפרץ!' : S.crit ? 'קריטי!' : S.interrupted ? 'נקטע!' : S.double ? 'קומבו כפול!' : HITS[Math.floor(Math.random() * HITS.length)];
+    S.hitText = S.brokeShield ? 'מגן נשבר!' : isSpecial ? special.name : f.type === 'chest' ? 'נפרץ!' : S.crit ? 'קריטי!' : S.interrupted ? 'נקטע!' : S.double ? 'קומבו כפול!' : HITS[Math.floor(Math.random() * HITS.length)];
     update((s) => { s.coins += S.gain; });
     if (S.interrupted) {
       const c = foeCenter();
@@ -541,7 +626,8 @@ export default function battle(root, { go, params }) {
       foeMove('enc-hurt');
       foePose('pose-hurt');
       sparks(c.x, c.y, [f.color || '#F5B82E', '#FFFFFF', stats.trail], S.special ? 20 : S.crit ? 16 : 12);
-      damage(c.x, c.top + 10, '-' + S.dmg, S.crit ? '#FFD43B' : '#FF4D5E', S.crit ? 70 : 54);
+      damage(c.x, c.top + 10, S.brokeShield ? 'מגן!' : '-' + S.dmg, S.brokeShield ? '#22D3EE' : S.crit ? '#FFD43B' : '#FF4D5E', S.crit ? 70 : 54);
+      renderBossPattern();
       if (S.crit) spawn(`<div class="crit" style="position:absolute;left:${c.x - 90}px;top:${c.top - 40}px;font-family:'Karantina',sans-serif;font-weight:700;font-size:72px;color:#FFD43B;text-shadow:4px 4px 0 #B42318,-2px -2px 0 #0B0B14,2px -2px 0 #0B0B14,-2px 2px 0 #0B0B14;">קריטי!</div>`, 1000);
       spawn(`<div style="position:absolute;left:${c.x - 66}px;top:${c.y - 66}px;width:240px;height:240px;transform:scale(${S.special ? 0.8 : 0.55});transform-origin:0 0;"><div class="fx-burst" style="width:240px;height:240px;transform-origin:50% 50%;">${FX({ kind: 'impact', color: '#F5B82E' })}</div></div>`, 700);
     });
@@ -684,6 +770,16 @@ export default function battle(root, { go, params }) {
 
   // The enemy attacks in its own style; big = the fully charged version.
   function enemyAttack(big, done) {
+    if (S.pattern === 'wave' || S.pattern === 'sequence') {
+      const moves = defenseMoves(S.defenseTurn++, S.pattern === 'sequence' ? 2 : 1);
+      beginActivity({ kind: 'defense', moves, hint: BOSS_STYLES[S.pattern].hint }, () => {
+        S.phase = 'counter'; S.interrupts += 1;
+        done();
+      }, () => { S.phase = 'counter'; performEnemyAttack(big, done); });
+    } else performEnemyAttack(big, done);
+  }
+
+  function performEnemyAttack(big, done) {
     const f = foe();
     const c = foeCenter();
     let hitAt = 320;
@@ -773,7 +869,7 @@ export default function battle(root, { go, params }) {
       <div class="defeat" style="position:absolute;left:0;right:0;top:110px;display:flex;flex-direction:column;align-items:center;">
         <span class="title-xl" style="font-size:140px;color:#E63946;text-shadow:5px 5px 0 #0B0B14,-3px -3px 0 #0B0B14,3px -3px 0 #0B0B14,-3px 3px 0 #0B0B14;">הובסת!</span>
       </div>`;
-    later(2000, () => go('result', { world: worldIdx, won: false, earned: S.earned, answered: S.answered, firstOk: S.firstOk, maxCombo: S.maxCombo, stage: S.enc, stages: W.path.length, interrupts: S.interrupts }));
+    later(2000, () => go('result', { world: worldIdx, won: false, earned: S.earned, answered: S.answered, firstOk: S.firstOk, maxCombo: S.maxCombo, stage: S.enc, stages: W.path.length, interrupts: S.interrupts, activities: S.completedActivities }));
   }
 
   function victory() {
@@ -794,13 +890,20 @@ export default function battle(root, { go, params }) {
         <span class="title-xl" style="font-size:150px;color:#F5B82E;text-shadow:5px 5px 0 #B42318,-3px -3px 0 #0B0B14,3px -3px 0 #0B0B14,-3px 3px 0 #0B0B14;">ניצחון!</span>
       </div>`;
     if (newBelt) later(600, () => { sfx('levelup'); say('beltwin', { interrupt: false }); });
-    later(2200, () => go('result', { world: worldIdx, won: true, stars, earned: S.earned, answered: S.answered, firstOk: S.firstOk, maxCombo: S.maxCombo, interrupts: S.interrupts, newBelt: newBelt && newBelt.id }));
+    later(2200, () => go('result', { world: worldIdx, won: true, stars, earned: S.earned, answered: S.answered, firstOk: S.firstOk, maxCombo: S.maxCombo, interrupts: S.interrupts, activities: S.completedActivities, newBelt: newBelt && newBelt.id }));
   }
 
   // ---------- pause (the answer clock and wind-ups stop while paused or in the background) ----------
-  function pauseClock() { if (!S.pauseStart) S.pauseStart = performance.now(); pauseCharge(); }
+  function pauseClock() {
+    if (!S.pauseStart) S.pauseStart = performance.now();
+    pauseCharge(); activeActivity?.pause();
+    $('heroMove').style.animationPlayState = 'paused';
+  }
   function resumeClock() {
     if (S.pauseStart) { S.pausedMs += performance.now() - S.pauseStart; S.pauseStart = 0; }
+    activeActivity?.resume();
+    $('heroMove').style.animationPlayState = '';
+    deferred.splice(0).forEach((fn) => { if (alive) fn(); });
     if ((S.phase === 'ask' || S.phase === 'oops') && S.charge.dur && !S.charge.start) startCharge();
   }
   const onVisibility = () => { if (document.hidden) pauseClock(); else if (!root.querySelector('#pauseBox')) resumeClock(); };
@@ -833,5 +936,5 @@ export default function battle(root, { go, params }) {
   renderHero();
   run(0);
 
-  return { unmount() { stopVoice(); timers.forEach(clearTimeout); clearChargeTimers(); document.removeEventListener('visibilitychange', onVisibility); } };
+  return { unmount() { alive = false; activeActivity?.unmount(); stopVoice(); timers.forEach(clearTimeout); clearChargeTimers(); document.removeEventListener('visibilitychange', onVisibility); } };
 }

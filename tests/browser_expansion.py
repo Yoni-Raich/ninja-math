@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_actions import play_activity
 
 OUTPUT = Path('output/expansion-checks')
 OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -74,6 +75,9 @@ with sync_playwright() as p:
     for _ in range(180):
         if page.locator('#a').count():
             break
+        if play_activity(page):
+            page.clock.fast_forward(1200)
+            continue
         available = page.locator('#choices button:enabled')
         tokens = page.locator('#panel .tok').all_text_contents()
         if available.count() and '?' in tokens:
