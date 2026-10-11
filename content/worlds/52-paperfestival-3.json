@@ -1,0 +1,42 @@
+{
+  "order": 52,
+  "id": "paperfestival-3",
+  "name": "משמר פסטיבל הנייר",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "paperfestival",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/paperfestival-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 124,
+    "scale": "in"
+  },
+  "path": [
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "chest",
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "chest",
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "tempesttitan"
+  ]
+}

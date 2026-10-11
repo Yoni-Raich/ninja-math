@@ -1,0 +1,39 @@
+{
+  "order": 34,
+  "id": "stormcitadel-1",
+  "name": "מסע מצודת הסערה",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "stormcitadel",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/stormcitadel-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 100,
+    "scale": "yo"
+  },
+  "path": [
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "chest",
+    "cactusronin",
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "bronzegolem"
+  ]
+}

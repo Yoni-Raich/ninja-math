@@ -1,0 +1,38 @@
+{
+  "order": 16,
+  "id": "paperfestival-0",
+  "name": "שביל פסטיבל הנייר",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "paperfestival",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/paperfestival-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 103,
+    "scale": "in"
+  },
+  "path": [
+    "paperfox",
+    "acornscout",
+    "mossbeetle",
+    "chest",
+    "bubbleotter",
+    "paperfox",
+    "acornscout",
+    "willowguardian"
+  ]
+}

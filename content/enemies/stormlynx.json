@@ -1,0 +1,17 @@
+{
+  "id": "stormlynx",
+  "name": "שונר הסערה",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 3,
+  "hp": 2,
+  "reward": 17,
+  "attack": "projectile",
+  "projectile": "bolt",
+  "color": "#75D5E2",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a blue lynx ninja with tufted ears, silver lightning markings, a flowing green scarf and twin lightning daggers."
+  }
+}

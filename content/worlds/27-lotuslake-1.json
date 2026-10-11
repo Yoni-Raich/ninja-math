@@ -1,0 +1,39 @@
+{
+  "order": 27,
+  "id": "lotuslake-1",
+  "name": "מסע אגם הלוטוס",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "lotuslake",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lotuslake-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 105,
+    "scale": "in"
+  },
+  "path": [
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "chest",
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "scarabking"
+  ]
+}

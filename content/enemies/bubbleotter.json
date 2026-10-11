@@ -1,0 +1,17 @@
+{
+  "id": "bubbleotter",
+  "name": "לוטרת הבועות",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 0,
+  "hp": 1,
+  "reward": 8,
+  "attack": "projectile",
+  "projectile": "water",
+  "color": "#56C5DC",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a playful brown otter ninja in a turquoise vest, holding a seashell that blows water bubbles."
+  }
+}

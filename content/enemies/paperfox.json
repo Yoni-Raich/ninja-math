@@ -1,0 +1,17 @@
+{
+  "id": "paperfox",
+  "name": "שועל הנייר",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 0,
+  "hp": 1,
+  "reward": 8,
+  "attack": "projectile",
+  "projectile": "feather",
+  "color": "#F2BD72",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "an orange origami fox warrior with folded paper ears, a cream kimono and paper fans."
+  }
+}

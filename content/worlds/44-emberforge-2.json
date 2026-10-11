@@ -1,0 +1,41 @@
+{
+  "order": 44,
+  "id": "emberforge-2",
+  "name": "אתגר נפחיית הגחלים",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "emberforge",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/emberforge-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 117,
+    "scale": "in"
+  },
+  "path": [
+    "smokeraccoon",
+    "embermantis",
+    "magmaturtle",
+    "chest",
+    "clockworkowl",
+    "smokeraccoon",
+    "embermantis",
+    "chest",
+    "magmaturtle",
+    "clockworkowl",
+    "furnacemaster"
+  ]
+}

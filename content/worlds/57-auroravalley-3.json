@@ -1,0 +1,42 @@
+{
+  "order": 57,
+  "id": "auroravalley-3",
+  "name": "משמר עמק הזוהר",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "auroravalley",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/auroravalley-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 109,
+    "scale": "hira"
+  },
+  "path": [
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "chest",
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "chest",
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "aurorastag"
+  ]
+}

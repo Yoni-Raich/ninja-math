@@ -1,0 +1,38 @@
+{
+  "order": 13,
+  "id": "lanternharbor-0",
+  "name": "שביל נמל הפנסים",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "lanternharbor",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lanternharbor-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 88,
+    "scale": "in"
+  },
+  "path": [
+    "acornscout",
+    "mossbeetle",
+    "bubbleotter",
+    "chest",
+    "paperfox",
+    "acornscout",
+    "mossbeetle",
+    "badgerchief"
+  ]
+}

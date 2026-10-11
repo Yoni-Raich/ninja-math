@@ -1,0 +1,16 @@
+{
+  "id": "coppercrab",
+  "name": "סרטן הנחושת",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 1,
+  "hp": 1,
+  "reward": 11,
+  "attack": "melee",
+  "color": "#CC7952",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a copper armored crab warrior with huge mechanical pincers, a tiny pirate hat and turquoise glowing eyes."
+  }
+}

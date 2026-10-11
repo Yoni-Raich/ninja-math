@@ -1,0 +1,16 @@
+{
+  "id": "scarabking",
+  "name": "מלך החרפושיות",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 1,
+  "hp": 4,
+  "reward": 22,
+  "attack": "magic",
+  "color": "#EBC65B",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a regal blue and gold scarab beetle king with a sun crown, broad golden wings and a jeweled staff."
+  }
+}

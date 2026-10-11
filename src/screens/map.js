@@ -1,6 +1,7 @@
 import { load } from '../game/save.js';
 import { WORLDS, SKILLS, FOES, FIGHTERS } from '../game/data.js';
 import { heroArt } from '../game/art.js';
+import { earnedBelt, worldAccess, recommendedWorld } from '../game/access.js';
 import { star, belt, backIcon, coin } from '../ui.js';
 import { sfx } from '../audio.js';
 
@@ -32,11 +33,11 @@ const REGION = 176;   // width of one world on the scroll; the map scrolls sidew
 export default function map(root, { go }) {
   const s = load();
   const N = WORLDS.length;
-  const unlocked = Math.min(s.unlocked, N);
-  const cur = unlocked - 1;
+  const access = WORLDS.map((_, i) => worldAccess(WORLDS, FOES, s, i));
+  const cur = recommendedWorld(WORLDS, FOES, s);
   const CW = N * REGION + 90;
   const RIGHT = CW - 45;
-  const lv = SKILLS[s.level];
+  const lv = SKILLS[earnedBelt(s)];
   const totalStars = s.stars.reduce((a, b) => a + (b || 0), 0);
   const worldX = (i) => RIGHT - (i + 0.5) * REGION;
 
@@ -47,16 +48,16 @@ export default function map(root, { go }) {
     w.path.forEach((id, i) => {
       const t = n === 1 ? 0.5 : i / (n - 1);
       const boss = FOES[id].type === 'boss';
-      pts.push({ x: x0 + (x1 - x0) * t, y: boss ? 236 : i % 2 ? 296 : 266, w: wi, boss, first: i === 0 });
+      pts.push({ x: x0 + (x1 - x0) * t, y: boss ? 278 : i % 2 ? 310 : 290, w: wi, boss, first: i === 0 });
     });
   });
   const curIdx = pts.findIndex((p) => p.w === cur && p.first);
   const poly = (list) => list.map((p) => `${Math.round(p.x)},${p.y}`).join(' ');
   const nodes = pts.map((p, i) => {
     const size = p.boss ? 26 : 16;
-    const done = p.w < cur || s.stars[p.w] > 0;
+    const done = s.stars[p.w] > 0;
     const isCur = i === curIdx;
-    const bg = done ? '#F5B82E' : isCur ? '#E63946' : p.w > cur ? '#9C927A' : '#F1E6CC';
+    const bg = done ? '#F5B82E' : isCur ? '#E63946' : !access[p.w].playable ? '#9C927A' : '#F1E6CC';
     return `<div style="position:absolute;left:${p.x - size / 2}px;top:${p.y - size / 2}px;width:${size}px;height:${size}px;pointer-events:none;">
       ${isCur ? `<span class="ring" style="position:absolute;left:0;top:0;width:${size}px;height:${size}px;border-radius:50%;border:3px solid #E63946;box-sizing:border-box;"></span>` : ''}
       <span style="position:absolute;left:0;top:0;width:${size}px;height:${size}px;box-sizing:border-box;transform:rotate(45deg);background:${bg};border:3px solid #2B2118;"></span>
@@ -68,8 +69,8 @@ export default function map(root, { go }) {
     const cx = worldX(i);
     const art = ILLUSTRATIONS[w.scene]
       ? `<g transform="translate(${cx} 150) scale(0.85)">${ILLUSTRATIONS[w.scene]}</g>`
-      : `<g transform="translate(${cx} 146)"><clipPath id="clip-${w.id}"><circle r="60"></circle></clipPath><image href="${(w.layers && w.layers[0] && w.layers[0].src) || ''}" x="-170" y="-66" height="132" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-${w.id})"></image><circle r="60" fill="none" stroke="#2B2118" stroke-width="3"></circle></g>`;
-    const lock = i > cur ? `<g transform="translate(${cx} 250)"><rect x="${-REGION / 2 + 4}" y="-190" width="${REGION - 8}" height="240" fill="#2B2118" opacity="0.5"></rect><path d="M-14 -58 a14 14 0 0 1 28 0 v10" stroke="#F1E6CC" stroke-width="5" fill="none"></path><rect x="-22" y="-50" width="44" height="34" rx="4" fill="#F1E6CC"></rect><circle cx="0" cy="-34" r="5" fill="#2B2118"></circle></g>` : '';
+      : `<g transform="translate(${cx} 146)"><clipPath id="clip-${w.id}"><circle r="60"></circle></clipPath><image href="${(w.layers && w.layers[0] && w.layers[0].src) || ''}" x="-170" y="-66" width="340" height="132" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-${w.id})" style="${w.layers?.[0]?.filter ? `filter:${w.layers[0].filter}` : ''}"></image><circle r="60" fill="none" stroke="#2B2118" stroke-width="3"></circle></g>`;
+    const lock = !access[i].playable ? `<g transform="translate(${cx} 250)"><rect x="${-REGION / 2 + 4}" y="-146" width="${REGION - 8}" height="215" fill="#2B2118" opacity="0.5"></rect><path d="M-14 -98 a14 14 0 0 1 28 0 v10" stroke="#F1E6CC" stroke-width="5" fill="none"></path><rect x="-22" y="-90" width="44" height="34" rx="4" fill="#F1E6CC"></rect><circle cx="0" cy="-74" r="5" fill="#2B2118"></circle></g>` : '';
     return art + lock;
   }).join('');
   const blots = Array.from({ length: Math.ceil(CW / 300) }, (_, i) => `<ellipse cx="${150 + i * 300}" cy="${i % 2 ? 340 : 110}" rx="80" ry="16"></ellipse>`).join('');
@@ -96,12 +97,13 @@ export default function map(root, { go }) {
       </svg>
       ${WORLDS.map((w, i) => `
         <div dir="rtl" style="position:absolute;left:${worldX(i) - REGION / 2}px;top:206px;width:${REGION}px;display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none;">
-          <span class="num" style="font-size:13px;color:${i > cur ? '#7A6F58' : '#2B2118'};white-space:nowrap;">${i + 1} · ${w.name}</span>
+          <span class="num" style="font-size:12px;color:#2B2118;white-space:nowrap;">${i + 1} · ${w.name}</span>
           <div style="display:flex;gap:2px;">${[0, 1, 2].map((k) => star(k < (s.stars[i] || 0) ? '#F5B82E' : '#E4D6B4', 13, '#2B2118')).join('')}</div>
+          <span class="num" style="display:flex;align-items:center;gap:4px;font-size:12px;color:#2B2118;">${belt(SKILLS[access[i].belt].color, 20, 11, '#2B2118')}חגורה ${SKILLS[access[i].belt].belt}${access[i].reason === 'belt' ? ' · נעול' : ''}</span>
         </div>`).join('')}
       ${nodes}
       <div style="position:absolute;left:${hp.x - 36}px;top:${hp.y - 76}px;width:200px;height:220px;transform:scale(.32);transform-origin:0 0;pointer-events:none;"><div class="pose-idle">${heroArt(hero, { weapon: s.eq.weapon, aura: s.eq.aura })}</div></div>
-      ${WORLDS.map((w, i) => `<button class="world-hit" data-w="${i}" aria-label="עולם ${i + 1}: ${w.name}${i > cur ? ' (נעול)' : ''}" style="left:${worldX(i) - REGION / 2}px;width:${REGION}px;"></button>`).join('')}
+      ${WORLDS.map((w, i) => `<button class="world-hit" data-w="${i}" aria-disabled="${!access[i].playable}" aria-label="עולם ${i + 1}: ${w.name}${access[i].reason === 'belt' ? ` (נעול עד חגורה ${SKILLS[access[i].belt].belt})` : access[i].reason === 'path' ? ' (סיימו את העולם הקודם)' : ''}" style="left:${worldX(i) - REGION / 2}px;width:${REGION}px;"></button>`).join('')}
     </div>
   </div>
   <svg width="915" height="412" viewBox="0 0 915 412" style="position:absolute;left:0;top:0;pointer-events:none;" aria-hidden="true">
@@ -113,6 +115,10 @@ export default function map(root, { go }) {
   <div style="position:absolute;top:28px;left:0;right:0;display:flex;justify-content:center;pointer-events:none;">
     <div class="sk" style="padding:0 28px;background:#2B2118;"><h1 class="title-xl unsk" style="margin:0;font-size:40px;line-height:1.05;color:#F1E6CC;">מפת העולמות</h1></div>
   </div>
+  <nav aria-label="אזורים לפי חגורה" style="position:absolute;top:70px;left:60px;right:60px;display:flex;justify-content:center;gap:8px;">
+    ${SKILLS.map((skill, index) => `<button class="belt-jump" data-belt="${index}" aria-label="עולמות לחגורה ${skill.belt}" style="display:flex;align-items:center;gap:5px;height:28px;padding:0 10px;background:#2B2118;color:#F1E6CC;border:1px solid ${index <= earnedBelt(s) ? '#F5B82E' : '#9C927A'};border-radius:4px;cursor:pointer;">${belt(skill.color, 24, 13, '#F1E6CC')}<span class="num" style="font-size:13px;">${skill.belt} · ${WORLDS.filter((_, i) => access[i].belt === index).length}</span></button>`).join('')}
+  </nav>
+  <div id="mapNotice" role="status" style="display:none;position:absolute;top:106px;left:220px;right:220px;padding:9px 14px;text-align:center;background:#2B2118;color:#F1E6CC;border:2px solid #F5B82E;border-radius:6px;font-size:15px;pointer-events:none;"></div>
   <div style="position:absolute;left:60px;right:60px;bottom:30px;height:50px;display:flex;align-items:center;gap:12px;">
     <button id="back" class="btn-icon" aria-label="חזרה לתפריט" style="background:#2B2118;border-color:#2B2118;">${backIcon('#F1E6CC')}</button>
     <div class="chip" style="height:34px;background:#2B2118;color:#F1E6CC;">${belt(lv.color, 30, 16, '#F1E6CC')}<span class="num" style="font-size:14px;">חגורה ${lv.belt} · ${totalStars} מתוך ${N * 3} כוכבים</span></div>
@@ -129,12 +135,33 @@ export default function map(root, { go }) {
   sc.addEventListener('wheel', (e) => { sc.scrollLeft += e.deltaY + e.deltaX; e.preventDefault(); }, { passive: false });
   root.querySelector('#back').onclick = () => go('title');
   root.querySelector('#go').onclick = () => go('battle', { world: cur });
+  let noticeTimer;
+  function notice(message) {
+    clearTimeout(noticeTimer);
+    const element = root.querySelector('#mapNotice');
+    element.textContent = message;
+    element.style.display = 'block';
+    noticeTimer = setTimeout(() => { element.style.display = 'none'; }, 4000);
+  }
+  root.querySelectorAll('.belt-jump').forEach((button) => {
+    button.onclick = () => {
+      const index = Number(button.dataset.belt);
+      const first = access.findIndex((a) => a.belt === index);
+      sc.scrollTo({ left: Math.max(0, worldX(first) - 419), behavior: 'smooth' });
+      if (index > earnedBelt(s)) notice(`העולמות האלה נפתחים בחגורה ${SKILLS[index].belt}. נצחו בקרב חגורה כדי להתקדם!`);
+    };
+  });
   root.querySelectorAll('.world-hit').forEach((b) => {
     b.onclick = () => {
       const i = Number(b.dataset.w);
-      if (i > cur) { sfx('block'); b.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-8px)' }, { transform: 'translateX(8px)' }, { transform: 'translateX(0)' }], 300); return; }
+      if (!access[i].playable) {
+        sfx('block');
+        notice(access[i].reason === 'belt' ? `צריך חגורה ${SKILLS[access[i].belt].belt}. התאמנו ונצחו בקרב חגורה!` : `סיימו קודם את ${WORLDS[i - 1].name}.`);
+        b.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-8px)' }, { transform: 'translateX(8px)' }, { transform: 'translateX(0)' }], 300);
+        return;
+      }
       go('battle', { world: i });
     };
   });
-  return { unmount() {} };
+  return { unmount() { clearTimeout(noticeTimer); } };
 }

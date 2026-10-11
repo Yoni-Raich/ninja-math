@@ -1,0 +1,17 @@
+{
+  "id": "eclipseninja",
+  "name": "נינג׳ת הליקוי",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 4,
+  "hp": 3,
+  "reward": 20,
+  "attack": "projectile",
+  "projectile": "shuriken",
+  "color": "#AA89DF",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a sleek black and purple eclipse ninja with a glowing crescent visor, cosmic scarf and two star shuriken."
+  }
+}

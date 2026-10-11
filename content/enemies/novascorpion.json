@@ -1,0 +1,17 @@
+{
+  "id": "novascorpion",
+  "name": "עקרב הנובה",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 4,
+  "hp": 3,
+  "reward": 20,
+  "attack": "projectile",
+  "projectile": "crystal",
+  "color": "#F29E76",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a black armored cosmic scorpion with glowing orange constellation spots, giant violet pincers and a blazing star tail."
+  }
+}

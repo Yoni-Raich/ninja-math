@@ -1,0 +1,42 @@
+{
+  "order": 55,
+  "id": "clockworkport-3",
+  "name": "משמר נמל השעונים",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "clockworkport",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/clockworkport-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 119,
+    "scale": "in"
+  },
+  "path": [
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "chest",
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "chest",
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "aurorastag"
+  ]
+}

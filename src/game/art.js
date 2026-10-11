@@ -57,7 +57,7 @@ export function spritePortrait(id) {
 export function worldScene(world) {
   if (world.scene !== 'image') return Scene({ world: world.scene, moving: true });
   const layers = (world.layers || []).map((l) => `
-    <div class="img-layer" data-src="${l.src}" data-h="${l.height}" data-speed="${l.speed}" style="position:absolute;left:0;top:${l.y}px;width:915px;height:${l.height}px;background-image:url(${l.src});background-size:auto ${l.height}px;background-repeat:repeat-x;"></div>`).join('');
+    <div class="img-layer" data-src="${l.src}" data-h="${l.height}" data-speed="${l.speed}" style="position:absolute;left:0;top:${l.y}px;width:915px;height:${l.height}px;background-image:url(${l.src});background-size:auto ${l.height}px;background-repeat:repeat-x;${l.filter ? `filter:${l.filter};` : ''}"></div>`).join('');
   return `<div style="position:relative;width:915px;height:412px;overflow:hidden;background:#8FD3E8;">${layers}</div>`;
 }
 

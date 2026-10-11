@@ -1,0 +1,39 @@
+{
+  "order": 26,
+  "id": "mushroomgrove-1",
+  "name": "מסע חורשת הפטריות",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "mushroomgrove",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/mushroomgrove-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/jungle-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 100,
+    "scale": "hira"
+  },
+  "path": [
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "chest",
+    "cactusronin",
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "bronzegolem"
+  ]
+}

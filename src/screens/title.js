@@ -1,7 +1,8 @@
 import Scene from '../art/Scene.js';
 import Fighter from '../art/Fighter.js';
 import { load, update } from '../game/save.js';
-import { WORLDS, FIGHTERS } from '../game/data.js';
+import { WORLDS, FIGHTERS, FOES } from '../game/data.js';
+import { recommendedWorld } from '../game/access.js';
 import { heroArt } from '../game/art.js';
 import { coin, speakerIcon } from '../ui.js';
 import { sfx, startMusic, stopMusic, unlockAudio } from '../audio.js';
@@ -50,7 +51,7 @@ export default function title(root, { go }) {
   </div>`;
 
   const q = (id) => root.querySelector('#' + id);
-  q('play').onclick = () => go('battle', { world: Math.min(load().unlocked, WORLDS.length) - 1 });
+  q('play').onclick = () => go('battle', { world: recommendedWorld(WORLDS, FOES, load()) });
   q('map').onclick = () => go('map');
   q('dojo').onclick = () => go('dojo');
   q('parents').onclick = () => go('parents');

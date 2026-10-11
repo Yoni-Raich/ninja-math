@@ -123,6 +123,7 @@ export function winBelt() {
     if (cur.phase !== 'challenge' || s.level >= SKILLS.length - 1) return;
     cur.phase = 'mastered';
     s.level += 1;
+    s.earnedBelt = Math.max(s.earnedBelt || 0, s.level);
     skillLog(s, SKILLS[s.level].id).phase = 'practice';
     won = SKILLS[s.level];
   });

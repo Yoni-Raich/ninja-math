@@ -1,0 +1,43 @@
+{
+  "order": 66,
+  "id": "ambercanyon-4",
+  "name": "אגדת קניון הענבר",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "ambercanyon",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/ambercanyon-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/desert-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 121,
+    "scale": "in"
+  },
+  "path": [
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "eclipseemperor"
+  ]
+}

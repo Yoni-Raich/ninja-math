@@ -1,0 +1,39 @@
+{
+  "order": 36,
+  "id": "eclipsepalace-1",
+  "name": "מסע ארמון הליקוי",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "eclipsepalace",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/eclipsepalace-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 110,
+    "scale": "in"
+  },
+  "path": [
+    "windfalcon",
+    "cactusronin",
+    "sandgecko",
+    "chest",
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "sandgecko",
+    "bronzegolem"
+  ]
+}

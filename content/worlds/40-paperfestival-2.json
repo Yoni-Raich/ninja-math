@@ -1,0 +1,41 @@
+{
+  "order": 40,
+  "id": "paperfestival-2",
+  "name": "אתגר פסטיבל הנייר",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "paperfestival",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/paperfestival-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 117,
+    "scale": "hira"
+  },
+  "path": [
+    "smokeraccoon",
+    "embermantis",
+    "magmaturtle",
+    "chest",
+    "clockworkowl",
+    "smokeraccoon",
+    "embermantis",
+    "chest",
+    "magmaturtle",
+    "clockworkowl",
+    "furnacemaster"
+  ]
+}

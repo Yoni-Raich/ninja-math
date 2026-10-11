@@ -1,0 +1,39 @@
+{
+  "order": 35,
+  "id": "starobservatory-1",
+  "name": "מסע מצפה הכוכבים",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "starobservatory",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/starobservatory-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 105,
+    "scale": "hira"
+  },
+  "path": [
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "chest",
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "scarabking"
+  ]
+}

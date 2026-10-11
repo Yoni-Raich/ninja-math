@@ -1,0 +1,38 @@
+{
+  "order": 15,
+  "id": "lotuslake-0",
+  "name": "שביל אגם הלוטוס",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "lotuslake",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lotuslake-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 98,
+    "scale": "hira"
+  },
+  "path": [
+    "bubbleotter",
+    "paperfox",
+    "acornscout",
+    "chest",
+    "mossbeetle",
+    "bubbleotter",
+    "paperfox",
+    "badgerchief"
+  ]
+}

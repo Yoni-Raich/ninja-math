@@ -2,6 +2,7 @@
   "order": 6,
   "id": "my-world",
   "name": "שם העולם",
+  "belt": 0,
   "scene": "image",
   "layers": [
     { "src": "backgrounds/my-world-far.webp", "speed": 70, "y": 0, "height": 412, "prompt": "A wide panoramic side-scrolling game BACKGROUND (about 3:1) of ... No characters, no text. Left and right edges must tile seamlessly. Keep the lower third simple." },

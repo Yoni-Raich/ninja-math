@@ -1,0 +1,42 @@
+{
+  "order": 49,
+  "id": "lanternharbor-3",
+  "name": "משמר נמל הפנסים",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "lanternharbor",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lanternharbor-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 109,
+    "scale": "in"
+  },
+  "path": [
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "chest",
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "chest",
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "aurorastag"
+  ]
+}

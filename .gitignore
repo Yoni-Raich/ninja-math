@@ -9,5 +9,8 @@ android/app/release/
 .DS_Store
 *.apk
 assets/
+output/
+content/expansion/art-results.json
+tests/__pycache__/
 *.log
 content/voice/raw/

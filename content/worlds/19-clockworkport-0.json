@@ -1,0 +1,38 @@
+{
+  "order": 19,
+  "id": "clockworkport-0",
+  "name": "שביל נמל השעונים",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "clockworkport",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/clockworkport-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 98,
+    "scale": "in"
+  },
+  "path": [
+    "bubbleotter",
+    "paperfox",
+    "acornscout",
+    "chest",
+    "mossbeetle",
+    "bubbleotter",
+    "paperfox",
+    "badgerchief"
+  ]
+}

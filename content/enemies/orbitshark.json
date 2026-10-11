@@ -1,0 +1,17 @@
+{
+  "id": "orbitshark",
+  "name": "כריש המסלול",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 4,
+  "hp": 3,
+  "reward": 20,
+  "attack": "projectile",
+  "projectile": "laser",
+  "color": "#6CBCEA",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a blue space shark cyborg hovering upright in silver astronaut armor, with neon fins and a laser gauntlet."
+  }
+}

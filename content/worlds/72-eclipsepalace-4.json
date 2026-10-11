@@ -1,0 +1,43 @@
+{
+  "order": 72,
+  "id": "eclipsepalace-4",
+  "name": "אגדת ארמון הליקוי",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "eclipsepalace",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/eclipsepalace-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 131,
+    "scale": "in"
+  },
+  "path": [
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "chest",
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "chest",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "eclipseemperor"
+  ]
+}

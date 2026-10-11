@@ -1,0 +1,39 @@
+{
+  "order": 31,
+  "id": "clockworkport-1",
+  "name": "מסע נמל השעונים",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "clockworkport",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/clockworkport-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 105,
+    "scale": "yo"
+  },
+  "path": [
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "chest",
+    "sandgecko",
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "scarabking"
+  ]
+}

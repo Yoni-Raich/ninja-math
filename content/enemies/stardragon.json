@@ -1,0 +1,16 @@
+{
+  "id": "stardragon",
+  "name": "דרקון הכוכבים",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 4,
+  "hp": 7,
+  "reward": 40,
+  "attack": "magic",
+  "color": "#AB94F5",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a majestic powerful midnight blue dragon king with a golden constellation crown, luminous violet wings and a swirling galaxy chest core."
+  }
+}

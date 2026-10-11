@@ -1,0 +1,17 @@
+{
+  "id": "magmaturtle",
+  "name": "צב המגמה",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 2,
+  "hp": 2,
+  "reward": 14,
+  "attack": "projectile",
+  "projectile": "fireball",
+  "color": "#FF9650",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a stocky red turtle warrior with a black volcanic shell cracked with glowing orange lava and stone gauntlets."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "embermantis",
+  "name": "גמל שלמה לוהט",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 2,
+  "hp": 2,
+  "reward": 14,
+  "attack": "melee",
+  "color": "#F9783D",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a fiery orange praying mantis ninja with dark segmented armor and two glowing curved forearm blades."
+  }
+}

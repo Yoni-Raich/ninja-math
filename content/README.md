@@ -30,6 +30,7 @@ public/backgrounds/*.png       image-world background layers
 | field | values |
 |---|---|
 | `type` | `enemy`, `boss` (bigger, gets a boss intro and can be a timed belt fight), `chest` |
+| `belt` | minimum earned belt: 0 white, 1 yellow, 2 orange, 3 green, 4 black; enforced even if a world has a lower requirement |
 | `hp` | hits needed (bosses 3-4) |
 | `reward` | coins per hit |
 | `attack` | how it hits back on a wrong answer: `melee` (lunges), `projectile` (throws), `magic` (charge + beam) |
@@ -67,6 +68,20 @@ npm run images -- my-weapon        # weapons and super attacks: one transparent 
    Each layer is mirrored into a seamless loop and scrolls at `speed` seconds per tile.
 4. `music`: `bpm` and `scale` (`in`, `yo`, `hira`) for the procedural soundtrack.
 5. `path`: the encounters in order. The last one should be a boss; a `chest` restores a heart.
+6. `belt`: minimum earned belt (0-4). Entry also requires completing the preceding world. The map and victory shortcut both enforce the gate.
+
+## Belt expansion
+
+The game has 72 worlds: the original 12, followed by 12 new white-belt routes and 12 routes for each higher belt.
+Thirty new opponents (four enemies and two bosses per belt) fight across twelve new locations.
+Earned belts remain unlocked when the adaptive practice level steps down. Old save positions and stars stay in place.
+
+`scripts/expand-content.mjs` rebuilds only expansion JSON data. `content/expansion/art-jobs.json` holds the exact generation prompts;
+`art-manifest.json` records imported source images and game assets. Import selected built-in image-generation results with
+`node scripts/import-expansion-art.mjs <results.json>`, where each result has `id`, `kind`, `prompt`, and its generated image `path`.
+Run `npm test` to check content, belt gates and asset availability.
+Run `node scripts/review-expansion-art.mjs` to validate transparent animation frames and create contact sheets.
+The browser checks use Python Playwright: run a Vite server, then `python tests/browser_expansion.py`.
 
 The map, HUD, and battle adapt to any number of worlds and stages.
 

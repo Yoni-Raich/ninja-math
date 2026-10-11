@@ -1,0 +1,17 @@
+{
+  "id": "clockworkowl",
+  "name": "ינשוף גלגלי השיניים",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 2,
+  "hp": 2,
+  "reward": 14,
+  "attack": "projectile",
+  "projectile": "bolt",
+  "color": "#DDA847",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a brass clockwork owl inventor with large teal goggles, gear wings and a small lightning wand."
+  }
+}

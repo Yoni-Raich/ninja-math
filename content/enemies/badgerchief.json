@@ -1,0 +1,16 @@
+{
+  "id": "badgerchief",
+  "name": "ראש שבט הגיריות",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 0,
+  "hp": 3,
+  "reward": 16,
+  "attack": "melee",
+  "color": "#BBA287",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a sturdy friendly badger samurai chief in bronze armor with a large bamboo shield and wooden training hammer."
+  }
+}

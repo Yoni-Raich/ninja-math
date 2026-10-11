@@ -1,0 +1,38 @@
+{
+  "order": 21,
+  "id": "auroravalley-0",
+  "name": "שביל עמק הזוהר",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "auroravalley",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/auroravalley-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 88,
+    "scale": "hira"
+  },
+  "path": [
+    "acornscout",
+    "mossbeetle",
+    "bubbleotter",
+    "chest",
+    "paperfox",
+    "acornscout",
+    "mossbeetle",
+    "badgerchief"
+  ]
+}
