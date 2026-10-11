@@ -1,0 +1,42 @@
+{
+  "order": 56,
+  "id": "emberforge-3",
+  "name": "משמר נפחיית הגחלים",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "emberforge",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/emberforge-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 124,
+    "scale": "yo"
+  },
+  "path": [
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "chest",
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "chest",
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "tempesttitan"
+  ]
+}

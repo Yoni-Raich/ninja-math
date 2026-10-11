@@ -1,0 +1,16 @@
+{
+  "id": "runedeer",
+  "name": "אייל הרונות",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 3,
+  "hp": 2,
+  "reward": 17,
+  "attack": "magic",
+  "color": "#8CF3BB",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a mystical turquoise deer warrior with branching crystal antlers, green rune cloak and an ancient jade staff."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "smokeraccoon",
+  "name": "דביבון העשן",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 2,
+  "hp": 2,
+  "reward": 14,
+  "attack": "projectile",
+  "projectile": "wisp",
+  "color": "#B398CE",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a grey raccoon ninja wearing a purple scarf and black smoke-pattern armor, carrying a glowing incense lantern."
+  }
+}

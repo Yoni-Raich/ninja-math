@@ -1,0 +1,43 @@
+{
+  "order": 61,
+  "id": "lanternharbor-4",
+  "name": "אגדת נמל הפנסים",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "lanternharbor",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lanternharbor-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 116,
+    "scale": "yo"
+  },
+  "path": [
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "chest",
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "stardragon"
+  ]
+}

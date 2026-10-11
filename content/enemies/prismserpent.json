@@ -1,0 +1,17 @@
+{
+  "id": "prismserpent",
+  "name": "נחש המנסרה",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 3,
+  "hp": 2,
+  "reward": 17,
+  "attack": "projectile",
+  "projectile": "crystal",
+  "color": "#BF92F1",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a coiled purple crystal serpent with rainbow prism scales, emerald eyes and a small silver samurai helmet."
+  }
+}

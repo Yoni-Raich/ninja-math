@@ -1,0 +1,42 @@
+{
+  "order": 53,
+  "id": "sunkencity-3",
+  "name": "משמר העיר השקועה",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "sunkencity",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/sunkencity-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 109,
+    "scale": "yo"
+  },
+  "path": [
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "chest",
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "chest",
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "aurorastag"
+  ]
+}

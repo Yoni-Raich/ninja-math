@@ -1,0 +1,43 @@
+{
+  "order": 63,
+  "id": "lotuslake-4",
+  "name": "אגדת אגם הלוטוס",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "lotuslake",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lotuslake-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 126,
+    "scale": "in"
+  },
+  "path": [
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "chest",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "stardragon"
+  ]
+}

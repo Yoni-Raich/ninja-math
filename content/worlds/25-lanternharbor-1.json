@@ -1,0 +1,39 @@
+{
+  "order": 25,
+  "id": "lanternharbor-1",
+  "name": "מסע נמל הפנסים",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "lanternharbor",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lanternharbor-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 95,
+    "scale": "yo"
+  },
+  "path": [
+    "cactusronin",
+    "sandgecko",
+    "coppercrab",
+    "chest",
+    "windfalcon",
+    "cactusronin",
+    "sandgecko",
+    "coppercrab",
+    "scarabking"
+  ]
+}

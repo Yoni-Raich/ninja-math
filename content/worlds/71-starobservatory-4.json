@@ -1,0 +1,43 @@
+{
+  "order": 71,
+  "id": "starobservatory-4",
+  "name": "אגדת מצפה הכוכבים",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "starobservatory",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/starobservatory-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 126,
+    "scale": "hira"
+  },
+  "path": [
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "chest",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "stardragon"
+  ]
+}

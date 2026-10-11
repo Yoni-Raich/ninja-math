@@ -1,0 +1,17 @@
+{
+  "id": "furnacemaster",
+  "name": "אדון הכבשן",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 2,
+  "hp": 5,
+  "reward": 28,
+  "attack": "projectile",
+  "projectile": "fireball",
+  "color": "#FF7441",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a huge friendly furnace robot samurai with black iron armor, orange glowing furnace belly, chimney shoulders and a forge hammer."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "order": 51,
+  "id": "lotuslake-3",
+  "name": "משמר אגם הלוטוס",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "lotuslake",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lotuslake-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 119,
+    "scale": "hira"
+  },
+  "path": [
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "chest",
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "chest",
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "aurorastag"
+  ]
+}

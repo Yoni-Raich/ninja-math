@@ -1,0 +1,43 @@
+{
+  "order": 69,
+  "id": "auroravalley-4",
+  "name": "אגדת עמק הזוהר",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "auroravalley",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/auroravalley-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 116,
+    "scale": "in"
+  },
+  "path": [
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "chest",
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "stardragon"
+  ]
+}

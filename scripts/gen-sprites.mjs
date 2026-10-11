@@ -91,7 +91,10 @@ async function processSheet(id) {
     comps.push(c);
   }
   const big = comps.filter((c) => c.n > 40).sort((a, b) => b.n - a.n);
-  let frames = big.slice(0, 4).sort((a, b) => a.x0 - b.x0).map((c) => ({ members: [c.id], x0: c.x0, x1: c.x1, y0: c.y0, y1: c.y1 }));
+  // A detached spark is not a character frame. Leave tiny blobs for the attachment
+  // pass so a joined attack/hurt pair still gets split into two actual poses.
+  const anchors = big.filter((c) => c.n >= (big[0]?.n || 0) * 0.04).slice(0, 4);
+  let frames = anchors.sort((a, b) => a.x0 - b.x0).map((c) => ({ members: [c.id], x0: c.x0, x1: c.x1, y0: c.y0, y1: c.y1 }));
   // Frames joined by an effect (a lightning glow, a weapon trail) arrive as one blob:
   // split the widest frame at its thinnest column until there are 4.
   while (frames.length < 4 && frames.length) {
@@ -108,7 +111,8 @@ async function processSheet(id) {
     frames.splice(frames.indexOf(f), 1, a, b);
   }
   if (frames.length < 4) throw new Error(`${id}: found ${frames.length} frames, expected 4`);
-  for (const c of big.slice(4)) {
+  const anchorIds = new Set(anchors.map((c) => c.id));
+  for (const c of big.filter((c) => !anchorIds.has(c.id))) {
     const cx = (c.x0 + c.x1) / 2, cy = (c.y0 + c.y1) / 2;
     const dist = (f) => Math.max(0, f.x0 - cx, cx - f.x1) + Math.max(0, f.y0 - cy, cy - f.y1);
     const f = frames.reduce((best, f2) => (dist(f2) < dist(best) ? f2 : best), frames[0]);

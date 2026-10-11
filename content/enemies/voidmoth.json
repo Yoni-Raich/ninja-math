@@ -1,0 +1,17 @@
+{
+  "id": "voidmoth",
+  "name": "עש הריק",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 4,
+  "hp": 3,
+  "reward": 20,
+  "attack": "projectile",
+  "projectile": "star",
+  "color": "#B58CEB",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a dark violet cosmic moth ninja with star-pattern wings, bright magenta eyes and a silver moon mask."
+  }
+}

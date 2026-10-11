@@ -1,0 +1,16 @@
+{
+  "id": "willowguardian",
+  "name": "שומר הערבה",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 0,
+  "hp": 3,
+  "reward": 16,
+  "attack": "magic",
+  "color": "#6FC98C",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a friendly living willow tree guardian with leafy eyebrows, root feet, jade runes and a branch staff."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "order": 65,
+  "id": "sunkencity-4",
+  "name": "אגדת העיר השקועה",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "sunkencity",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/sunkencity-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 116,
+    "scale": "hira"
+  },
+  "path": [
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "chest",
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "stardragon"
+  ]
+}

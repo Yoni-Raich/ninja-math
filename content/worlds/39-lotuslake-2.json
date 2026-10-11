@@ -1,0 +1,41 @@
+{
+  "order": 39,
+  "id": "lotuslake-2",
+  "name": "אתגר אגם הלוטוס",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "lotuslake",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lotuslake-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 112,
+    "scale": "yo"
+  },
+  "path": [
+    "clockworkowl",
+    "smokeraccoon",
+    "embermantis",
+    "chest",
+    "magmaturtle",
+    "clockworkowl",
+    "smokeraccoon",
+    "chest",
+    "embermantis",
+    "magmaturtle",
+    "phoenixknight"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "order": 22,
+  "id": "stormcitadel-0",
+  "name": "שביל מצודת הסערה",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "stormcitadel",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/stormcitadel-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 93,
+    "scale": "in"
+  },
+  "path": [
+    "mossbeetle",
+    "bubbleotter",
+    "paperfox",
+    "chest",
+    "acornscout",
+    "mossbeetle",
+    "bubbleotter",
+    "willowguardian"
+  ]
+}

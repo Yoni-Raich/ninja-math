@@ -2,7 +2,8 @@ import { worldScene } from '../game/art.js';
 import Fighter from '../art/Fighter.js';
 import TreasureChest from '../art/TreasureChest.js';
 import { load } from '../game/save.js';
-import { WORLDS, SKILLS, FIGHTERS } from '../game/data.js';
+import { WORLDS, SKILLS, FIGHTERS, FOES } from '../game/data.js';
+import { worldAccess } from '../game/access.js';
 import { heroArt } from '../game/art.js';
 import { coin, star, belt } from '../ui.js';
 
@@ -13,6 +14,8 @@ export default function result(root, { go, params }) {
   const won = !!params.won;
   const next = Math.min(params.world + 1, WORLDS.length - 1);
   const isLast = params.world === WORLDS.length - 1;
+  const nextAccess = worldAccess(WORLDS, FOES, s, next);
+  const nextPlayable = !isLast && nextAccess.playable;
   const acc = params.answered ? `${params.firstOk}/${params.answered}` : '—';
   const stars = params.stars || 0;
 
@@ -44,11 +47,11 @@ export default function result(root, { go, params }) {
       ${params.interrupts ? `<div class="num" style="text-align:center;font-size:14px;color:#22D3EE;">עצרת ${params.interrupts} מתקפות בזמן!</div>` : ''}
       ${params.newBelt ? (() => { const b = SKILLS.find((k) => k.id === params.newBelt); return `<div class="pop-in" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:6px;background:#1E2238;border:1px dashed #F5B82E;animation-delay:.8s;">${belt(b.color, 46, 24)}<span class="num" style="font-size:17px;color:#F5B82E;">חגורה ${b.belt}! עכשיו: ${b.name}</span></div>`; })() : ''}
       <p style="margin:0;font-size:14px;color:#D0D4E4;text-align:center;">${won
-        ? (isLast ? 'ניצחת את כל העולמות! אפשר לחזור ולאסוף 3 כוכבים בכל עולם.' : `נפתח עולם חדש: ${WORLDS[next].name}`)
+        ? (isLast ? 'ניצחת את כל העולמות! אפשר לחזור ולאסוף 3 כוכבים בכל עולם.' : nextPlayable ? `נפתח עולם חדש: ${WORLDS[next].name}` : `העולם הבא מחכה לחגורה ${SKILLS[nextAccess.belt].belt}. התאמנו בעולמות הפתוחים ונצחו בקרב חגורה!`)
         : 'כל טעות היא אימון. נסו שוב — הפעם עם הרמז של העין.'}</p>
       <div style="display:flex;gap:10px;justify-content:center;">
         ${won
-          ? `<button id="a" class="btn-main" style="height:48px;padding:0 22px;"><span class="num unsk" style="font-size:18px;">${isLast ? 'למפה' : 'לעולם הבא'}</span></button>
+          ? `<button id="a" class="btn-main" style="height:48px;padding:0 22px;"><span class="num unsk" style="font-size:18px;">${nextPlayable ? 'לעולם הבא' : 'למפה'}</span></button>
              <button id="b" class="btn-sub"><span class="unsk">שוב</span></button>`
           : `<button id="a" class="btn-main cta" style="height:48px;padding:0 22px;"><span class="num unsk" style="font-size:18px;">נסו שוב</span></button>
              <button id="b" class="btn-sub"><span class="unsk">למפה</span></button>`}
@@ -59,7 +62,7 @@ export default function result(root, { go, params }) {
   const a = root.querySelector('#a');
   const b = root.querySelector('#b');
   if (won) {
-    a.onclick = () => (isLast ? go('map') : go('battle', { world: next }));
+    a.onclick = () => (nextPlayable ? go('battle', { world: next }) : go('map'));
     b.onclick = () => go('battle', { world: params.world });
   } else {
     a.onclick = () => go('battle', { world: params.world });

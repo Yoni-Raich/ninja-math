@@ -1,0 +1,41 @@
+{
+  "order": 38,
+  "id": "mushroomgrove-2",
+  "name": "אתגר חורשת הפטריות",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "mushroomgrove",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/mushroomgrove-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/jungle-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 107,
+    "scale": "in"
+  },
+  "path": [
+    "magmaturtle",
+    "clockworkowl",
+    "smokeraccoon",
+    "chest",
+    "embermantis",
+    "magmaturtle",
+    "clockworkowl",
+    "chest",
+    "smokeraccoon",
+    "embermantis",
+    "furnacemaster"
+  ]
+}

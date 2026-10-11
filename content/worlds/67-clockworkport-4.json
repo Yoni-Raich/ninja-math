@@ -1,0 +1,43 @@
+{
+  "order": 67,
+  "id": "clockworkport-4",
+  "name": "אגדת נמל השעונים",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "clockworkport",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/clockworkport-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 126,
+    "scale": "yo"
+  },
+  "path": [
+    "orbitshark",
+    "novascorpion",
+    "voidmoth",
+    "chest",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "stardragon"
+  ]
+}

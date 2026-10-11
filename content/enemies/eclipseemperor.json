@@ -1,0 +1,16 @@
+{
+  "id": "eclipseemperor",
+  "name": "קיסר הליקוי",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 4,
+  "hp": 7,
+  "reward": 40,
+  "attack": "magic",
+  "color": "#D0AEF8",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a grand black and gold celestial samurai emperor with a crescent helmet, purple galaxy cape, floating star ornaments and a large glowing moon blade."
+  }
+}

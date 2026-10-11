@@ -1,0 +1,43 @@
+{
+  "order": 70,
+  "id": "stormcitadel-4",
+  "name": "אגדת מצודת הסערה",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "stormcitadel",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/stormcitadel-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 121,
+    "scale": "yo"
+  },
+  "path": [
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "eclipseemperor"
+  ]
+}

@@ -3,6 +3,7 @@
   "name": "שם בעברית",
   "tag": "תיאור קצר בכרטיס",
   "type": "enemy",
+  "belt": 0,
   "hp": 1,
   "reward": 6,
   "attack": "projectile",

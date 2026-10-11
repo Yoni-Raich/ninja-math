@@ -1,0 +1,41 @@
+{
+  "order": 43,
+  "id": "clockworkport-2",
+  "name": "אתגר נמל השעונים",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "clockworkport",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/clockworkport-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/neon-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 112,
+    "scale": "hira"
+  },
+  "path": [
+    "clockworkowl",
+    "smokeraccoon",
+    "embermantis",
+    "chest",
+    "magmaturtle",
+    "clockworkowl",
+    "smokeraccoon",
+    "chest",
+    "embermantis",
+    "magmaturtle",
+    "phoenixknight"
+  ]
+}

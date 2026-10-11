@@ -1,0 +1,42 @@
+{
+  "order": 59,
+  "id": "starobservatory-3",
+  "name": "משמר מצפה הכוכבים",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "starobservatory",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/starobservatory-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 119,
+    "scale": "yo"
+  },
+  "path": [
+    "prismserpent",
+    "runedeer",
+    "jadewasp",
+    "chest",
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "chest",
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "aurorastag"
+  ]
+}

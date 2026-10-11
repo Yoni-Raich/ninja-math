@@ -1,0 +1,17 @@
+{
+  "id": "windfalcon",
+  "name": "בז הרוחות",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 1,
+  "hp": 1,
+  "reward": 11,
+  "attack": "projectile",
+  "projectile": "feather",
+  "color": "#DAB94C",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a golden falcon ninja with flowing white wings, a yellow headband and a feather spear."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "jadewasp",
+  "name": "צרעת הירקן",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 3,
+  "hp": 2,
+  "reward": 17,
+  "attack": "projectile",
+  "projectile": "needle",
+  "color": "#55D6AF",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a jade green wasp ninja with translucent wings, emerald segmented armor and a long glowing needle spear."
+  }
+}

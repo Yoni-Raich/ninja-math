@@ -1,0 +1,16 @@
+{
+  "id": "acornscout",
+  "name": "סייר הבלוטים",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 0,
+  "hp": 1,
+  "reward": 8,
+  "attack": "melee",
+  "color": "#ED963A",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "an orange squirrel ninja with a bushy tail, jade scarf and wooden acorn staff."
+  }
+}

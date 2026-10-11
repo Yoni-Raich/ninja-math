@@ -1,0 +1,38 @@
+{
+  "order": 17,
+  "id": "sunkencity-0",
+  "name": "שביל העיר השקועה",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "sunkencity",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/sunkencity-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 88,
+    "scale": "yo"
+  },
+  "path": [
+    "acornscout",
+    "mossbeetle",
+    "bubbleotter",
+    "chest",
+    "paperfox",
+    "acornscout",
+    "mossbeetle",
+    "badgerchief"
+  ]
+}

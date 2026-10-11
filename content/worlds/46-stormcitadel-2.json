@@ -1,0 +1,41 @@
+{
+  "order": 46,
+  "id": "stormcitadel-2",
+  "name": "אתגר מצודת הסערה",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "stormcitadel",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/stormcitadel-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 107,
+    "scale": "hira"
+  },
+  "path": [
+    "magmaturtle",
+    "clockworkowl",
+    "smokeraccoon",
+    "chest",
+    "embermantis",
+    "magmaturtle",
+    "clockworkowl",
+    "chest",
+    "smokeraccoon",
+    "embermantis",
+    "furnacemaster"
+  ]
+}

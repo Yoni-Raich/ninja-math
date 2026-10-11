@@ -1,0 +1,16 @@
+{
+  "id": "bronzegolem",
+  "name": "גולם הברונזה",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 1,
+  "hp": 4,
+  "reward": 22,
+  "attack": "melee",
+  "color": "#BF8959",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a huge round bronze clockwork golem with riveted armor, a glowing amber chest and oversized hammer fists."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "order": 28,
+  "id": "paperfestival-1",
+  "name": "מסע פסטיבל הנייר",
+  "chapter": "מסע השמש",
+  "belt": 1,
+  "region": "paperfestival",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/paperfestival-far.webp",
+      "speed": 62,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.1) sepia(.12)"
+    },
+    {
+      "src": "backgrounds/sky-ground.webp",
+      "speed": 7.6,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 110,
+    "scale": "yo"
+  },
+  "path": [
+    "windfalcon",
+    "cactusronin",
+    "sandgecko",
+    "chest",
+    "coppercrab",
+    "windfalcon",
+    "cactusronin",
+    "sandgecko",
+    "bronzegolem"
+  ]
+}

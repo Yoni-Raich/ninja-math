@@ -1,0 +1,17 @@
+{
+  "id": "tempesttitan",
+  "name": "טיטאן הסופות",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 3,
+  "hp": 6,
+  "reward": 34,
+  "attack": "projectile",
+  "projectile": "bolt",
+  "color": "#67D2ED",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a towering storm cloud samurai titan with blue stone armor, swirling cloud shoulders, green lightning eyes and a thunder drum."
+  }
+}

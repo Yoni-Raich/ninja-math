@@ -9,6 +9,8 @@ import './styles/battle.css';
 import './styles/app.css';
 import { unlockAudio, startMusic, sfx } from './audio.js';
 import { load } from './game/save.js';
+import { WORLDS, FOES } from './game/data.js';
+import { worldAccess } from './game/access.js';
 import title from './screens/title.js';
 import map from './screens/map.js';
 import battle from './screens/battle.js';
@@ -30,6 +32,7 @@ fit();
 
 export function go(name, params = {}, { instant = false } = {}) {
   if (busy) return;
+  if (name === 'battle' && !worldAccess(WORLDS, FOES, load(), params.world ?? 0).playable) name = 'map';
   const swap = () => {
     if (current && current.unmount) current.unmount();
     const el = document.createElement('div');

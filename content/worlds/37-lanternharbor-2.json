@@ -1,0 +1,41 @@
+{
+  "order": 37,
+  "id": "lanternharbor-2",
+  "name": "אתגר נמל הפנסים",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "lanternharbor",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/lanternharbor-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/coral-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 102,
+    "scale": "hira"
+  },
+  "path": [
+    "embermantis",
+    "magmaturtle",
+    "clockworkowl",
+    "chest",
+    "smokeraccoon",
+    "embermantis",
+    "magmaturtle",
+    "chest",
+    "clockworkowl",
+    "smokeraccoon",
+    "phoenixknight"
+  ]
+}

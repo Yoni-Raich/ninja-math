@@ -4,6 +4,7 @@ import FX from '../art/FX.js';
 import { FOES, WORLDS, FIGHTERS, WEAPONS, SPECIALS, IMAGES, HITS, SKILLS, MAX_HEARTS, weaponStats } from '../game/data.js';
 import { foeArt, foePortrait, spritePortrait, foeBox, worldScene, startLayers, setSceneMoving, heroArt } from '../game/art.js';
 import { load, update } from '../game/save.js';
+import { worldAccess } from '../game/access.js';
 import { makeQuestion, record, progress, challengeSeconds, winBelt, recentMedianMs } from '../game/learning.js';
 import { sfx, haptic, setMusicStyle, startMusic } from '../audio.js';
 import { coin, heart, belt, replay } from '../ui.js';
@@ -46,7 +47,12 @@ const BOLT_SVG = (c) => `<svg width="90" height="360" viewBox="0 0 90 360"><path
 
 export default function battle(root, { go, params }) {
   const save = load();
-  const worldIdx = Math.min(params.world ?? 0, WORLDS.length - 1);
+  const worldIdx = params.world ?? 0;
+  // Map buttons and result shortcuts share this guard, including direct navigation.
+  if (!worldAccess(WORLDS, FOES, save, worldIdx).playable) {
+    queueMicrotask(() => go('map', {}, { instant: true }));
+    return { unmount() {} };
+  }
   const W = WORLDS[worldIdx];
   const hero = FIGHTERS.find((f) => f.id === save.eq.fighter) || FIGHTERS[0];
   const heroKind = hero.id;

@@ -1,0 +1,38 @@
+{
+  "order": 14,
+  "id": "mushroomgrove-0",
+  "name": "שביל חורשת הפטריות",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "mushroomgrove",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/mushroomgrove-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/jungle-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 93,
+    "scale": "yo"
+  },
+  "path": [
+    "mossbeetle",
+    "bubbleotter",
+    "paperfox",
+    "chest",
+    "acornscout",
+    "mossbeetle",
+    "bubbleotter",
+    "willowguardian"
+  ]
+}

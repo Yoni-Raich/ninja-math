@@ -1,0 +1,16 @@
+{
+  "id": "mossbeetle",
+  "name": "חיפושית הטחב",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 0,
+  "hp": 1,
+  "reward": 8,
+  "attack": "melee",
+  "color": "#6EA85A",
+  "charge": false,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a round emerald beetle with a moss-covered shell, tiny samurai helmet and two wooden training sticks."
+  }
+}

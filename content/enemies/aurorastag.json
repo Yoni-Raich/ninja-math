@@ -1,0 +1,16 @@
+{
+  "id": "aurorastag",
+  "name": "מלך איילי הזוהר",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 3,
+  "hp": 6,
+  "reward": 34,
+  "attack": "magic",
+  "color": "#93EACB",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a majestic giant white stag king with luminous teal aurora antlers, emerald armor and a crescent spear."
+  }
+}

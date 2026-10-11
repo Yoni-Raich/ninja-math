@@ -1,0 +1,16 @@
+{
+  "id": "phoenixknight",
+  "name": "אביר הפניקס",
+  "tag": "בוס · שומר האזור",
+  "type": "boss",
+  "belt": 2,
+  "hp": 5,
+  "reward": 28,
+  "attack": "magic",
+  "color": "#FF9152",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a heroic giant orange phoenix knight with flaming feather wings, ruby armor and a golden sun spear."
+  }
+}

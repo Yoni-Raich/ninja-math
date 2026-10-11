@@ -1,0 +1,43 @@
+{
+  "order": 62,
+  "id": "mushroomgrove-4",
+  "name": "אגדת חורשת הפטריות",
+  "chapter": "אגדות המאסטרים",
+  "belt": 4,
+  "region": "mushroomgrove",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/mushroomgrove-far.webp",
+      "speed": 50,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(-25deg) brightness(.82)"
+    },
+    {
+      "src": "backgrounds/jungle-ground.webp",
+      "speed": 6.4,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 121,
+    "scale": "hira"
+  },
+  "path": [
+    "eclipseninja",
+    "orbitshark",
+    "novascorpion",
+    "chest",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "chest",
+    "novascorpion",
+    "voidmoth",
+    "eclipseninja",
+    "orbitshark",
+    "eclipseemperor"
+  ]
+}

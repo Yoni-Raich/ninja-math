@@ -1,0 +1,42 @@
+{
+  "order": 54,
+  "id": "ambercanyon-3",
+  "name": "משמר קניון הענבר",
+  "chapter": "משמר הירקן",
+  "belt": 3,
+  "region": "ambercanyon",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/ambercanyon-far.webp",
+      "speed": 54,
+      "y": 0,
+      "height": 412,
+      "filter": "hue-rotate(18deg) saturate(1.1)"
+    },
+    {
+      "src": "backgrounds/desert-ground.webp",
+      "speed": 6.8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 114,
+    "scale": "hira"
+  },
+  "path": [
+    "stormlynx",
+    "prismserpent",
+    "runedeer",
+    "chest",
+    "jadewasp",
+    "stormlynx",
+    "prismserpent",
+    "chest",
+    "runedeer",
+    "jadewasp",
+    "stormlynx",
+    "tempesttitan"
+  ]
+}

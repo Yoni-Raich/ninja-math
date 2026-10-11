@@ -1,0 +1,38 @@
+{
+  "order": 23,
+  "id": "starobservatory-0",
+  "name": "שביל מצפה הכוכבים",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "starobservatory",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/starobservatory-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 98,
+    "scale": "yo"
+  },
+  "path": [
+    "bubbleotter",
+    "paperfox",
+    "acornscout",
+    "chest",
+    "mossbeetle",
+    "bubbleotter",
+    "paperfox",
+    "badgerchief"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "order": 45,
+  "id": "auroravalley-2",
+  "name": "אתגר עמק הזוהר",
+  "chapter": "אתגר הלהבות",
+  "belt": 2,
+  "region": "auroravalley",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/auroravalley-far.webp",
+      "speed": 58,
+      "y": 0,
+      "height": 412,
+      "filter": "saturate(1.15) hue-rotate(-12deg)"
+    },
+    {
+      "src": "backgrounds/moon-ground.webp",
+      "speed": 7.2,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 102,
+    "scale": "yo"
+  },
+  "path": [
+    "embermantis",
+    "magmaturtle",
+    "clockworkowl",
+    "chest",
+    "smokeraccoon",
+    "embermantis",
+    "magmaturtle",
+    "chest",
+    "clockworkowl",
+    "smokeraccoon",
+    "phoenixknight"
+  ]
+}

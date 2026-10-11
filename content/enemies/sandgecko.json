@@ -1,0 +1,17 @@
+{
+  "id": "sandgecko",
+  "name": "שממית החולות",
+  "tag": "לוחם חדש",
+  "type": "enemy",
+  "belt": 1,
+  "hp": 1,
+  "reward": 11,
+  "attack": "projectile",
+  "projectile": "sand",
+  "color": "#E6AC66",
+  "charge": true,
+  "art": {
+    "kind": "sprite",
+    "prompt": "a golden sand gecko ninja with orange spots, a sand-colored mask and two curved bronze daggers."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "order": 24,
+  "id": "eclipsepalace-0",
+  "name": "שביל ארמון הליקוי",
+  "chapter": "מסלול אימון",
+  "belt": 0,
+  "region": "eclipsepalace",
+  "scene": "image",
+  "layers": [
+    {
+      "src": "backgrounds/eclipsepalace-far.webp",
+      "speed": 66,
+      "y": 0,
+      "height": 412,
+      "filter": ""
+    },
+    {
+      "src": "backgrounds/crystal-ground.webp",
+      "speed": 8,
+      "y": 318,
+      "height": 94
+    }
+  ],
+  "music": {
+    "bpm": 103,
+    "scale": "hira"
+  },
+  "path": [
+    "paperfox",
+    "acornscout",
+    "mossbeetle",
+    "chest",
+    "bubbleotter",
+    "paperfox",
+    "acornscout",
+    "willowguardian"
+  ]
+}
